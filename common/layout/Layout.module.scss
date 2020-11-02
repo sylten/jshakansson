@@ -1,0 +1,14 @@
+﻿@import '../../styles/common.scss';
+
+.Layout {
+  .Content {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 4rem;
+    @media screen and (max-width: $max-sm) {
+        margin-top: 2rem;
+    }
+  }
+}

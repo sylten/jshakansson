@@ -1,0 +1,21 @@
+@import '../../styles/common.scss';
+
+.Loader {
+  display: inline-block;
+  border: 2px solid transparent; /* Light grey */
+  border-top: 2px solid $primary;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  animation: spin .85s cubic-bezier(0.785, 0.45, 0.35, 0.86) infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.CenteredLoader {
+  margin-top: 10%;
+  text-align: center;
+}

@@ -1,0 +1,57 @@
+@import "./common.scss";
+
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  font-weight: 300;
+  background: #f9fdff;
+  // background: linear-gradient(135deg, #f9fdff 0%,#f2fbff 100%);
+  transition: background-color 2s;
+
+  &.inkamisu {
+      background: #fcf9ff;
+      // background: linear-gradient(135deg, #fcf9ff 0%,#f5f2ff 100%);
+  }
+  &.tattoomigo {
+      background: #f9fffd;
+      // background: linear-gradient(135deg, #f9fffd 0%,#f2fff8 100%);
+  }
+  &.signe {
+      background: #fffcf9;
+      // background: linear-gradient(135deg, #fffcf9 0%,#fff9f2 100%);
+  }
+  &.santatracker {
+      background: #f9fdff;
+      // background: linear-gradient(135deg, #f9fdff 0%,#f2fdff 100%);
+  }
+  &.smartwater-explore-the-sky {
+      background: #f9fbff;
+      // background: linear-gradient(135deg, #f9fbff 0%,#f2f6ff 100%);
+  }
+  &.clouds-piano {
+      background: #f9f9f9;
+      // background: linear-gradient(135deg, #f9f9f9 0%,#f4f4f4 100%);
+  }
+}
+
+a {
+  text-decoration: none;
+  &:visited, &:link {
+      color: initial;
+  }
+}
+
+button {
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+@media print {
+  .no-print {
+      display: none;
+  }
+}
