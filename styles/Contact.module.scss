@@ -1,0 +1,42 @@
+@import "./common.scss";
+
+.contact {
+  margin: 0rem 2rem;
+
+  .contactOptions {
+      list-style: none;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      padding: 0;
+      font-size: 1.25rem;
+      li {
+          padding: 0.5rem 0rem;
+          border-bottom: 1px solid #ccc;
+          i {
+              width: 1.25rem;
+          }
+          &:last-child {
+              border: none;
+          }
+
+          @media screen and (min-width: $min-lg) {
+              width: 25%;
+          }
+      }
+  }
+
+  .address {
+      margin-bottom: 5rem;
+
+      span {
+          display: block;
+          margin-bottom: 0.25rem;
+          font-size: 0.875rem;
+
+          &.companyName {
+              margin-bottom: 1rem;
+              font-size: 1rem;
+          }
+      }
+  }
+}

@@ -1,0 +1,21 @@
+@import '../../styles/common.scss';
+
+.logo {
+  margin-top: 4rem;
+  text-align: center;
+  
+  img {
+      width: 100px;
+      @media screen and (max-width: $max-sm) {
+          width: 75px;
+      }
+  }
+
+  @media screen and (max-width: $max-sm) {
+      margin-top: 2rem;
+      img {
+          width: 75px;
+      }
+  }
+}
+

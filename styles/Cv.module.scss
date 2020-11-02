@@ -1,0 +1,111 @@
+@import "./common.scss";
+
+.cv {
+    margin: 0rem 1.5rem;
+
+    .utilRow {
+        .right {
+            float: right;
+        }
+        margin-bottom: 2rem;
+    }
+    
+    .content {
+        margin-top: 1rem;
+        display: flex;
+        @media screen and (max-width: $max-md) {
+            display: block;
+        }
+    
+        p {
+            font-size: 0.875rem;
+        }
+    
+        .main {
+            flex-grow: 2;
+            @media print {
+                width: 66%;
+            }
+            .header {
+                margin-bottom: 4rem;
+                @media screen and (max-width: $max-md) {
+                    margin-bottom: 2.5rem;
+                }
+                @media print {
+                    margin-bottom: 2.5rem;
+                }
+    
+                h1 {
+                    font-size: 2.25rem;
+                    @media screen and (max-width: $max-md) {
+                        font-size: 1.5rem;
+                    }
+                    @media print {
+                        font-size: 1.75rem;
+                    }
+                }
+                .title {
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+                .contactHeader {
+                    display: none;
+                    margin-top: 2rem;
+                    margin-bottom: 0;
+                    @media screen and (max-width: $max-md) {
+                        display: block;
+                    }
+                }
+            }
+    
+            .section {
+                margin-bottom: 4rem;
+                @media print {
+                    margin-bottom: 2.5rem;
+                }
+        
+                h2 {
+                    font-size: 2rem;
+                    @media print {
+                        font-size: 1.5rem;
+                    }
+                }
+                h3 {
+                    font-weight: bold;
+                    margin-bottom: 0.5rem;
+                    font-size: 1rem;
+                }
+                .title, .degree, .issuer, .level {
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    font-size: 1rem;
+                }
+                .period {
+                    margin-top: 0.5rem;
+                }
+                .summary {
+                    margin-bottom: 2rem;
+                }
+                .tech {
+                    font-size: 0.675rem;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    color: #666;
+                }
+            }
+        }
+        .contactSide {
+            @media screen and (max-width: $max-md) {
+                display: none;
+            }
+        }
+    }    
+}
+
+
+@media print {
+    .certifications {
+        margin-top: 4rem;
+    }
+}
