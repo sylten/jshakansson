@@ -1,0 +1,125 @@
+@import '../../styles/common.scss';
+
+.portfolioItem {
+  $border-radius: 0.1rem;
+
+  margin: 2rem;
+  border-radius: $border-radius;
+  box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
+  
+  @media screen and (min-width: $min-lg) {
+      position: relative;
+      transition: box-shadow 0.15s, transform 0.15s;
+
+      &:hover {
+          box-shadow: 1px 1px 8px 1px rgba(0,0,0,0.2);
+          transform: scale(1.01);
+      }
+  }
+
+  @media screen and (max-width: $max-sm) {
+      margin: 1rem;
+  }
+
+  .imageWrapper {
+      width: 100%;
+      height: 200px;
+      img {
+          @extend .fit;
+          border-top-left-radius: $border-radius;
+          border-top-right-radius: $border-radius;
+      }
+  }
+  .body {
+      padding: 0.5rem 0.75rem;
+      background: rgba(255,255,255,0.75);
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+
+      .title {
+          margin-top: 0rem;
+          margin-bottom: 0.5rem;
+          font-size: 1.5rem;
+      }
+      .companies {
+          margin-bottom: 0.5rem;
+
+          .company {
+              font-size: 0.75rem;
+              text-transform: uppercase;
+              img {
+                  height: 0.875rem;
+                  position: relative;
+                  top: 0.1rem;
+              }
+
+              :after {
+                  content: "/";
+                  margin-left: 0.25rem;
+                  color: #ccc;
+              }
+              &:last-child {
+                  :after {
+                      display: none;
+                  }
+              }
+          }
+      }
+      .intro {
+          display: block;
+          font-size: 0.75rem;
+          margin-top: 1rem;
+      }
+      .tech {
+          display: block;
+          
+          span {
+              display: inline-block;
+
+              color: #999;
+              font-size: 0.65rem;
+              font-weight: 500;
+
+              &:after {
+                  content: "/";
+                  margin-left: 0.25rem;
+                  margin-right: 0.25rem;
+                  color: #ccc;
+              }
+              &:last-child {
+                  &:after {
+                      display: none;
+                  }
+              }
+          }
+      }
+  }
+
+  &.smallView {
+      margin: 0.5rem;
+
+      @media screen and (min-width: $min-lg) {
+          &:hover {
+              box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.2);
+              top: -1px;
+          }
+      }
+
+      @media screen and (max-width: $max-sm) {
+          margin: 0.25rem;
+      }
+
+      .imageWrapper {
+          height: 100px;
+      }
+
+      .body {
+          .title {
+              font-size: 1.25rem;
+              @media screen and (max-width: $max-sm) {
+                  font-size: 1rem;
+              }
+          }
+      }
+  }
+}

@@ -1,29 +1,42 @@
-import Layout from '../common/layout/Layout';
-import styles from '../styles/Landing.module.scss'
-import Link from 'next/link';
+import Layout from '../../common/layout/Layout';
+import BackButton from '../../common/components/BackButton';
+import Logo from '../../common/components/Logo';
+import PortfolioItem from '../../common/components/PortfolioItem';
+import styles from '../../styles/Portfolio.module.scss'
+import { portfolioItems } from '../../common/portfolio-items';
 
 export default function Portfolio() {
+  const items = portfolioItems.filter(item => !item.hidden);
+
   return (
    <Layout>
-     <div className={styles.landing}>
-        <div className={styles.header}>
-            <div className={styles.title}>
-                <h1>Hello</h1>
-                <p>
-                    You've found Jonas' place to showcase his work and experience.
-                </p>
-            </div>
-        </div>
-        
-        <div className={styles.navigation}>
-            <ul>
-                <li><Link href="/portfolio/index"><a>Portfolio</a></Link></li>
-                <li><Link href="/cv"><a>CV</a></Link></li>
-                <li><Link href="/contact"><a>Contact</a></Link></li>
-            </ul>
-        </div>
+     <div className={styles.portfolioIndex}>
+      <div className={styles.utilRow}>
+          <BackButton></BackButton>
+      </div>
 
-        <div className={styles.line}></div>
+      <div className={styles.header}>
+        <h1>Portfolio</h1>
+        <p>
+          This is a collection of personal and professional projects that I've worked on.
+        </p>
+      </div>
+      
+      <div className={styles.portfolioItems}>
+        {
+          items.map(item => (
+            <div className={styles.portfolioIndexItem}>
+              <PortfolioItem key={item.uniqueName} item={item}></PortfolioItem>
+            </div>
+          ))
+        }
+      </div>
+
+      <div className={styles.utilRow}>
+          <BackButton></BackButton>
+      </div>
+
+      <Logo></Logo>
     </div>
    </Layout>
   )
