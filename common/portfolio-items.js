@@ -260,7 +260,7 @@ export const portfolioItems = [
         ]
     },
     { 
-        name: 'KTH Examination project: Klang',
+        name: 'KTH project: Klang',
         uniqueName: 'klang',
         hidden: false,
         url: null,

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Landing() {
   return (
-   <Layout>
+   <Layout isLanding={true}>
      <div className={styles.landing}>
         <div className={styles.header}>
             <div className={styles.title}>

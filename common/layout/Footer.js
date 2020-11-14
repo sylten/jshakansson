@@ -1,10 +1,10 @@
 import styles from './Footer.module.scss';
 
-export default function Footer() {
+export default function Footer(props) {
   const year = new Date().getFullYear();
 
   return (
-    <div className={styles.footer}>
+    <div className={`${styles.footer} ${props.isLanding ? styles.isLanding : ''}`}>
       <footer className="no-print">
         <span className={styles.copyright}>&copy; {year} AB J.S. Håkansson</span>
         <span className="social">

@@ -1,17 +1,24 @@
 ﻿@import '../../styles/common.scss';
 
-.footer footer {
-  margin: 3rem 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid #ccc;
+.footer {
+  footer {
+    max-width: $page-size;
+    margin: 3rem auto;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
 
-  display: flex;
-  justify-content: space-between;
-  .copyright {
-      font-size: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    .copyright {
+        font-size: 0.75rem;
+    }
+
+    @media print {
+        display: none;
+    }
   }
 
-  @media print {
-      display: none;
+  &.isLanding footer {
+    max-width: $landing-page-size;
   }
 }

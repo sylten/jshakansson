@@ -1,12 +1,11 @@
 @import "./common.scss";
 
 .portfolioIndex {
-  .util-row {
-      margin: 0 2rem;
-  }
+  max-width: $page-size;
+  margin: 0 auto;
 
   .header {
-      padding-left: 2rem;
+      // padding-left: 2rem;
       @media screen and (max-width: $max-sm) {
           padding-left: 1rem;
       }
@@ -24,6 +23,13 @@
   .portfolioItems {
       display: flex;
       flex-flow: row wrap;
+      margin-left: -2rem;
+      margin-right: -2rem;
+
+      @media screen and (max-width: $max-sm) {
+        margin-left: 0;
+        margin-right: 0;
+      }
   
       .portfolioIndexItem {
           flex-grow: 0;

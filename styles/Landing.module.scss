@@ -8,6 +8,8 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
+        max-width: $landing-page-size;
+        margin: 0 auto;
 
         .title {
             h1 {
@@ -90,7 +92,8 @@
     .line {
         background: $blue-1;
         height: 0.35rem;
-        margin: 10rem 4rem 0 4rem;
+        max-width: 800px;
+        margin: 10rem auto;
 
         @media screen and (max-width: $max-sm) {
             margin: 4rem 0;

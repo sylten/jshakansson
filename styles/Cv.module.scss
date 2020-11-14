@@ -1,7 +1,8 @@
 @import "./common.scss";
 
 .cv {
-    margin: 0rem 1.5rem;
+    margin: 0rem auto;
+    max-width: $page-size;
 
     .utilRow {
         .right {

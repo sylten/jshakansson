@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Footer from './Footer';
 import styles from './Layout.module.scss';
 
-export default function Layout({children}) {
+export default function Layout(props) {
   return (
     <div className={styles.Layout}>
       <Head>
@@ -24,9 +24,9 @@ export default function Layout({children}) {
         <link rel="icon" type="image/x-icon" href="favicon.ico?v=7" />
       </Head>
       <div className={styles.Content}>
-        {children}
+        {props.children}
       </div>
-      <Footer />
+      <Footer isLanding={props.isLanding} />
     </div>
   );
 }
