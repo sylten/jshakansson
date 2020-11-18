@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+      <loc>https://jshakansson.se</loc>
+      <image:image>
+        <image:loc>https://jshakansson.se/jshakansson-650-min.png</image:loc>
+        <image:caption>J.S. Håkansson logo.</image:caption>
+      </image:image>
+  </url>
+  <url>
+      <loc>https://jshakansson.se/cv</loc>
+      <image:image>
+        <image:loc>https://jshakansson.se/jonas-min.jpg</image:loc>
+        <image:caption>Jonas Siltamäki Håkansson</image:caption>
+      </image:image>
+  </url>
+  <url>
+      <loc>https://jshakansson.se/contact</loc>
+  </url>
+  <url>
+      <loc>https://jshakansson.se/portfolio</loc>
+  </url>
+  <url>
+      <loc>https://jshakansson.se/portfolio/signe</loc>
+  </url>
+  <url>
+      <loc>https://jshakansson.se/portfolio/inkamisu</loc>
+  </url>
+  <url>
+      <loc>https://jshakansson.se/portfolio/tattoomigo</loc>
+  </url>
+  <url>
+      <loc>https://jshakansson.se/portfolio/klang</loc>
+  </url>
+  <url>
+      <loc>https://jshakansson.se/portfolio/strawberry-theme</loc>
+  </url>
+</urlset>

@@ -11,9 +11,9 @@ export default function Layout(props) {
         <meta property="og:title" content="Jonas Siltamäki Håkansson" />
         <meta name="description" property="description" content="My portfolio of personal and professional projects that I've worked on." />
         <meta property="og:description" content="My portfolio of personal and professional projects that I've worked on." />
-        <meta property="og:image" content="https://jshakansson.se/assets/jshakansson-150.png" />
-        <meta property="og:image:url" content="https://jshakansson.se/assets/jshakansson-150.png" />
-        <meta property="og:image:secure_url" content="https://jshakansson.se/assets/jshakansson-150.png" />
+        <meta property="og:image" content="https://jshakansson.se/assets/jshakansson-150-min.png" />
+        <meta property="og:image:url" content="https://jshakansson.se/assets/jshakansson-150-min.png" />
+        <meta property="og:image:secure_url" content="https://jshakansson.se/assets/jshakansson-150-min.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:alt" content="Jonas Portfolio logo" />
         <meta property="og:type" content="website" />

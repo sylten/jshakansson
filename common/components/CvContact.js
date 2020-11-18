@@ -4,7 +4,7 @@ export default function CvContact() {
   return (
     <div className={styles.cvContact}>
       <div className={styles.profilePicture}>
-          <img src="/jonas1.jpg" alt="Jonas Siltamäki Håkansson" />
+          <img src="/jonas-min.jpg" alt="Jonas Siltamäki Håkansson" />
       </div>
       <div className={styles.contact}>
           <h4>Contact</h4>

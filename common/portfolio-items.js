@@ -338,7 +338,7 @@ export const portfolioItems = [
         itemLogo: null,
         showNameNextToLogo: true,
         companies: [
-            { name: 'Personal', mediaUrl: '/jshakansson-650.png' }
+            { name: 'Personal', mediaUrl: '/jshakansson-650-min.png' }
         ]
     }
 ];
