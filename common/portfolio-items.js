@@ -340,5 +340,26 @@ export const portfolioItems = [
         companies: [
             { name: 'Personal', mediaUrl: '/jshakansson-650-min.png' }
         ]
-    }
+    },
+    { 
+      name: 'Tetris 3D',
+      uniqueName: 'tetris3d',
+      hidden: false,
+      url: 'https://cdn.jshakansson.se/Tetris3D.exe',
+      urlButtonText: 'Download',
+      intro: 'Game created for a school project',
+      description: `
+      3D tetris game created for a school project. Written in C++ with DirectX.
+      `,
+      tech: ['C++', 'DirectX'],
+      year: 2010,
+      largeMediaUrl: 'fYWUUwYM5tk',
+      largeMediaType: MediaType.YouTube,
+      smallMediaUrl: '/tetris3d/tetris3d-min.jpg',
+      itemLogo: null,
+      showNameNextToLogo: true,
+      companies: [
+          { name: 'Personal', mediaUrl: '/jshakansson-650-min.png' }
+      ]
+  }
 ];
