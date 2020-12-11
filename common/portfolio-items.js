@@ -349,7 +349,7 @@ export const portfolioItems = [
       urlButtonText: 'Download',
       intro: 'Game created for a school project',
       description: `
-      3D tetris game created for a school project. Written in C++ with DirectX.
+      A 3D tetris game I created for a school project. Written in C++ with DirectX.
       `,
       tech: ['C++', 'DirectX'],
       year: 2010,
