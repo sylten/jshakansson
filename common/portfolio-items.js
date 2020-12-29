@@ -1,6 +1,29 @@
 import {MediaType} from './media-type';
 
 export const portfolioItems = [
+      { 
+        name: 'Mibreaker',
+        uniqueName: 'mibreaker',
+        hidden: false,
+        url: 'https://mibreaker.com/',
+        intro: 'Microbreak reminder software.',
+        description:
+        `
+        Mibreaker is a small software that helps you remember to take breaks when working. I created it to remind myself when working from home during the Covid-19 pandemic.
+        <br>
+        The software was created in Electron, using React. I also made a website in NextJS, hosted in Vercel where others may download the application.
+        `,
+        tech: ['React', 'Electron', 'NextJS', 'Vercel'],
+        year: 2020,
+        largeMediaUrl: '/mibreaker/mibreaker-large.jpg',
+        largeMediaType: MediaType.Image,
+        smallMediaUrl: '/mibreaker/mibreaker-small.jpg',
+        itemLogo: '/mibreaker/mibreaker-full-logo.png',
+        showNameNextToLogo: false,
+        companies: [
+          { name: 'Personal', mediaUrl: '/jshakansson-650-min.png' }
+        ]
+    },
     { 
         name: 'Signe',
         uniqueName: 'signe',
