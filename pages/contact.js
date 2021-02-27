@@ -10,7 +10,7 @@ export default function Contact() {
         <h1>Contact me</h1>
         <p>Send me a message or email if I managed to pique your interest!</p>
         <ul className={styles.contactOptions}>
-            <li><a href="https://www.linkedin.com/in/jonas-siltamäki-håkansson-9a065273" target="_blank"><i className="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/jonas-siltamaki-hakansson" target="_blank"><i className="fab fa-linkedin"></i> LinkedIn</a></li>
             <li><a href="mailto:jonas@jshakansson.se" target="_blank"><i className="fal fa-envelope"></i> jonas@jshakansson.se</a></li>
         </ul>
 

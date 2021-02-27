@@ -20,7 +20,7 @@ export default function CvContact() {
           </p>
 
           <p className="no-print">
-              <a href="https://www.linkedin.com/in/jonas-siltam%C3%A4ki-h%C3%A5kansson-9a065273/" target="blank">
+              <a href="https://www.linkedin.com/in/jonas-siltamaki-hakansson" target="blank">
                   <i className="fab fa-linkedin"></i> LinkedIn
               </a>
           </p>

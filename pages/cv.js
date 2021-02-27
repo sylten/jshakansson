@@ -19,7 +19,12 @@ export default function Cv() {
                     <h1>Jonas Siltamäki Håkansson</h1>
                     <p className={styles.title}>Software Engineering consultant</p>
                     <p>
-                      Analytical, pragmatic and realistic. I prefer basing decisions on data and am not afraid to change my position if proven wrong. A born generalist who likes to get involved in every aspect of a business and is quick to adapt to do what needs to be done to get things moving. I enjoy efficiency and get restless by contentlessness. In my personal life, meditation and mindfulness has taught me to enjoy the moment and not get stressed out by a red light or a long queue. 
+                      I'm an entrepreneurial software engineer who loves data and finance. 
+                      My curiousness is neverending and has taken me across multiple industries, 
+                      from music and marketing to consulting as a I'm self-employed software engineer in finance, which I do at the moment. 
+                      Finance and business has always been at the core of my interests, and I compulsively
+                      analyze macro economics, stocks, businesses and financial news and enjoy it thouroughly. 
+                      Skills: Angular, React, C#, Python, SQL
                     </p>
                     <div className={styles.contactHeader}>
                         <CvContact></CvContact>
@@ -32,7 +37,7 @@ export default function Cv() {
                         <p className={styles.title}>Frontend lead</p>
                         <p className={styles.period}>2019-</p>
                         <p className={styles.tech}>.Net, Angular, SQL Server, C#, TypeScript, Azure DevOps, Service Fabric</p>
-                        <p className={styles.summary}>System design and development using .Net, Angular and Azure DevOps. Included design and implementation of a web component based micro frontend architecture to streamline and decouple deliveries.</p>
+                        <p className={styles.summary}>System design and development using .Net, Angular and Azure DevOps. Included design and implementation of a web component based micro frontend architecture.</p>
                     </div>
 
                     <div className={styles.item}>
@@ -84,12 +89,6 @@ export default function Cv() {
                 <div className={`${styles.section} ${styles.education}`}>
                     <h2>Education</h2>
                     <div className={styles.item}>
-                        <h3>KTH Royal Institute of Technology</h3>
-                        <p className={styles.degree}>Bachelor's Degree, Computer Science</p>
-                        <p className={styles.period}>2010-2013</p>
-                    </div>
-
-                    <div className={styles.item}>
                         <h3>Stockholm University</h3>
                         <p className={styles.degree}>Bachelor’s Degree, Business Administration and Management</p>
                         <p className={styles.period}>2015-2018</p>
@@ -99,6 +98,12 @@ export default function Cv() {
                         <h3>The Chinese University of Hong Kong Business School</h3>
                         <p className={styles.degree}>Exchange term, Managerial Economics</p>
                         <p className={styles.period}>2017</p>
+                    </div>
+
+                    <div className={styles.item}>
+                        <h3>KTH Royal Institute of Technology</h3>
+                        <p className={styles.degree}>Bachelor's Degree, Computer Science</p>
+                        <p className={styles.period}>2010-2013</p>
                     </div>
                 </div>
 
