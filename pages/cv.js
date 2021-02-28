@@ -23,8 +23,7 @@ export default function Cv() {
                       My curiousness is neverending and has taken me across multiple industries, 
                       from music and marketing to consulting as a I'm self-employed software engineer in finance, which I do at the moment. 
                       Finance and business has always been at the core of my interests, and I compulsively
-                      analyze macro economics, stocks, businesses and financial news and enjoy it thouroughly. 
-                      Skills: Angular, React, C#, Python, SQL
+                      analyze macro economics, stocks, businesses and financial news and enjoy it thouroughly.
                     </p>
                     <div className={styles.contactHeader}>
                         <CvContact></CvContact>
@@ -88,6 +87,12 @@ export default function Cv() {
 
                 <div className={`${styles.section} ${styles.education}`}>
                     <h2>Education</h2>
+                    <div className={styles.item}>
+                        <h3>Udacity</h3>
+                        <p className={styles.degree}>Data Scientist Nanodegree</p>
+                        <p className={styles.period}>2020</p>
+                    </div>
+                    
                     <div className={styles.item}>
                         <h3>Stockholm University</h3>
                         <p className={styles.degree}>Bachelor’s Degree, Business Administration and Management</p>
