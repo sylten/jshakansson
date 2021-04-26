@@ -6,9 +6,9 @@ export const portfolioItems = [
         uniqueName: 'crypto-new-tab',
         hidden: false,
         url: 'https://chrome.google.com/webstore/detail/crypto-new-tab/iggdnocohklfkhjngbeodhkngohncogg',
-        intro: 'A crypto market overview on your new tab page.',
+        intro: 'A Chrome extension that adds a crypto market overview to your new tab page.',
         description:
-        `Shows current prices for the top 10 cryptocurrencies on your new tab page. Also provides some additional stats like market cap, volume and total- and circulating supply for each token.`,
+        `Shows current prices for the top 10 cryptocurrencies on the Chrome new tab page. Also provides some additional stats like market cap, volume and total- and circulating supply for each token.`,
         tech: ['React', 'NextJS', 'Vercel'],
         year: 2021,
         largeMediaUrl: '/crypto-new-tab/crypto-new-tab-large.png',
