@@ -1,7 +1,26 @@
 import {MediaType} from './media-type';
 
 export const portfolioItems = [
-      { 
+    { 
+        name: 'Crypto New Tab',
+        uniqueName: 'crypto-new-tab',
+        hidden: false,
+        url: 'https://chrome.google.com/webstore/detail/crypto-new-tab/iggdnocohklfkhjngbeodhkngohncogg',
+        intro: 'A crypto market overview on your new tab page.',
+        description:
+        `Shows current prices for the top 10 cryptocurrencies on your new tab page. Also provides some additional stats like market cap, volume and total- and circulating supply for each token.`,
+        tech: ['React', 'NextJS', 'Vercel'],
+        year: 2021,
+        largeMediaUrl: '/crypto-new-tab/crypto-new-tab-large.png',
+        largeMediaType: MediaType.Image,
+        smallMediaUrl: '/crypto-new-tab/crypto-new-tab-large.png',
+        itemLogo: '/crypto-new-tab/crypto-new-tab-logo.png',
+        showNameNextToLogo: true,
+        companies: [
+          { name: 'Personal', mediaUrl: '/jshakansson-650-min.png' }
+        ]
+    },
+    { 
         name: 'Mibreaker',
         uniqueName: 'mibreaker',
         hidden: false,

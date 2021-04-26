@@ -90,7 +90,7 @@ export default function Cv() {
                     <div className={styles.item}>
                         <h3>Udacity</h3>
                         <p className={styles.degree}>Data Scientist Nanodegree</p>
-                        <p className={styles.period}>2020</p>
+                        <p className={styles.period}>2021</p>
                     </div>
                     
                     <div className={styles.item}>
