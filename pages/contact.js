@@ -16,8 +16,8 @@ export default function Contact() {
 
         <p className={styles.address}>
             <span className="company-name">J.S. Håkansson, AB</span>
-            <span>Hemslöjdsvägen 22</span>
-            <span>16731 Bromma, Sweden</span>
+            <span>Ernst Ahlgrens väg 10</span>
+            <span>11255 Stockholm, Sweden</span>
         </p>
 
         <BackButton></BackButton>

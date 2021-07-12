@@ -43,8 +43,8 @@ export default function CvContact() {
 
           <p className={styles.address}>
               <span>J.S. Håkansson, AB</span>
-              <span>Hemslöjdsvägen 22</span>
-              <span>16731 Bromma, Sweden</span>
+              <span>Ernst Ahlgrens väg 10</span>
+              <span>11255 Stockholm, Sweden</span>
           </p>
       </div>
   </div>

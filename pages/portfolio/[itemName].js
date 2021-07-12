@@ -83,7 +83,7 @@ export default function Item() {
                   </div>
 
                   <div className={styles.buttonWrapper}>
-                      <a href={item.url} target="_blank" onMouseenter={mouseEnterVisitButton} onMouseleave={mouseLeaveVisitButton}>{item.urlButtonText || 'Visit project'}</a>
+                      <a href={item.url} target="_blank" onMouseenter={mouseEnterVisitButton} onMouseleave={mouseLeaveVisitButton}>{item.urlButtonText || 'View project'}</a>
                   </div>
           
                   <div className={styles.line}>
