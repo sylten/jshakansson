@@ -20,10 +20,10 @@ export default function Cv() {
                     <p className={styles.title}>Software Engineering consultant</p>
                     <p>
                       I am an entrepreneurial software engineer who loves data and finance. 
-                      My curiousness is neverending and has taken me across multiple industries, 
+                      My curiousness is never-ending and has taken me across multiple industries, 
                       from music and marketing to consulting as a self-employed software engineer. 
                       Finance and business has always been at the core of my interests, and I compulsively
-                      analyze macro economics, stocks, businesses and financial news and enjoy it thouroughly.
+                      analyse macro economics, stocks, businesses and financial news and enjoy it thoroughly.
                     </p>
                     <div className={styles.contactHeader}>
                         <CvContact></CvContact>
