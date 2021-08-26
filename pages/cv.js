@@ -17,9 +17,9 @@ export default function Cv() {
             <div className={styles.main}>
                 <div className={styles.header}>
                     <h1>Jonas Siltamäki Håkansson</h1>
-                    <p className={styles.title}>Software Engineering consultant</p>
+                    <p className={styles.title}>Engineering and business consultant</p>
                     <p>
-                      I am an entrepreneurial software engineer who loves data and finance. 
+                      I am an entrepreneurial software engineer an who loves data and finance. 
                       My curiousness is never-ending and has taken me across multiple industries, 
                       from music and marketing to consulting as a self-employed software engineer. 
                       Finance and business has always been at the core of my interests, and I compulsively
@@ -36,7 +36,7 @@ export default function Cv() {
                         <p className={styles.title}>Frontend lead</p>
                         <p className={styles.period}>2019-</p>
                         <p className={styles.tech}>Angular, SQL, .Net, Azure DevOps, Requirements analysis, Architecture, UX</p>
-                        <p className={styles.summary}>System design and development using .Net, Angular and Azure DevOps. I also helped out with requirements analysis and architecture. For example design and implementation of a micro frontend architecture based on module federation.</p>
+                        <p className={styles.summary}>System design and web development. I also helped out with requirements analysis and architecture. For example design and implementation of a micro frontend architecture based on module federation.</p>
                     </div>
 
                     <div className={styles.item}>
