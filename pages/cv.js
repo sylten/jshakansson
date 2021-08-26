@@ -35,44 +35,44 @@ export default function Cv() {
                         <h3>Insclear</h3>
                         <p className={styles.title}>Frontend lead</p>
                         <p className={styles.period}>2019-</p>
-                        <p className={styles.tech}>.Net, Angular, SQL Server, C#, TypeScript, Azure DevOps, Service Fabric</p>
-                        <p className={styles.summary}>System design and development using .Net, Angular and Azure DevOps. Including design and implementation of a micro frontend architecture based on module federation.</p>
+                        <p className={styles.tech}>Angular, SQL, .Net, Azure DevOps, Requirements analysis, Architecture, UX</p>
+                        <p className={styles.summary}>System design and development using .Net, Angular and Azure DevOps. I also helped out with requirements analysis and architecture. For example design and implementation of a micro frontend architecture based on module federation.</p>
                     </div>
 
                     <div className={styles.item}>
                         <h3>SEB</h3>
                         <p className={styles.title}>Solutions Developer / Designer</p>
                         <p className={styles.period}>2018-2019</p>
-                        <p className={styles.tech}>.Net, Angular, SQL Server, C#, TypeScript, Azure DevOps, IBM MQ, IBM Api Connect</p>
-                        <p className={styles.summary}>Full stack software development. Worked in a project to modernise the architecture of the systems handling settlement of securities, while also making SEB compliant in CSDR. The application I worked on provides a Rest API for securities settlement, also developed an MQ based solution to provide the same functionality for older systems.</p>
+                        <p className={styles.tech}>Angular, SQL, .Net, Azure DevOps, IBM Api Connect</p>
+                        <p className={styles.summary}>Full stack software design and development. Worked in a project to modernise the architecture of the systems handling settlement of securities, while also making SEB compliant in CSDR. The application I worked on provides a Rest API for securities settlement. I also worked on an MQ based solution to provide the same functionality for older systems.</p>
                     </div>
 
                     <div className={styles.item}>
                         <h3>Tattoomigo</h3>
-                        <p className={styles.title}>Co-Founder, developer</p>
+                        <p className={styles.title}>Co-Founder</p>
                         <p className={styles.period}>2017-2018</p>
-                        <p className={styles.tech}>.Net Core, Angular, SQL Server, C#, TypeScript, Azure, Node JS, Swish API</p>
-                        <p className={styles.summary}>As a co-founder I worked on everything from developing the initial idea into a sustainable business model to developing the platform. I worked closely with a very entrepreneurial person and my role was often to take ideas and bring them down to earth. We completed each other very well and I enjoyed developing the business model and logistics.
+                        <p className={styles.tech}>Business analysis, Business development, Angular, SQL, .Net, Azure, Node JS, System architecture, UX</p>
+                        <p className={styles.summary}>As a co-founder I worked on everything from developing the initial idea into a sustainable business model, to branding, to developing the platform. I worked closely with a very entrepreneurial colleague and my role was often to take ideas and bring them down to earth. We completed each other very well and I enjoyed developing the business model and logistics.
                           <br/><br/>
-                          I also helped develop the system architecture and website. I mainly worked on the frontend. The backend is written in C# using .Net Core and SQL Server and is hosted in Azure. The frontend is written in TypeScript and uses Angular 5 along with Angular Universal and is hosted on a lightweight Node JS server.
+                          I also worked on the system architecture, website and UX. I mainly worked on the frontend. The backend is written in C# using .Net Core and SQL Server and is hosted in Azure. The frontend is written in TypeScript and uses Angular along with Angular Universal and is hosted on a lightweight Node JS server.
                           <br/><br/>
-                          Additionally I acted supervisor for engineering students doing their examination work at Tattoomigo.
+                          Additionally, I supervised two engineering students doing their examination work at Tattoomigo.
                         </p>
                     </div>
 
                     <div className={styles.item}>
                         <h3>Signe.io</h3>
-                        <p className={styles.title}>Co-Founder, developer</p>
+                        <p className={styles.title}>Co-Founder</p>
                         <p className={styles.period}>2016-2017</p>
-                        <p className={styles.tech}>React, Bootstrap, Node JS, MySQL, Stripe API</p>
-                        <p className={styles.summary}>I helped kick start Signe, working out the business model and branding while also building the first prototype version of Signe using NodeJS and MySQL for backend and React on the frontend.</p>
+                        <p className={styles.tech}>React, Node JS, SQL, Stripe, Business analysis, Business development, System architecture, UX</p>
+                        <p className={styles.summary}>I helped kick start Signe, working on the business model and branding while also building a prototype version of the platform using NodeJS, MySQL, React and Stripe as a payment service provider.</p>
                     </div>
 
                     <div className={styles.item}>
                         <h3>Skandikon</h3>
                         <p className={styles.title}>Software Engineer</p>
                         <p className={styles.period}>2014-2015</p>
-                        <p className={styles.tech}>.Net, SQL Server, jQuery, C#, JavaScript</p>
+                        <p className={styles.tech}>.Net, C#, SQL, JavaScript</p>
                         <p className={styles.summary}>System development, full stack development of a system for handling pensions. Programming in C# using .NET MVC, SQL Server and front end work in ASP / jQuery.</p>
                     </div>
 
@@ -80,7 +80,7 @@ export default function Cv() {
                         <h3>Plan 8 Production</h3>
                         <p className={styles.title}>Web Developer</p>
                         <p className={styles.period}>2013-2014</p>
-                        <p className={styles.tech}>JavaScript, jQuery, Backbone, RequireJS, Node JS, MySQL, PHP</p>
+                        <p className={styles.tech}>JavaScript, Node JS, SQL, PHP, AWS</p>
                         <p className={styles.summary}>Continued to develop my <Link href="/portfolio/klang" target="_blank"><a>school examination project Klang</a></Link>, which was used in collaboration with clients such as Google, H&amp;M, Mercedes, HBO and many more. Also included full stack development of a cloud based system for handling audio files and adding music and sound to interactive websites built in JavaScript, PHP and MySQL. As well as web apps using Node JS.</p>
                     </div>
                 </div>
@@ -94,15 +94,15 @@ export default function Cv() {
                     </div>
                     
                     <div className={styles.item}>
-                        <h3>Stockholm University</h3>
-                        <p className={styles.degree}>Bachelor’s Degree, Business Administration and Management</p>
-                        <p className={styles.period}>2015-2018</p>
-                    </div>
-
-                    <div className={styles.item}>
                         <h3>The Chinese University of Hong Kong Business School</h3>
                         <p className={styles.degree}>Exchange term, Managerial Economics</p>
                         <p className={styles.period}>2017</p>
+                    </div>
+
+                    <div className={styles.item}>
+                        <h3>Stockholm University</h3>
+                        <p className={styles.degree}>Bachelor’s Degree, Business Administration and Management</p>
+                        <p className={styles.period}>2015-2018</p>
                     </div>
 
                     <div className={styles.item}>

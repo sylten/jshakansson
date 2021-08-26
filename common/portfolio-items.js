@@ -21,16 +21,16 @@ export const portfolioItems = [
         ]
     },
     { 
-        name: 'Mibreaker',
+        name: 'MiBreaker',
         uniqueName: 'mibreaker',
         hidden: false,
         url: 'https://mibreaker.com/',
         intro: 'Microbreak reminder software.',
         description:
         `
-        Mibreaker is a small software that helps you remember to take breaks when working. I created it to remind myself when working from home during the Covid-19 pandemic.
-        <br>
-        The software was created in Electron, using React. I also made a website in NextJS, hosted in Vercel where others may download the application.
+        MiBreaker is a small software that helps you remember to take breaks when working. I created it to remind myself when working from home during the Covid-19 pandemic.
+        <br />
+        The software was created in Electron, using React. I also made a landing website in NextJS, hosted in Vercel where others may download the application and purchase it for professional use.
         `,
         tech: ['React', 'Electron', 'NextJS', 'Vercel'],
         year: 2020,
@@ -53,7 +53,7 @@ export const portfolioItems = [
         `
         Signe is a platform for crowdfunding concert events. Anyone can suggest an artist that they want to crowdfund and the team will look into options for making an event happen. In December of 2017, Signe received the Test Drive MusicTech Award for best pitch and became part of the Amplify Sweden family of startups at Sting.
         <br>
-        I developed the first version of Signe using a Node JS server, a MySQL database and a React frontend. I also implemented Stripe as a payment solution.
+        I worked on the the initial version of Signe. I worked on the business development and branding, and I developed a proof of concept using Node JS, MySQL, React and  Stripe as a payment solution.
         `,
         tech: ['React', 'JavaScript', 'Node JS', 'MySQL'],
         year: 2016,
@@ -102,7 +102,7 @@ export const portfolioItems = [
         <br>
         Inkamisu uses the same tech as Tattoomigo and the sites share the same backend. That way artists can use the same profile for Inkamisu and Tattoomigo. Just like Tattoomigo, Inkamisu was developed by me and my friend Joakim. To handle payments from customers we implemented Swish payments for Inkamisu.
         `,
-        tech: ['Angular2', 'TypeScript', '.NET', 'C#', 'SQL Server', 'Azure', 'Node JS'],
+        tech: ['Business', 'Branding', 'Architecture', 'Angular', 'TypeScript', '.NET', 'C#', 'SQL', 'Azure', 'Node JS'],
         year: 2018,
         largeMediaUrl: '1RTCYdT_IZ9XzG2-9vQkVftrSBlyRx55b',
         largeMediaType: MediaType.GoogleDrive,
@@ -122,9 +122,9 @@ export const portfolioItems = [
         description: `
         Tattoomigo was a platform where tattoo artists can showcase their work. It's also a one-stop-shop for people looking to book tattoos. The website offers users a neat way of browsing inspirational pictures of tattoos, view the profiles of the artists that made them and locate the studio where the artist resides. When a user has decided on what tattoo to get and potential artists to tattoo it, users can easily book the tattoo via Tattoomigo.
         <br>
-        I built this website together with a good friend of mine, Joakim. We designed the architecture and built the entire website together. To be more effective I focused on building the front end and Joakim focused on the back end. The backend consists of an api built using .NET Core and SQL Server. It was hosted in Azure. The frontend framework used is Angular2, written in TypeScript. The frontend is hosted on a Node JS server and implements Angular Universal for server-side rendering.
+        I built the website together with a good friend of mine, Joakim. We designed the architecture and built the entire website together. To be more effective I focused on building the front end and Joakim focused on the back end. The backend consists of an api built using .NET Core and SQL Server. It was hosted in Azure. The frontend framework used is Angular, written in TypeScript. The frontend is hosted on a Node JS server and implements Angular Universal for server-side rendering.
         `,
-        tech: ['Angular2', 'TypeScript', '.NET', 'C#', 'SQL Server', 'Azure', 'Node JS'],
+        tech: ['Business', 'Branding', 'Architecture', 'Angular', 'TypeScript', '.NET', 'C#', 'SQL', 'Azure', 'Node JS'],
         year: 2017,
         largeMediaUrl: 'v78dIOQ9K9A',
         largeMediaType: MediaType.YouTube,
