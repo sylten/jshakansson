@@ -111,16 +111,19 @@ export default function Cv() {
                     <div className={styles.item}>
                         <h3>Agile Fundamentals: Including Scrum and Kanban</h3>
                         <p><a className={styles.issuer} href="https://www.ude.my/UC-397a8aa7-b7ce-4851-8bde-0716f342ce49/" target="blank">Udemy</a></p>
+                        <p className={styles.period}>2021</p>
                     </div>
 
                     <div className={styles.item}>
                         <h3>Data Scientist Nanodegree</h3>
                         <p><a className={styles.issuer} href="https://www.udacity.com/" target="blank">Udacity</a></p>
+                        <p className={styles.period}>2021</p>
                     </div>
 
                     <div className={styles.item}>
                         <h3>Leading Yourself and Others</h3>
                         <p><a className={styles.issuer} href="https://enneagramcenter.se/" target="blank">EnneagramCenter</a></p>
+                        <p className={styles.period}>2016</p>
                     </div>
                 </div>
 
