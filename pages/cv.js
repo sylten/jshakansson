@@ -19,7 +19,7 @@ export default function Cv() {
                     <h1>Jonas Siltamäki Håkansson</h1>
                     <p className={styles.title}>Engineering and business consultant</p>
                     <p>
-                      I am an entrepreneurial software engineer an who loves data and finance. 
+                      I am an entrepreneurial engineer an who loves data and finance. 
                       My curiousness is never-ending and has taken me across multiple industries, 
                       from music and marketing to consulting as a self-employed software engineer. 
                       Finance and business has always been at the core of my interests, and I compulsively
@@ -88,12 +88,6 @@ export default function Cv() {
                 <div className={`${styles.section} ${styles.education}`}>
                     <h2>Education</h2>
                     <div className={styles.item}>
-                        <h3>Udacity</h3>
-                        <p className={styles.degree}>Data Scientist Nanodegree</p>
-                        <p className={styles.period}>2021</p>
-                    </div>
-                    
-                    <div className={styles.item}>
                         <h3>The Chinese University of Hong Kong Business School</h3>
                         <p className={styles.degree}>Exchange term, Managerial Economics</p>
                         <p className={styles.period}>2017</p>
@@ -114,6 +108,16 @@ export default function Cv() {
 
                 <div className={`${styles.section} ${styles.certifications}`}>
                     <h2>Certifications</h2>
+                    <div className={styles.item}>
+                        <h3>Agile Fundamentals: Including Scrum and Kanban</h3>
+                        <p><a className={styles.issuer} href="https://www.ude.my/UC-397a8aa7-b7ce-4851-8bde-0716f342ce49/" target="blank">Udemy</a></p>
+                    </div>
+
+                    <div className={styles.item}>
+                        <h3>Data Scientist Nanodegree</h3>
+                        <p><a className={styles.issuer} href="https://www.udacity.com/" target="blank">Udacity</a></p>
+                    </div>
+
                     <div className={styles.item}>
                         <h3>Leading Yourself and Others</h3>
                         <p><a className={styles.issuer} href="https://enneagramcenter.se/" target="blank">EnneagramCenter</a></p>
