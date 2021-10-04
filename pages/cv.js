@@ -19,7 +19,7 @@ export default function Cv() {
                     <h1>Jonas Siltamäki Håkansson</h1>
                     <p className={styles.title}>Engineering and business consultant</p>
                     <p>
-                      I am an entrepreneurial engineer an who loves data and finance. 
+                      I am an entrepreneurial engineer an who loves business and finance. 
                       My curiousness is never-ending and has taken me across multiple industries, 
                       from music and marketing to consulting as a self-employed software engineer. 
                       Finance and business has always been at the core of my interests, and I compulsively
@@ -36,7 +36,7 @@ export default function Cv() {
                         <p className={styles.title}>Frontend lead</p>
                         <p className={styles.period}>2019-</p>
                         <p className={styles.tech}>Angular, SQL, .Net, Requirements analysis and engineering, Systems design and architecture, UX, Azure DevOps</p>
-                        <p className={styles.summary}>Various initiatives to streamline administration processes and interfaces, to minimize errors and make the administration more efficient. I worked on requirements engineering, architecture, design of interfaces and actual implementation.</p>
+                        <p className={styles.summary}>Various initiatives to streamline administration processes and interfaces, to minimize errors and make administration more efficient. I worked on requirements engineering, architecture, design of interfaces and actual implementation.</p>
                         <p className={styles.summary}>Migration of a monolithic frontend application to a micro frontend based architecture using module federation. I helped with initial research and requirements analysis, architecture, implementation and documentation.</p>
                     </div>
 
@@ -81,12 +81,19 @@ export default function Cv() {
                         <p className={styles.period}>2013-2014</p>
                         <p className={styles.tech}>JavaScript, Node JS, SQL, PHP, AWS</p>
                         <p className={styles.summary}>Continuation of development of my <Link href="/portfolio/klang" target="_blank"><a>school examination project Klang</a></Link>, which was used in collaboration with clients such as Google, H&amp;M, Mercedes, HBO and many more.</p>
-                        <p className={styles.summary}>Full stack development of a cloud based system for handling audio files and adding music and sound to interactive websites built in JavaScript, PHP and MySQL. As well as web apps using Node JS.</p>
+                        <p className={styles.summary}>Full stack development of a cloud based system for handling audio files and adding music and sound to interactive websites.</p>
+                        <p className={styles.summary}>Various interactive web apps.</p>
                     </div>
                 </div>
 
                 <div className={`${styles.section} ${styles.education}`}>
                     <h2>Education</h2>
+                    <div className={styles.item}>
+                        <h3>KTH Royal Institute of Technology</h3>
+                        <p className={styles.degree}>Bachelor's Degree, Computer Science</p>
+                        <p className={styles.period}>2010-2013</p>
+                    </div>
+
                     <div className={styles.item}>
                         <h3>The Chinese University of Hong Kong Business School</h3>
                         <p className={styles.degree}>Exchange term, Managerial Economics</p>
@@ -97,12 +104,6 @@ export default function Cv() {
                         <h3>Stockholm University</h3>
                         <p className={styles.degree}>Bachelor’s Degree, Business Administration and Management</p>
                         <p className={styles.period}>2015-2018</p>
-                    </div>
-
-                    <div className={styles.item}>
-                        <h3>KTH Royal Institute of Technology</h3>
-                        <p className={styles.degree}>Bachelor's Degree, Computer Science</p>
-                        <p className={styles.period}>2010-2013</p>
                     </div>
                 </div>
 
