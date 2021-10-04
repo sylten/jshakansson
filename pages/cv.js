@@ -35,7 +35,7 @@ export default function Cv() {
                         <h3>Insclear</h3>
                         <p className={styles.title}>Frontend lead</p>
                         <p className={styles.period}>2019-</p>
-                        <p className={styles.tech}>Angular, SQL, .Net, Requirements analysis and engineering, Systems design and architecture, UX, Azure DevOps</p>
+                        <p className={styles.skills}>Requirements analysis and engineering, Systems design and architecture, UX, Angular, SQL, .Net, Azure DevOps</p>
                         <p className={styles.summary}>Various initiatives to streamline administration processes and interfaces, to minimize errors and make administration more efficient. I worked on requirements engineering, architecture, design of interfaces and actual implementation.</p>
                         <p className={styles.summary}>Migration of a monolithic frontend application to a micro frontend based architecture using module federation. I helped with initial research and requirements analysis, architecture, implementation and documentation.</p>
                     </div>
@@ -44,7 +44,7 @@ export default function Cv() {
                         <h3>SEB</h3>
                         <p className={styles.title}>Solutions Developer / Designer</p>
                         <p className={styles.period}>2018-2019</p>
-                        <p className={styles.tech}>Angular, .Net, SQL, Systems design, Azure DevOps, IBM Api Connect</p>
+                        <p className={styles.skills}>Systems design, Angular, .Net, SQL, Azure DevOps, IBM Api Connect</p>
                         <p className={styles.summary}>Systems design and development. I worked on a project to modernise the architecture of the systems handling settlement of securities, while also making SEB compliant in CSDR. The main deliveries of the project was an API for securities settlement and a web based GUI for administration of securities settlement.</p>
                     </div>
 
@@ -52,7 +52,7 @@ export default function Cv() {
                         <h3>Tattoomigo</h3>
                         <p className={styles.title}>Co-Founder</p>
                         <p className={styles.period}>2017-2018</p>
-                        <p className={styles.tech}>Business analysis and development, Angular, SQL, .Net, Azure, Node JS, System architecture, UX, Design</p>
+                        <p className={styles.skills}>Business analysis and development, Systems architecture, UX, Design, Angular, SQL, .Net, Azure, Node JS</p>
                         <p className={styles.summary}>Development of the initial idea into a sustainable business model. I also helped with branding. I worked closely with a very entrepreneurial colleague and my role was often to take ideas and bring them down to earth.</p>
                         <p className={styles.summary}>Systems development including systems architecture, programming, UX and design.</p>
                         <p className={styles.summary}>Supervision of two engineering students doing their examination work at Tattoomigo.</p>
@@ -62,7 +62,7 @@ export default function Cv() {
                         <h3>Signe.io</h3>
                         <p className={styles.title}>Co-Founder</p>
                         <p className={styles.period}>2016-2017</p>
-                        <p className={styles.tech}>React, Node JS, SQL, Stripe, Business analysis, Business development, System architecture, UX</p>
+                        <p className={styles.skills}>Business analysis, Business development, Systems architecture, UX, React, Node JS, SQL, Stripe</p>
                         <p className={styles.summary}>Development of the business model, logistics and branding.</p>
                         <p className={styles.summary}>Development of a prototype version of the platform using NodeJS, MySQL, React and Stripe as a payment service provider.</p>
                     </div>
@@ -71,7 +71,7 @@ export default function Cv() {
                         <h3>Skandikon</h3>
                         <p className={styles.title}>Software Engineer</p>
                         <p className={styles.period}>2014-2015</p>
-                        <p className={styles.tech}>.Net, C#, SQL, JavaScript</p>
+                        <p className={styles.skills}>.Net, C#, SQL, JavaScript</p>
                         <p className={styles.summary}>Systems development, full stack development of a system for handling pensions.</p>
                     </div>
 
@@ -79,7 +79,7 @@ export default function Cv() {
                         <h3>Plan 8 Production</h3>
                         <p className={styles.title}>Web Developer</p>
                         <p className={styles.period}>2013-2014</p>
-                        <p className={styles.tech}>JavaScript, Node JS, SQL, PHP, AWS</p>
+                        <p className={styles.skills}>JavaScript, Node JS, SQL, PHP, AWS</p>
                         <p className={styles.summary}>Continuation of development of my <Link href="/portfolio/klang" target="_blank"><a>school examination project Klang</a></Link>, which was used in collaboration with clients such as Google, H&amp;M, Mercedes, HBO and many more.</p>
                         <p className={styles.summary}>Full stack development of a cloud based system for handling audio files and adding music and sound to interactive websites.</p>
                         <p className={styles.summary}>Various interactive web apps.</p>
@@ -89,7 +89,7 @@ export default function Cv() {
                 <div className={`${styles.section} ${styles.education}`}>
                     <h2>Education</h2>
                     <div className={styles.item}>
-                        <h3>KTH Royal Institute of Technology</h3>
+                        <h3>KTH Royal Institute of skillsnology</h3>
                         <p className={styles.degree}>Bachelor's Degree, Computer Science</p>
                         <p className={styles.period}>2010-2013</p>
                     </div>
@@ -146,7 +146,7 @@ export default function Cv() {
             </div>
         </div>
 
-        <div class={styles.utilRow + ' no-print'}>
+        <div className={styles.utilRow + ' no-print'}>
           <BackButton></BackButton>
         </div>
     </div>

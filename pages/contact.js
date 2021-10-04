@@ -15,7 +15,7 @@ export default function Contact() {
         </ul>
 
         <p className={styles.address}>
-            <span className="company-name">J.S. Håkansson, AB</span>
+            <span className="company-name">J.S. Håkansson AB</span>
             <span>Ernst Ahlgrens väg 10</span>
             <span>11255 Stockholm, Sweden</span>
         </p>

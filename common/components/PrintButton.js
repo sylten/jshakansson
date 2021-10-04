@@ -25,7 +25,7 @@ export default function PrintButton() {
   }
 
   return (
-    <button class={styles.PrintButton + ' no-print'} onClick={print}>
+    <button className={styles.PrintButton + ' no-print'} onClick={print}>
       <i className="fal fa-print"></i> Print
     </button>
   );
