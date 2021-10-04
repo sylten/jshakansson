@@ -35,29 +35,27 @@ export default function Cv() {
                         <h3>Insclear</h3>
                         <p className={styles.title}>Frontend lead</p>
                         <p className={styles.period}>2019-</p>
-                        <p className={styles.tech}>Angular, SQL, .Net, Azure DevOps, Requirements analysis, Architecture, UX</p>
-                        <p className={styles.summary}>System design and web development. I also helped out with requirements analysis and architecture. For example design and implementation of a micro frontend architecture based on module federation.</p>
+                        <p className={styles.tech}>Angular, SQL, .Net, Requirements analysis and engineering, Systems design and architecture, UX, Azure DevOps</p>
+                        <p className={styles.summary}>Various initiatives to streamline administration processes and interfaces, to minimize errors and make the administration more efficient. I worked on requirements engineering, architecture, design of interfaces and actual implementation.</p>
+                        <p className={styles.summary}>Migration of a monolithic frontend application to a micro frontend based architecture using module federation. I helped with initial research and requirements analysis, architecture, implementation and documentation.</p>
                     </div>
 
                     <div className={styles.item}>
                         <h3>SEB</h3>
                         <p className={styles.title}>Solutions Developer / Designer</p>
                         <p className={styles.period}>2018-2019</p>
-                        <p className={styles.tech}>Angular, SQL, .Net, Azure DevOps, IBM Api Connect</p>
-                        <p className={styles.summary}>Full stack software design and development. Worked in a project to modernise the architecture of the systems handling settlement of securities, while also making SEB compliant in CSDR. The application I worked on provides a Rest API for securities settlement. I also worked on an MQ based solution to provide the same functionality for older systems.</p>
+                        <p className={styles.tech}>Angular, .Net, SQL, Systems design, Azure DevOps, IBM Api Connect</p>
+                        <p className={styles.summary}>Systems design and development. I worked on a project to modernise the architecture of the systems handling settlement of securities, while also making SEB compliant in CSDR. The main deliveries of the project was an API for securities settlement and a web based GUI for administration of securities settlement.</p>
                     </div>
 
                     <div className={styles.item}>
                         <h3>Tattoomigo</h3>
                         <p className={styles.title}>Co-Founder</p>
                         <p className={styles.period}>2017-2018</p>
-                        <p className={styles.tech}>Business analysis, Business development, Angular, SQL, .Net, Azure, Node JS, System architecture, UX</p>
-                        <p className={styles.summary}>As a co-founder I worked on everything from developing the initial idea into a sustainable business model, to branding, to developing the platform. I worked closely with a very entrepreneurial colleague and my role was often to take ideas and bring them down to earth. We completed each other very well and I enjoyed developing the business model and logistics.
-                          <br/><br/>
-                          I also worked on the system architecture, website and UX. I mainly worked on the frontend. The backend is written in C# using .Net Core and SQL Server and is hosted in Azure. The frontend is written in TypeScript and uses Angular along with Angular Universal and is hosted on a lightweight Node JS server.
-                          <br/><br/>
-                          Additionally, I supervised two engineering students doing their examination work at Tattoomigo.
-                        </p>
+                        <p className={styles.tech}>Business analysis and development, Angular, SQL, .Net, Azure, Node JS, System architecture, UX, Design</p>
+                        <p className={styles.summary}>Development of the initial idea into a sustainable business model. I also helped with branding. I worked closely with a very entrepreneurial colleague and my role was often to take ideas and bring them down to earth.</p>
+                        <p className={styles.summary}>Systems development including systems architecture, programming, UX and design.</p>
+                        <p className={styles.summary}>Supervision of two engineering students doing their examination work at Tattoomigo.</p>
                     </div>
 
                     <div className={styles.item}>
@@ -65,7 +63,8 @@ export default function Cv() {
                         <p className={styles.title}>Co-Founder</p>
                         <p className={styles.period}>2016-2017</p>
                         <p className={styles.tech}>React, Node JS, SQL, Stripe, Business analysis, Business development, System architecture, UX</p>
-                        <p className={styles.summary}>I helped kick start Signe, working on the business model and branding while also building a prototype version of the platform using NodeJS, MySQL, React and Stripe as a payment service provider.</p>
+                        <p className={styles.summary}>Development of the business model, logistics and branding.</p>
+                        <p className={styles.summary}>Development of a prototype version of the platform using NodeJS, MySQL, React and Stripe as a payment service provider.</p>
                     </div>
 
                     <div className={styles.item}>
@@ -73,7 +72,7 @@ export default function Cv() {
                         <p className={styles.title}>Software Engineer</p>
                         <p className={styles.period}>2014-2015</p>
                         <p className={styles.tech}>.Net, C#, SQL, JavaScript</p>
-                        <p className={styles.summary}>System development, full stack development of a system for handling pensions. Programming in C# using .NET MVC, SQL Server and front end work in ASP / jQuery.</p>
+                        <p className={styles.summary}>Systems development, full stack development of a system for handling pensions.</p>
                     </div>
 
                     <div className={styles.item}>
@@ -81,7 +80,8 @@ export default function Cv() {
                         <p className={styles.title}>Web Developer</p>
                         <p className={styles.period}>2013-2014</p>
                         <p className={styles.tech}>JavaScript, Node JS, SQL, PHP, AWS</p>
-                        <p className={styles.summary}>Continued to develop my <Link href="/portfolio/klang" target="_blank"><a>school examination project Klang</a></Link>, which was used in collaboration with clients such as Google, H&amp;M, Mercedes, HBO and many more. Also included full stack development of a cloud based system for handling audio files and adding music and sound to interactive websites built in JavaScript, PHP and MySQL. As well as web apps using Node JS.</p>
+                        <p className={styles.summary}>Continuation of development of my <Link href="/portfolio/klang" target="_blank"><a>school examination project Klang</a></Link>, which was used in collaboration with clients such as Google, H&amp;M, Mercedes, HBO and many more.</p>
+                        <p className={styles.summary}>Full stack development of a cloud based system for handling audio files and adding music and sound to interactive websites built in JavaScript, PHP and MySQL. As well as web apps using Node JS.</p>
                     </div>
                 </div>
 

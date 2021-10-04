@@ -85,7 +85,12 @@
                     margin-top: 0.5rem;
                 }
                 .summary {
-                    margin-bottom: 2rem;
+                    &:last-child {
+                        margin-bottom: 2rem;
+                    }
+                    &:before {
+                        content: '- ';
+                    }
                 }
                 .tech {
                     font-size: 0.675rem;
