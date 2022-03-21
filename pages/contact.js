@@ -8,7 +8,7 @@ export default function Contact() {
    <Layout>
      <div className={styles.contact}>
         <h1>Contact me</h1>
-        <p>Send me a message or email if I managed to pique your interest!</p>
+        <p>If I've managed to pique your interest, you're welcome to email or message me!</p>
         <ul className={styles.contactOptions}>
             <li><a href="https://www.linkedin.com/in/jonas-siltamaki-hakansson" target="_blank"><i className="fab fa-linkedin"></i> LinkedIn</a></li>
             <li><a href="mailto:jonas@jshakansson.se" target="_blank"><i className="fal fa-envelope"></i> jonas@jshakansson.se</a></li>

@@ -61,7 +61,7 @@ export default function Item() {
                     </span>
                     : item.companies.map(company => (
                       <span key={company.name} className={styles.company}>
-                        <img src={company.mediaUrl} alt="" />
+                        {/* <img src={company.mediaUrl} alt="" /> */}
                         <span>{company.name}</span>
                       </span>
                     ))

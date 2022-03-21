@@ -29,7 +29,7 @@ export const portfolioItems = [
         description:
         `
         MiBreaker is a small software that helps you remember to take breaks when working. I created it to remind myself when working from home during the Covid-19 pandemic.
-        <br />
+        <br>
         The software was created in Electron, using React. I also made a landing website in NextJS, hosted in Vercel where others may download the application and purchase it for professional use.
         `,
         tech: ['React', 'Electron', 'NextJS', 'Vercel'],

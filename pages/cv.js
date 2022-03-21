@@ -17,13 +17,16 @@ export default function Cv() {
             <div className={styles.main}>
                 <div className={styles.header}>
                     <h1>Jonas Siltamäki Håkansson</h1>
-                    <p className={styles.title}>Engineering and business consultant</p>
+                    <p className={styles.title}>Software engineering consultant</p>
                     <p>
-                      I am an entrepreneurial engineer an who loves business and finance. 
+                      I am an entrepreneurial engineer who loves business and finance. 
                       My curiousness is never-ending and has taken me across multiple industries, 
                       from music and marketing to consulting as a self-employed software engineer. 
-                      Finance and business has always been at the core of my interests, and I compulsively
-                      analyse macro economics, stocks, businesses and financial news and enjoy it thoroughly.
+                    </p>
+                    <p>
+                      Finance and business are deep-rooted interests, and I consume a lot of 
+                      information on macro economics, stocks, businesses and financial news. 
+                      I also enjoy reading, running and cooking.
                     </p>
                     <div className={styles.contactHeader}>
                         <CvContact></CvContact>
@@ -35,7 +38,7 @@ export default function Cv() {
                         <h3>Insclear</h3>
                         <p className={styles.title}>Frontend lead</p>
                         <p className={styles.period}>2019-</p>
-                        <p className={styles.skills}>Requirements analysis and engineering, Systems design and architecture, UX, Angular, SQL, .Net, Azure DevOps</p>
+                        <p className={styles.skills}>Web development and architecture, Requirements analysis, UX, Angular, SQL, .Net, Azure DevOps</p>
                         <p className={styles.summary}>Various initiatives to streamline administration processes and interfaces, to minimize errors and make administration more efficient. I worked on requirements engineering, architecture, design of interfaces and actual implementation.</p>
                         <p className={styles.summary}>Migration of a monolithic frontend application to a micro frontend based architecture using module federation. I helped with initial research and requirements analysis, architecture, implementation and documentation.</p>
                     </div>
@@ -44,15 +47,15 @@ export default function Cv() {
                         <h3>SEB</h3>
                         <p className={styles.title}>Solutions Developer / Designer</p>
                         <p className={styles.period}>2018-2019</p>
-                        <p className={styles.skills}>Systems design, Angular, .Net, SQL, Azure DevOps, IBM Api Connect</p>
-                        <p className={styles.summary}>Systems design and development. I worked on a project to modernise the architecture of the systems handling settlement of securities, while also making SEB compliant in CSDR. The main deliveries of the project was an API for securities settlement and a web based GUI for administration of securities settlement.</p>
+                        <p className={styles.skills}>Angular, .Net, SQL, Azure DevOps, Software architecture, IBM Api Connect</p>
+                        <p className={styles.summary}>Solution design and engineering. I worked on a project to modernise the architecture of the systems handling settlement of securities, while also making SEB compliant in CSDR. The main deliveries of the project was an API for securities settlement and a web based GUI for administration of securities settlement.</p>
                     </div>
 
                     <div className={styles.item}>
                         <h3>Tattoomigo</h3>
                         <p className={styles.title}>Co-Founder</p>
                         <p className={styles.period}>2017-2018</p>
-                        <p className={styles.skills}>Business analysis and development, Systems architecture, UX, Design, Angular, SQL, .Net, Azure, Node JS</p>
+                        <p className={styles.skills}>Web development and architecture, Business analysis and development, UX, Design, Angular, SQL, .Net, Azure, Node JS</p>
                         <p className={styles.summary}>Development of the initial idea into a sustainable business model. I also helped with branding. I worked closely with a very entrepreneurial colleague and my role was often to take ideas and bring them down to earth.</p>
                         <p className={styles.summary}>Systems development including systems architecture, programming, UX and design.</p>
                         <p className={styles.summary}>Supervision of two engineering students doing their examination work at Tattoomigo.</p>
@@ -62,7 +65,7 @@ export default function Cv() {
                         <h3>Signe.io</h3>
                         <p className={styles.title}>Co-Founder</p>
                         <p className={styles.period}>2016-2017</p>
-                        <p className={styles.skills}>Business analysis, Business development, Systems architecture, UX, React, Node JS, SQL, Stripe</p>
+                        <p className={styles.skills}>Web development and architecture, Business analysis and development, UX, React, Node JS, SQL, Stripe</p>
                         <p className={styles.summary}>Development of the business model, logistics and branding.</p>
                         <p className={styles.summary}>Development of a prototype version of the platform using NodeJS, MySQL, React and Stripe as a payment service provider.</p>
                     </div>
