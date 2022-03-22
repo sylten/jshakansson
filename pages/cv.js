@@ -39,8 +39,8 @@ export default function Cv() {
                         <p className={styles.title}>Frontend lead</p>
                         <p className={styles.period}>2019-</p>
                         <p className={styles.skills}>Web development and architecture, Requirements analysis, UX, Angular, SQL, .Net, Azure DevOps</p>
-                        <p className={styles.summary}>Various initiatives to streamline administration processes and interfaces, to minimize errors and make administration more efficient. I worked on requirements engineering, architecture, design of interfaces and actual implementation.</p>
-                        <p className={styles.summary}>Migration of a monolithic frontend application to a micro frontend based architecture using module federation. I helped with initial research and requirements analysis, architecture, implementation and documentation.</p>
+                        <p className={styles.summary}>Various projects to streamline administration processes and interfaces, to minimize errors and make administration more efficient. I worked on requirements engineering, architecture, design of interfaces and web development.</p>
+                        <p className={styles.summary}>Migration of a monolithic frontend application to a micro frontend based architecture using module federation. I helped with initial research and requirements analysis, architecture, web development and documentation.</p>
                     </div>
 
                     <div className={styles.item}>
@@ -57,7 +57,7 @@ export default function Cv() {
                         <p className={styles.period}>2017-2018</p>
                         <p className={styles.skills}>Web development and architecture, Business analysis and development, UX, Design, Angular, SQL, .Net, Azure, Node JS</p>
                         <p className={styles.summary}>Development of the initial idea into a sustainable business model. I also helped with branding. I worked closely with a very entrepreneurial colleague and my role was often to take ideas and bring them down to earth.</p>
-                        <p className={styles.summary}>Systems development including systems architecture, programming, UX and design.</p>
+                        <p className={styles.summary}>Web development including architecture, programming, UX and design.</p>
                         <p className={styles.summary}>Supervision of two engineering students doing their examination work at Tattoomigo.</p>
                     </div>
 
@@ -66,8 +66,8 @@ export default function Cv() {
                         <p className={styles.title}>Co-Founder</p>
                         <p className={styles.period}>2016-2017</p>
                         <p className={styles.skills}>Web development and architecture, Business analysis and development, UX, React, Node JS, SQL, Stripe</p>
-                        <p className={styles.summary}>Development of the business model, logistics and branding.</p>
                         <p className={styles.summary}>Development of a prototype version of the platform using NodeJS, MySQL, React and Stripe as a payment service provider.</p>
+                        <p className={styles.summary}>Development of the business model, logistics and branding.</p>
                     </div>
 
                     <div className={styles.item}>
