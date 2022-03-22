@@ -9,7 +9,7 @@ export default function Landing() {
         <div className={styles.header}>
             <div className={styles.title}>
                 <h1>Jonas Siltamäki Håkansson</h1>
-                <p>Engineering and business consultant</p>
+                <p>Software engineering consultant</p>
             </div>
         </div>
         

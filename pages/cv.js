@@ -20,7 +20,7 @@ export default function Cv() {
                     <p className={styles.title}>Software engineering consultant</p>
                     <p>
                       I am an entrepreneurial engineer who loves business and finance. 
-                      My curiousness is never-ending and has taken me across multiple industries, 
+                      My curiosity is never-ending and has taken me across multiple industries, 
                       from music and marketing to consulting as a self-employed software engineer. 
                     </p>
                     <p>
@@ -68,6 +68,14 @@ export default function Cv() {
                         <p className={styles.skills}>Web development and architecture, Business analysis and development, UX, React, Node JS, SQL, Stripe</p>
                         <p className={styles.summary}>Development of the business model, logistics and branding.</p>
                         <p className={styles.summary}>Development of a prototype version of the platform using NodeJS, MySQL, React and Stripe as a payment service provider.</p>
+                    </div>
+
+                    <div className={styles.item}>
+                        <h3>SVT</h3>
+                        <p className={styles.title}>Technical communicator</p>
+                        <p className={styles.period}>2016-2017</p>
+                        <p className={styles.skills}></p>
+                        <p className={styles.summary}>Technical support for the video streaming service SVT Play and managed social media accounts for SVT and SVT Play. Part-time work while studying business administration and having a go at entrepreneurship.</p>
                     </div>
 
                     <div className={styles.item}>
