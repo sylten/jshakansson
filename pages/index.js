@@ -13,7 +13,12 @@ export default function Landing() {
 
                 <div>
                     <h1>Jonas Siltamäki Håkansson</h1>
-                    <p>Software engineering consultant proficient in frontend and backend technologies such as React, Angular, .Net and Node.</p>
+                    <p>
+                        Software engineering consultant proficient in frontend and backend 
+                        technologies such as React, Angular, .Net and Node.
+                        Experienced working in small and large teams at both startups and large
+                        companies.
+                    </p>
                 </div>
                 
                 <div className={styles.profileRight}><ProfilePicture /></div>

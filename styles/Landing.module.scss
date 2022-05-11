@@ -64,6 +64,10 @@
         margin: 3rem 0rem;
         text-align: center;
 
+        @media screen and (max-width: $max-xs) {
+            margin: 2rem 0rem;
+        }
+
         ul {
             list-style: none;
             padding: 0rem;
