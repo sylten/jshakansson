@@ -1,6 +1,7 @@
 import Layout from '../common/layout/Layout';
 import styles from '../styles/Landing.module.scss'
 import Link from 'next/link';
+import ProfilePicture from '../common/components/ProfilePicture';
 
 export default function Landing() {
   return (
@@ -8,9 +9,16 @@ export default function Landing() {
      <div className={styles.landing}>
         <div className={styles.header}>
             <div className={styles.title}>
-                <h1>Jonas Siltamäki Håkansson</h1>
-                <p>Software engineering consultant</p>
+                <div className={styles.profileAbove}><ProfilePicture  /></div>
+
+                <div>
+                    <h1>Jonas Siltamäki Håkansson</h1>
+                    <p>Software engineering consultant proficient in frontend and backend technologies such as React, Angular, .Net and Node.</p>
+                </div>
+                
+                <div className={styles.profileRight}><ProfilePicture /></div>
             </div>
+            
         </div>
         
         <div className={styles.navigation}>

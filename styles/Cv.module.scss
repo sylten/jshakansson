@@ -3,6 +3,7 @@
 .cv {
     margin: 0rem auto;
     max-width: $page-size;
+    padding: 1rem 1.5rem;
 
     .utilRow {
         .right {
@@ -38,6 +39,7 @@
     
                 h1 {
                     font-size: 2.25rem;
+                    margin-top: 0;
                     @media screen and (max-width: $max-md) {
                         font-size: 1.5rem;
                     }

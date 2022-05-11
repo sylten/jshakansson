@@ -10,5 +10,9 @@
     @media screen and (max-width: $max-sm) {
         margin-top: 2rem;
     }
+
+    @media print {
+      margin-top: 0;
+  }
   }
 }

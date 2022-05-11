@@ -19,14 +19,18 @@ export default function Cv() {
                     <h1>Jonas Siltamäki Håkansson</h1>
                     <p className={styles.title}>Software engineering consultant</p>
                     <p>
-                      I am an entrepreneurial engineer who loves business and finance. 
-                      My curiosity is never-ending and has taken me across multiple industries, 
-                      from music and marketing to consulting as a self-employed software engineer. 
+                        I am an entrepreneurial self-employed software engineer with 
+                        experience of multiple industries, from music and marketing to 
+                        banking and finance. My interest in web development started as 
+                        an 11-year old, when I created a website for a game I played. 
+                        Since then I've gained a degree in computer science from 
+                        KTH Royal Institute of Technology and a bachelor of business administration 
+                        from Stockholm Business School.  
                     </p>
                     <p>
-                      Finance and business are deep-rooted interests, and I consume a lot of 
-                      information on macro economics, stocks, businesses and financial news. 
-                      I also enjoy reading, running and cooking.
+                        In addition to web development, finance and business are deep-rooted interests of mine.
+                        I consume a lot of information on macro economics, stocks and financial news, and I've 
+                        enjoyed co-founding two startups. I also enjoy reading, running and cooking.
                     </p>
                     <div className={styles.contactHeader}>
                         <CvContact></CvContact>
@@ -38,9 +42,18 @@ export default function Cv() {
                         <h3>Insclear</h3>
                         <p className={styles.title}>Frontend lead</p>
                         <p className={styles.period}>2019-</p>
-                        <p className={styles.skills}>Web development and architecture, Requirements analysis, UX, Angular, SQL, .Net, Azure DevOps</p>
+                        <p className={styles.skills}>Angular, .Net, Azure DevOps, SQL</p>
                         <p className={styles.summary}>Various projects to streamline administration processes and interfaces, to minimize errors and make administration more efficient. I worked on requirements engineering, architecture, design of interfaces and web development.</p>
                         <p className={styles.summary}>Migration of a monolithic frontend application to a micro frontend based architecture using module federation. I helped with initial research and requirements analysis, architecture, web development and documentation.</p>
+                    </div>
+
+                    <div className={styles.item}>
+                        <h3>MiBreaker</h3>
+                        <p className={styles.title}>Creator</p>
+                        <p className={styles.period}>2020</p>
+                        <p className={styles.skills}>React, Next.js, Vercel, Electron, Mailjet, Bunny CDN</p>
+                        <p className={styles.summary}>I developed a basic e-commerce website to market and sell the MiBreaker application. Developed in Next.js with React and deployed on Vercel with bunny CDN for serving static files. Also implemented email sending using Mailjet.</p>
+                        <p className={styles.summary}>I created a desktop app using Electron with React, packaged and code signed for Windows and Mac.</p>
                     </div>
 
                     <div className={styles.item}>
@@ -68,14 +81,6 @@ export default function Cv() {
                         <p className={styles.skills}>Web development and architecture, Business analysis and development, UX, React, Node JS, SQL, Stripe</p>
                         <p className={styles.summary}>Development of a prototype version of the platform using NodeJS, MySQL, React and Stripe as a payment service provider.</p>
                         <p className={styles.summary}>Development of the business model, logistics and branding.</p>
-                    </div>
-
-                    <div className={styles.item}>
-                        <h3>SVT</h3>
-                        <p className={styles.title}>Technical communicator</p>
-                        <p className={styles.period}>2016-2017</p>
-                        <p className={styles.skills}></p>
-                        <p className={styles.summary}>Technical support for the video streaming service SVT Play and managed social media accounts for SVT and SVT Play. Part-time work while studying business administration and having a go at entrepreneurship.</p>
                     </div>
 
                     <div className={styles.item}>

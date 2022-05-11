@@ -3,9 +3,12 @@
 .portfolioIndex {
   max-width: $page-size;
   margin: 0 auto;
+  
+  @media screen and (min-width: $min-sm) {
+    padding: 0 1rem;
+  }
 
   .header {
-      // padding-left: 2rem;
       @media screen and (max-width: $max-sm) {
           padding-left: 1rem;
       }
@@ -39,5 +42,12 @@
               flex-basis: 100%;
           }
       }
+  }
+
+  .utilRow {
+      margin-top: 2rem;
+    @media screen and (max-width: $max-sm) {
+        margin-left: 1rem;
+    }
   }
 }

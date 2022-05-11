@@ -5,15 +5,43 @@
     min-height: 75vh;
     
     .header {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
         max-width: $landing-page-size;
         margin: 0 auto;
+        margin-bottom: 2rem;
+        @media screen and (min-width: $min-lg) {
+            margin-bottom: 6rem;
+        }
 
         .title {
+            display: flex;
+            justify-content: space-between;
             h1 {
                 margin-top: 0rem;
+            }
+            p {
+                max-width: 80%;
+            }
+            .profileAbove {
+                display: none;
+                margin-bottom: 1rem;
+            }
+            
+            @media screen and (max-width: $max-xs) {
+                flex-direction: column;
+                text-align: center;
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+                p {
+                    max-width: 100%;
+                }
+                .profileRight {
+                    display: none;
+                }
+                .profileAbove {
+                    display: block;
+                }
             }
         }
 

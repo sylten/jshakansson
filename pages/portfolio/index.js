@@ -25,8 +25,8 @@ export default function Portfolio() {
       <div className={styles.portfolioItems}>
         {
           items.map(item => (
-            <div className={styles.portfolioIndexItem}>
-              <PortfolioItem key={item.uniqueName} item={item}></PortfolioItem>
+            <div key={item.uniqueName} className={styles.portfolioIndexItem}>
+              <PortfolioItem item={item}></PortfolioItem>
             </div>
           ))
         }
