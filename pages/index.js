@@ -16,7 +16,7 @@ export default function Landing() {
                     <p>
                         Software engineering consultant proficient in frontend and backend 
                         technologies such as React, Angular, .Net and Node.
-                        Experienced working in small and large teams at both startups and large
+                        Experienced working in small and large teams at both startups and larger
                         companies.
                     </p>
                 </div>

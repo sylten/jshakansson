@@ -23,9 +23,9 @@ export default function Cv() {
                         experience of multiple industries, from music and marketing to 
                         banking and finance. My interest in web development started as 
                         an 11-year old, when I created a website for a game I played. 
-                        Since then I've gained a degree in computer science from 
-                        KTH Royal Institute of Technology and a bachelor of business administration 
-                        from Stockholm Business School.  
+                        Since then I've obtained degrees in computer science and business 
+                        administration, and have gained extensive knowledge working with 
+                        software development, requirements engineering and software architecture.
                     </p>
                     <p>
                         In addition to web development, finance and business are deep-rooted interests of mine.
