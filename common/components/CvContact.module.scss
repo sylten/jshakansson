@@ -3,6 +3,7 @@
 .cvContact {
     $border-radius: 0.25rem;
 
+    position: relative;
     background: white;
     border-radius: $border-radius;
     font-size: 0.875rem;
@@ -15,9 +16,9 @@
 
     .pdf {
         @media screen and (min-width: $min-lg) {
-            float: right;
-            position: relative;
-            top: -1.55rem;
+            position: absolute;
+            top: 2rem;
+            right: 1rem;
         }
     }
 
