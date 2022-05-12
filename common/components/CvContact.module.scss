@@ -14,11 +14,10 @@
     margin-left: 2rem;
 
     .pdf {
-        float: right;
-        position: relative;
-        top: -1.55rem;
-        @media screen and (max-width: $max-md) {
-            display: none;
+        @media screen and (min-width: $min-lg) {
+            float: right;
+            position: relative;
+            top: -1.55rem;
         }
     }
 

@@ -9,10 +9,6 @@ export default function CvContact() {
       <div className={styles.contact}>
           <h4>Contact</h4>
 
-          <a className={styles.pdf + ' no-print'} href="/jonas-siltamaki-hakansson-cv.pdf" target="blank">
-              <i className="fal fa-file-pdf"></i> Pdf
-          </a>
-
           <p className={styles.website}>
               <a href="https://jshakansson.se/" target="blank">
                   <i className="fal fa-globe"></i> jshakansson.se
@@ -40,6 +36,10 @@ export default function CvContact() {
           <p className={styles.phone}>
               <i className="fal fa-phone"></i> +46703078303
           </p>
+
+          <a className={styles.pdf + ' no-print'} href="/jonas-siltamaki-hakansson-cv.pdf" target="blank">
+              <i className="fal fa-file-pdf"></i> Pdf
+          </a>
 
           <p className={styles.address}>
               <span>J.S. Håkansson AB</span>

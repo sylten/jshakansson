@@ -42,7 +42,7 @@ export default function Cv() {
                         <h3>Insclear</h3>
                         <p className={styles.title}>Frontend lead</p>
                         <p className={styles.period}>2019-</p>
-                        <p className={styles.skills}>Angular, .Net, Azure DevOps, SQL</p>
+                        <p className={styles.skills}>Angular, .Net, Service Fabric, Azure DevOps, SQL</p>
                         <p className={styles.summary}>Various projects to streamline administration processes and interfaces, to minimize errors and make administration more efficient. I worked on requirements engineering, architecture, design of interfaces and web development.</p>
                         <p className={styles.summary}>Migration of a monolithic frontend application to a micro frontend based architecture using module federation. I helped with initial research and requirements analysis, architecture, web development and documentation.</p>
                     </div>
@@ -51,8 +51,8 @@ export default function Cv() {
                         <h3>MiBreaker</h3>
                         <p className={styles.title}>Creator</p>
                         <p className={styles.period}>2020</p>
-                        <p className={styles.skills}>React, Next.js, Vercel, Electron, Mailjet, Bunny CDN</p>
-                        <p className={styles.summary}>I developed a basic e-commerce website to market and sell the MiBreaker application. Developed in Next.js with React and deployed on Vercel with bunny CDN for serving static files. Also implemented email sending using Mailjet.</p>
+                        <p className={styles.skills}>React, Node, Next.js, Vercel, Electron, Stripe, Mailjet, Bunny CDN</p>
+                        <p className={styles.summary}>I developed a basic e-commerce website to market and sell the MiBreaker application. Developed in Next.js with React and deployed on Vercel with bunny CDN for serving static files. I also implemented card payments with Stripe and email sending using Mailjet.</p>
                         <p className={styles.summary}>I created a desktop app using Electron with React, packaged and code signed for Windows and Mac.</p>
                     </div>
 
@@ -68,18 +68,18 @@ export default function Cv() {
                         <h3>Tattoomigo</h3>
                         <p className={styles.title}>Co-Founder</p>
                         <p className={styles.period}>2017-2018</p>
-                        <p className={styles.skills}>Web development and architecture, Business analysis and development, UX, Design, Angular, SQL, .Net, Azure, Node JS</p>
-                        <p className={styles.summary}>Development of the initial idea into a sustainable business model. I also helped with branding. I worked closely with a very entrepreneurial colleague and my role was often to take ideas and bring them down to earth.</p>
+                        <p className={styles.skills}>Angular, Node, .Net, SQL, Azure</p>
                         <p className={styles.summary}>Web development including architecture, programming, UX and design.</p>
                         <p className={styles.summary}>Supervision of two engineering students doing their examination work at Tattoomigo.</p>
+                        <p className={styles.summary}>I also helped with development of the initial idea into a sustainable business model. I also helped with branding. I worked closely with a very entrepreneurial colleague and my role was often to take ideas and bring them down to earth.</p>
                     </div>
 
                     <div className={styles.item}>
                         <h3>Signe.io</h3>
                         <p className={styles.title}>Co-Founder</p>
                         <p className={styles.period}>2016-2017</p>
-                        <p className={styles.skills}>Web development and architecture, Business analysis and development, UX, React, Node JS, SQL, Stripe</p>
-                        <p className={styles.summary}>Development of a prototype version of the platform using NodeJS, MySQL, React and Stripe as a payment service provider.</p>
+                        <p className={styles.skills}>React, Node, JavaScript, SQL, Stripe</p>
+                        <p className={styles.summary}>Development of a prototype version of the platform using Node, MySQL, React and Stripe as a payment service provider.</p>
                         <p className={styles.summary}>Development of the business model, logistics and branding.</p>
                     </div>
 
@@ -95,7 +95,7 @@ export default function Cv() {
                         <h3>Plan 8 Production</h3>
                         <p className={styles.title}>Web Developer</p>
                         <p className={styles.period}>2013-2014</p>
-                        <p className={styles.skills}>JavaScript, Node JS, SQL, PHP, AWS</p>
+                        <p className={styles.skills}>JavaScript, TypeScript, Node, SQL, PHP, AWS</p>
                         <p className={styles.summary}>Continuation of development of my <Link href="/portfolio/klang" target="_blank"><a>school examination project Klang</a></Link>, which was used in collaboration with clients such as Google, H&amp;M, Mercedes, HBO and many more.</p>
                         <p className={styles.summary}>Full stack development of a cloud based system for handling audio files and adding music and sound to interactive websites.</p>
                         <p className={styles.summary}>Various interactive web apps.</p>
@@ -118,7 +118,7 @@ export default function Cv() {
 
                     <div className={styles.item}>
                         <h3>Stockholm University</h3>
-                        <p className={styles.degree}>Bachelor’s Degree, Business Administration and Management</p>
+                        <p className={styles.degree}>Bachelor's Degree, Business Administration and Management</p>
                         <p className={styles.period}>2015-2018</p>
                     </div>
                 </div>
