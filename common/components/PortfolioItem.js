@@ -6,13 +6,11 @@ export default function PortfolioItem(props) {
     <div className={`${styles.portfolioItem} ${props.smallView ? styles.smallView : ''}`}>
       <div className={styles.imageWrapper}>
         <Link href={'/portfolio/' + props.item.uniqueName}>
-          <a>
-            <img src={props.item.smallMediaUrl} alt="" />
-          </a>
+          <img src={props.item.smallMediaUrl} alt="" />
         </Link>
       </div>
       <div className={styles.body}>
-        <h3 className={styles.title}><Link href={'/portfolio/' + props.item.uniqueName}><a>{props.item.name}</a></Link></h3>
+        <h3 className={styles.title}><Link href={'/portfolio/' + props.item.uniqueName}>{props.item.name}</Link></h3>
         <div className={styles.companies}>
           {
             props.item.companies.length === 0 ?

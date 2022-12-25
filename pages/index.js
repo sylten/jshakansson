@@ -28,9 +28,9 @@ export default function Landing() {
         
         <div className={styles.navigation}>
             <ul>
-                <li><Link href="/portfolio"><a>Portfolio</a></Link></li>
-                <li><Link href="/cv"><a>CV</a></Link></li>
-                <li><Link href="/contact"><a>Contact</a></Link></li>
+                <li><Link href="/portfolio">Portfolio</Link></li>
+                <li><Link href="/cv">CV</Link></li>
+                <li><Link href="/contact">Contact</Link></li>
             </ul>
         </div>
 

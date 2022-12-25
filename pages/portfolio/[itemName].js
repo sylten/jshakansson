@@ -127,7 +127,7 @@ export default function Item() {
 
             <div className={styles.back}>
               <Link href="/portfolio">
-                <a><i className="fal fa-chevron-left"></i> Back to portfolio</a>
+                <i className="fal fa-chevron-left"></i> Back to portfolio
               </Link>
             </div>
         </div>

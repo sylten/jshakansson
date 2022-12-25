@@ -25,7 +25,7 @@ export default function Cv() {
                         an 11-year old, when I created a website for a game I played. 
                         Since then I've obtained degrees in computer science and business 
                         administration, and have gained extensive knowledge working with 
-                        software development, requirements engineering and software architecture.
+                        software development and software architecture.
                     </p>
                     <p>
                         In addition to web development, finance and business are deep-rooted interests of mine.
@@ -39,21 +39,21 @@ export default function Cv() {
                 <div className={`${styles.section} ${styles.experience}`}>
                     <h2>Experience</h2>
                     <div className={styles.item}>
-                        <h3>Insclear</h3>
-                        <p className={styles.title}>Frontend lead</p>
-                        <p className={styles.period}>2019-</p>
-                        <p className={styles.skills}>Angular, .Net, Service Fabric, Azure DevOps, SQL</p>
-                        <p className={styles.summary}>Various projects to streamline administration processes and interfaces, to minimize errors and make administration more efficient. I worked on requirements engineering, architecture, design of interfaces and web development.</p>
-                        <p className={styles.summary}>Migration of a monolithic frontend application to a micro frontend based architecture using module federation. I helped with initial research and requirements analysis, architecture, web development and documentation.</p>
+                        <h3>Elgiganten</h3>
+                        <p className={styles.title}>Full-stack Developer</p>
+                        <p className={styles.period}>2022-</p>
+                        <p className={styles.skills}>React, Next.js, Node, TypeScript, .Net Core, C#, Cosmos DB, Kafka</p>
+                        <p className={styles.summary}>Mainly worked on an app for customers to track their orders and packages, after making a purchase in the e-commerce store. The app is available in four countries.</p>
+                        <p className={styles.summary}>Included some coaching of junior developers.</p>
                     </div>
 
                     <div className={styles.item}>
-                        <h3>MiBreaker</h3>
-                        <p className={styles.title}>Creator</p>
-                        <p className={styles.period}>2020</p>
-                        <p className={styles.skills}>React, Node, Next.js, Vercel, Electron, Stripe, Mailjet, Bunny CDN</p>
-                        <p className={styles.summary}>I developed a basic e-commerce website to market and sell the MiBreaker application. Developed in Next.js with React and deployed on Vercel with bunny CDN for serving static files. I also implemented card payments with Stripe and email sending using Mailjet.</p>
-                        <p className={styles.summary}>I created a desktop app using Electron with React, packaged and code signed for Windows and Mac.</p>
+                        <h3>Insclear</h3>
+                        <p className={styles.title}>Frontend lead</p>
+                        <p className={styles.period}>2019-2022</p>
+                        <p className={styles.skills}>Angular, .Net, Service Fabric, Azure DevOps, SQL</p>
+                        <p className={styles.summary}>Various projects to streamline administration processes and interfaces, to minimize errors and make administration more efficient. I worked on requirements engineering, architecture, design of interfaces and web development.</p>
+                        <p className={styles.summary}>Migration of a monolithic frontend application to a micro frontend based architecture using module federation. I helped with initial research and requirements analysis, architecture, web development and documentation.</p>
                     </div>
 
                     <div className={styles.item}>
@@ -96,7 +96,7 @@ export default function Cv() {
                         <p className={styles.title}>Web Developer</p>
                         <p className={styles.period}>2013-2014</p>
                         <p className={styles.skills}>JavaScript, TypeScript, Node, SQL, PHP, AWS</p>
-                        <p className={styles.summary}>Continuation of development of my <Link href="/portfolio/klang" target="_blank"><a>school examination project Klang</a></Link>, which was used in collaboration with clients such as Google, H&amp;M, Mercedes, HBO and many more.</p>
+                        <p className={styles.summary}>Continuation of development of my <Link href="/portfolio/klang" target="_blank">school examination project Klang</Link>, which was used in collaboration with clients such as Google, H&amp;M, Mercedes, HBO and many more.</p>
                         <p className={styles.summary}>Full stack development of a cloud based system for handling audio files and adding music and sound to interactive websites.</p>
                         <p className={styles.summary}>Various interactive web apps.</p>
                     </div>
@@ -120,6 +120,26 @@ export default function Cv() {
                         <h3>Stockholm University</h3>
                         <p className={styles.degree}>Bachelor's Degree, Business Administration and Management</p>
                         <p className={styles.period}>2015-2018</p>
+                    </div>
+                </div>
+
+                <div className={`${styles.section} ${styles.experience}`}>
+                    <h2>Other projects</h2>
+                    <div className={styles.item}>
+                        <h3>MiBreaker</h3>
+                        <p className={styles.title}><Link href="https://mibreaker.com/sv">mibreaker.com</Link></p>
+                        <p className={styles.period}>2020</p>
+                        <p className={styles.skills}>React, Node, Next.js, Vercel, Electron, Stripe, Mailjet, Bunny CDN</p>
+                        <p className={styles.summary}>I developed a basic e-commerce website to market and sell the MiBreaker application. Developed in Next.js with React and deployed on Vercel with bunny CDN for serving static files. I also implemented card payments with Stripe and email sending using Mailjet.</p>
+                        <p className={styles.summary}>I created a desktop app using Electron with React, packaged and code signed for Windows and Mac.</p>
+                    </div>
+                    <div className={styles.item}>
+                        <h3>Personal website</h3>
+                        <p className={styles.title}><Link href="https://jshakansson.se">jshakansson.se</Link></p>
+                        <p className={styles.period}>2019</p>
+                        <p className={styles.skills}>React, Next.js, Vercel</p>
+                        <p className={styles.summary}>When I started my one man consulting firm, I created a pretty basic website to showcase what I've done.</p>
+                        <p className={styles.summary}>It's built on Next.js and is hosted on Vercel.</p>
                     </div>
                 </div>
 
