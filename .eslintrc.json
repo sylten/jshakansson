@@ -1,7 +1,6 @@
 {
   "extends": ["next/core-web-vitals"],
   "rules": {
-    "@next/next/no-img-element": "off",
     "arrow-parens": ["error", "as-needed"],
     "arrow-spacing": ["error"],
     "block-spacing": ["error", "always"],

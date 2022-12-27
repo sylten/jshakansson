@@ -9,15 +9,28 @@ export const portfolioItems = [
         intro: 'A Chrome extension that adds a crypto market overview to your new tab page.',
         description:
         `Shows current prices for the top 10 cryptocurrencies on the Chrome new tab page. Also provides some additional stats like market cap, volume and total- and circulating supply for each token.`,
-        tech: ['React', 'NextJS', 'Vercel'],
+        tech: ['React', 'NextJS'],
         year: 2021,
-        largeMediaUrl: '/crypto-new-tab/crypto-new-tab-large.png',
-        largeMediaType: MediaType.Image,
-        smallMediaUrl: '/crypto-new-tab/crypto-new-tab-large.png',
-        itemLogo: '/crypto-new-tab/crypto-new-tab-logo.png',
+        largeMedia: {
+            type: MediaType.Image,
+            url: '/crypto-new-tab/crypto-new-tab-large.png',
+            width: 1280, 
+            height: 800
+        },
+        smallMedia: {
+            type: MediaType.Image,
+            url: '/crypto-new-tab/crypto-new-tab-large.png',
+            width: 1280, 
+            height: 800
+        },
+        itemLogo: {
+            url: '/crypto-new-tab/crypto-new-tab-logo.png',
+            width: 512, 
+            height: 512
+        },
         showNameNextToLogo: true,
         companies: [
-          { name: 'Personal', mediaUrl: '/jshakansson-650-min.png' }
+          { name: 'Personal', mediaUrl: '/jshakansson-650-min.png', mediaWidth: 650, mediaHeight: 650 }
         ]
     },
     { 
@@ -34,13 +47,25 @@ export const portfolioItems = [
         `,
         tech: ['React', 'Electron', 'NextJS', 'Vercel'],
         year: 2020,
-        largeMediaUrl: '/mibreaker/mibreaker-large.jpg',
-        largeMediaType: MediaType.Image,
-        smallMediaUrl: '/mibreaker/mibreaker-small.jpg',
-        itemLogo: '/mibreaker/mibreaker-full-logo.png',
+        largeMedia: {
+            type: MediaType.Image,
+            url: '/mibreaker/mibreaker-large.jpg',
+            width: 1668, 
+            height: 1080
+        },
+        smallMedia: {
+            url: '/mibreaker/mibreaker-small.jpg',
+            width: 600, 
+            height: 388
+        },
+        itemLogo: {
+            url: '/mibreaker/mibreaker-full-logo.png',
+            width: 300, 
+            height: 75
+        },
         showNameNextToLogo: false,
         companies: [
-          { name: 'Personal', mediaUrl: '/jshakansson-650-min.png' }
+          { name: 'Personal', mediaUrl: '/jshakansson-650-min.png', mediaWidth: 650, mediaHeight: 650 }
         ]
     },
     { 
@@ -57,13 +82,25 @@ export const portfolioItems = [
         `,
         tech: ['React', 'JavaScript', 'Node JS', 'MySQL'],
         year: 2016,
-        largeMediaUrl: '/signe/signe-large.jpg',
-        largeMediaType: MediaType.Image,
-        smallMediaUrl: '/signe/signe-small.jpg',
-        itemLogo: '/signe/signe-logo-text.png',
+        largeMedia: {
+            type: MediaType.Image,
+            url: '/signe/signe-large.jpg',
+            width: 1600,
+            height: 1067
+        },
+        smallMedia: {
+            url: '/signe/signe-small.jpg',
+            width: 600, 
+            height: 400
+        },
+        itemLogo: {
+            url: '/signe/signe-logo-text.png',
+            width: 570, 
+            height: 200
+        },
         showNameNextToLogo: false,
         companies: [
-            { name: 'Signe', mediaUrl: '/signe/signe-logo.png' }
+            { name: 'Signe', mediaUrl: '/signe/signe-logo.png', mediaWidth: 50, mediaHeight: 50 }
         ]
     },
     { 
@@ -102,15 +139,27 @@ export const portfolioItems = [
         <br>
         Inkamisu uses the same tech as Tattoomigo and the sites share the same backend. That way artists can use the same profile for Inkamisu and Tattoomigo. Just like Tattoomigo, Inkamisu was developed by me and my friend Joakim. To handle payments from customers we implemented Swish payments for Inkamisu.
         `,
-        tech: ['Business', 'Branding', 'Architecture', 'Angular', 'TypeScript', '.NET', 'C#', 'SQL', 'Azure', 'Node JS'],
+        tech: ['Business', 'Branding', 'Architecture', 'Angular', 'TypeScript', '.NET', 'C#', 'SQL', 'Azure', 'Node'],
         year: 2018,
-        largeMediaUrl: '1RTCYdT_IZ9XzG2-9vQkVftrSBlyRx55b',
-        largeMediaType: MediaType.GoogleDrive,
-        smallMediaUrl: '/inkamisu/inkamisu-small.jpg',
-        itemLogo: '/inkamisu/inkamisu-logo.png',
+        largeMedia: {
+            type: MediaType.GoogleDrive,
+            url: '1RTCYdT_IZ9XzG2-9vQkVftrSBlyRx55b',
+            width: 1920,
+            height: 1080
+        },
+        smallMedia: {
+            url: '/inkamisu/inkamisu-small.jpg',
+            width: 600, 
+            height: 400
+        },
+        itemLogo: {
+            url: '/inkamisu/inkamisu-logo.png',
+            width: 300, 
+            height: 300
+        },
         showNameNextToLogo: true,
         companies: [
-            { name: 'Tattoomigo', mediaUrl: '/tattoomigo/tattoomigo-logo.png' }
+            { name: 'Tattoomigo', mediaUrl: '/tattoomigo/tattoomigo-logo.png', mediaWidth: 300, mediaHeight: 300 }
         ]
     },
     { 
@@ -126,13 +175,25 @@ export const portfolioItems = [
         `,
         tech: ['Business', 'Branding', 'Architecture', 'Angular', 'TypeScript', '.NET', 'C#', 'SQL', 'Azure', 'Node JS'],
         year: 2017,
-        largeMediaUrl: 'v78dIOQ9K9A',
-        largeMediaType: MediaType.YouTube,
-        smallMediaUrl: '/tattoomigo/tattoomigo-small.jpg',
-        itemLogo: '/tattoomigo/tattoomigo-text.png',
+        largeMedia: {
+            type: MediaType.YouTube,
+            url: 'v78dIOQ9K9A',
+            width: 1920,
+            height: 1080
+        },
+        smallMedia: {
+            url: '/tattoomigo/tattoomigo-small.jpg',
+            width: 600, 
+            height: 216
+        },
+        itemLogo: {
+            url: '/tattoomigo/tattoomigo-text.png',
+            width: 1000, 
+            height: 225
+        },
         showNameNextToLogo: false,
         companies: [
-            { name: 'Tattoomigo', mediaUrl: '/tattoomigo/tattoomigo-logo.png' }
+            { name: 'Tattoomigo', mediaUrl: '/tattoomigo/tattoomigo-logo.png', mediaWidth: 300, mediaHeight: 300 }
         ]
     },
     { 
@@ -312,13 +373,21 @@ export const portfolioItems = [
         `,
         tech: ['TypeScript', 'Web Audio API', 'HTML5 Audio'],
         year: 2013,
-        largeMediaUrl: '/klang/klang-large.jpg',
-        largeMediaType: MediaType.Image,
-        smallMediaUrl: '/klang/klang-small.jpg',
+        largeMedia: {
+            type: MediaType.Image,
+            url: '/klang/klang-large.jpg',
+            width: 1500,
+            height: 900
+        },
+        smallMedia: {
+            url: '/klang/klang-small.jpg',
+            width: 600, 
+            height: 400
+        },
         itemLogo: null,
         showNameNextToLogo: true,
         companies: [
-            { name: 'Plan8', mediaUrl: '/logos/plan8-small.png' }
+            { name: 'Plan8', mediaUrl: '/logos/plan8-small.png', mediaWidth: 250, mediaHeight: 250 }
         ]
     },
     { 
@@ -374,13 +443,22 @@ export const portfolioItems = [
         `,
         tech: ['Json'],
         year: 2018,
-        largeMediaUrl: '/theme/strawberry.jpg',
-        largeMediaType: MediaType.Image,
-        smallMediaUrl: '/theme/strawberry.jpg',
+        largeMedia: {
+            type: MediaType.Image,
+            url: '/theme/strawberry.jpg',
+            width: 650, 
+            height: 275
+        },
+        smallMedia: {
+            type: MediaType.Image,
+            url: '/theme/strawberry.jpg',
+            width: 650, 
+            height: 275
+        },
         itemLogo: null,
         showNameNextToLogo: true,
         companies: [
-            { name: 'Personal', mediaUrl: '/jshakansson-650-min.png' }
+            { name: 'Personal', mediaUrl: '/jshakansson-650-min.png', mediaWidth: 650, mediaHeight: 650 }
         ]
     },
     { 
@@ -395,13 +473,22 @@ export const portfolioItems = [
       `,
       tech: ['C++', 'DirectX'],
       year: 2010,
-      largeMediaUrl: 'fYWUUwYM5tk',
-      largeMediaType: MediaType.YouTube,
-      smallMediaUrl: '/tetris3d/tetris3d-min.jpg',
+      largeMedia: {
+        type: MediaType.YouTube,
+        url: 'fYWUUwYM5tk',
+        width: 1980, 
+        height: 1080
+    },
+    smallMedia: {
+        type: MediaType.Image,
+        url: '/tetris3d/tetris3d-min.jpg',
+        width: 1280, 
+        height: 898
+    },
       itemLogo: null,
       showNameNextToLogo: true,
       companies: [
-          { name: 'Personal', mediaUrl: '/jshakansson-650-min.png' }
+          { name: 'Personal', mediaUrl: '/jshakansson-650-min.png', mediaWidth: 650, mediaHeight: 650 }
       ]
   }
 ];

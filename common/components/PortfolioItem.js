@@ -1,12 +1,13 @@
 import styles from './PortfolioItem.module.scss';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function PortfolioItem(props) {
   return (
     <div className={`${styles.portfolioItem} ${props.smallView ? styles.smallView : ''}`}>
       <div className={styles.imageWrapper}>
         <Link href={'/portfolio/' + props.item.uniqueName}>
-          <img src={props.item.smallMediaUrl} alt="" />
+          <Image src={props.item.smallMedia?.url} alt={`${props.item.name} preview image`} width={props.item.smallMedia.width} height={props.item.smallMedia.height} />
         </Link>
       </div>
       <div className={styles.body}>
@@ -20,7 +21,7 @@ export default function PortfolioItem(props) {
             </span>
             : props.item.companies.map(company => (
               <span key={company.name} className={styles.company}>
-                <img src={company.mediaUrl} alt="" />
+                <Image src={company.mediaUrl} alt="" width={company.mediaWidth} height={company.mediaHeight} />
                 <span>{company.name}</span>
               </span>
             ))

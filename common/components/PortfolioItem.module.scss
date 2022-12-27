@@ -22,7 +22,7 @@
   }
 
   .imageWrapper {
-      width: 100%;
+      width: auto;
       height: 200px;
       img {
           @extend .fit;
@@ -49,6 +49,7 @@
               text-transform: uppercase;
               img {
                   height: 0.875rem;
+                  width: auto;
                   position: relative;
                   top: 0.1rem;
                   margin-right: .25rem;

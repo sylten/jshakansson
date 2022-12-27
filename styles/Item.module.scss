@@ -17,6 +17,7 @@
           }
           img {
               height: 2rem;
+              width: auto;
               position: relative;
               top: 0.2rem;
               padding-right: .5rem;
@@ -163,7 +164,7 @@
       .banner {
           $border-radius: 0.15rem;
   
-          width: 100%;
+          width: auto;
           height: 400px;
           border-radius: $border-radius;
           

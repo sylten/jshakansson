@@ -19,18 +19,18 @@ export default function Cv() {
               <h1>Jonas Siltamäki Håkansson</h1>
               <p className={styles.title}>Software engineering consultant</p>
               <p>
-                        I am an entrepreneurial self-employed software engineer with
-                        experience of multiple industries, from music and marketing to
-                        banking and finance. My interest in web development started as
-                        an 11-year old, when I created a website for a game I played.
-                        Since then I&lsquo;ve obtained degrees in computer science and business
-                        administration, and have gained extensive knowledge working with
-                        software development and software architecture.
+                I am an entrepreneurial self-employed software engineer with
+                experience of multiple industries, from music and marketing to
+                banking and finance. My interest in web development started as
+                an 11-year old, when I created a website for a game I played.
+                Since then I&lsquo;ve obtained degrees in computer science and business
+                administration, and have gained extensive knowledge working with
+                software development and software architecture.
               </p>
               <p>
-                        In addition to web development, finance and business are deep-rooted interests of mine.
-                        I consume a lot of information on macro economics, stocks and financial news, and I&lsquo;ve
-                        enjoyed co-founding two startups. I also enjoy reading, running and cooking.
+                In addition to web development, finance and business are deep-rooted interests of mine.
+                I consume a lot of information on macro economics, stocks and financial news, and I&lsquo;ve
+                enjoyed co-founding two startups. I also enjoy reading, running and cooking.
               </p>
               <div className={styles.contactHeader}>
                 <CvContact></CvContact>
