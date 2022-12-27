@@ -54,17 +54,11 @@ export default function Item() {
           <div className={styles.subheader}>
             <div className={styles.companies}>
               {
-                item.companies.length === 0 ?
-                  <span className={styles.company}>
-                    <img src="/assets/favicon.png" alt="" />
-                    <span>Personal project</span>
+                item.companies.map(company => (
+                  <span key={company.name} className={styles.company}>
+                    <span>{company.name}</span>
                   </span>
-                  : item.companies.map(company => (
-                    <span key={company.name} className={styles.company}>
-                      {/* <img src={company.mediaUrl} alt="" /> */}
-                      <span>{company.name}</span>
-                    </span>
-                  ))
+                ))
               }
             </div>
 

@@ -36,10 +36,12 @@
 
     .profilePicture {
         img {
+            height: auto;
             max-width: 300px;
             border-top-left-radius: $border-radius;
             border-top-right-radius: $border-radius;
             @media print {
+                width: auto;
                 max-height: 200px;
                 border-radius: $border-radius;
             }

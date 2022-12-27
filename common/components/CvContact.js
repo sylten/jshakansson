@@ -1,10 +1,12 @@
 import styles from './CvContact.module.scss';
+import jonasMin from "../../public/jonas-min.jpg";
+import Image from 'next/image';
 
 export default function CvContact() {
   return (
     <div className={styles.cvContact}>
       <div className={styles.profilePicture}>
-          <img src="/jonas-min.jpg" alt="Jonas Siltamäki Håkansson" />
+          <Image src={jonasMin} alt="Profile picture of Jonas Siltamäki Håkansson" width={636} height={636} priority />
       </div>
       <div className={styles.contact}>
           <h4>Contact</h4>

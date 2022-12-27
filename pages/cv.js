@@ -40,16 +40,16 @@ export default function Cv() {
               <h2>Experience</h2>
               <div className={styles.item}>
                 <h3>Elgiganten</h3>
-                <p className={styles.title}>Full-stack Developer</p>
+                <p className={styles.title}>Full Stack Developer</p>
                 <p className={styles.period}>2022-</p>
-                <p className={styles.skills}>React, Next.js, Node, TypeScript, .Net Core, C#, Cosmos DB, Kafka</p>
+                <p className={styles.skills}>React, Next.js, Node, TypeScript, .Net Core, C#, Cosmos DB, Kafka, Tailwind CSS</p>
                 <p className={styles.summary}>Mainly worked on an app for customers to track their orders and packages, after making a purchase in the e-commerce store. The app is available in four countries.</p>
                 <p className={styles.summary}>Included some coaching of junior developers.</p>
               </div>
 
               <div className={styles.item}>
                 <h3>Insclear</h3>
-                <p className={styles.title}>Frontend lead</p>
+                <p className={styles.title}>Full Stack Developer</p>
                 <p className={styles.period}>2019-2022</p>
                 <p className={styles.skills}>Angular, .Net, Service Fabric, Azure DevOps, SQL</p>
                 <p className={styles.summary}>Various projects to streamline administration processes and interfaces, to minimize errors and make administration more efficient. I worked on requirements engineering, architecture, design of interfaces and web development.</p>
@@ -66,7 +66,7 @@ export default function Cv() {
 
               <div className={styles.item}>
                 <h3>Tattoomigo</h3>
-                <p className={styles.title}>Co-Founder</p>
+                <p className={styles.title}>Co-Founder &amp; Developer</p>
                 <p className={styles.period}>2017-2018</p>
                 <p className={styles.skills}>Angular, Node, .Net, SQL, Azure</p>
                 <p className={styles.summary}>Web development including architecture, programming, UX and design.</p>
@@ -76,7 +76,7 @@ export default function Cv() {
 
               <div className={styles.item}>
                 <h3>Signe.io</h3>
-                <p className={styles.title}>Co-Founder</p>
+                <p className={styles.title}>Co-Founder &amp; Developer</p>
                 <p className={styles.period}>2016-2017</p>
                 <p className={styles.skills}>React, Node, JavaScript, SQL, Stripe</p>
                 <p className={styles.summary}>Development of a prototype version of the platform using Node, MySQL, React and Stripe as a payment service provider.</p>
@@ -85,7 +85,7 @@ export default function Cv() {
 
               <div className={styles.item}>
                 <h3>Skandikon</h3>
-                <p className={styles.title}>Software Engineer</p>
+                <p className={styles.title}>Full Stack Developer</p>
                 <p className={styles.period}>2014-2015</p>
                 <p className={styles.skills}>.Net, C#, SQL, JavaScript</p>
                 <p className={styles.summary}>Systems development, full stack development of a system for handling pensions.</p>

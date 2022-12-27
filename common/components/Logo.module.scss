@@ -6,6 +6,7 @@
   
   img {
       width: 100px;
+      height: auto;
       @media screen and (max-width: $max-sm) {
           width: 75px;
       }
