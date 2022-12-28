@@ -16,17 +16,15 @@ export default function Item() {
   const [descriptionParagraphs, setDescriptionParagraphs] = useState([]);
 
   useEffect(() => {
-    (async() => {
-      if (!itemName) {
-        return;
-      }
+    if (!itemName) {
+      return;
+    }
 
-      const item = portfolioItems.find(item => item.uniqueName === itemName);
-      const descriptionParagraphs = item.description.split("<br>");
+    const item = portfolioItems.find(item => item.uniqueName === itemName);
+    const descriptionParagraphs = item.description.split("<br>");
 
-      setItem(item);
-      setDescriptionParagraphs(descriptionParagraphs);
-    })();
+    setItem(item);
+    setDescriptionParagraphs(descriptionParagraphs);
   }, [router, itemName]);
 
   const mouseEnterVisitButton = event => {

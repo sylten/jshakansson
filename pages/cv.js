@@ -25,11 +25,12 @@ export default function Cv() {
                 an 11-year old, when I created a website for a game I played.
                 Since then I&lsquo;ve obtained degrees in computer science and business
                 administration, and have gained extensive knowledge working with
-                software development and software architecture.
+                software development and software architecture. I also still like to
+                spend time on hobby programming projects. I&lsquo;ve had a lot of fun with Raspberry Pis.
               </p>
               <p>
-                In addition to web development, finance and business are deep-rooted interests of mine.
-                I consume a lot of information on macro economics, stocks and financial news, and I&lsquo;ve
+                In addition to web development, finance and business are deep-rooted interests.
+                I consume a lot of information on economics and financial news, and I&lsquo;ve
                 enjoyed co-founding two startups. I also enjoy reading, running and cooking.
               </p>
               <div className={styles.contactHeader}>
@@ -42,7 +43,7 @@ export default function Cv() {
                 <h3>Elgiganten</h3>
                 <p className={styles.title}>Full Stack Developer</p>
                 <p className={styles.period}>2022-</p>
-                <p className={styles.skills}>React, Next.js, Node, TypeScript, .Net Core, C#, Cosmos DB, Kafka, Tailwind CSS</p>
+                <p className={styles.skills}>React, Next.js, Node, TypeScript, .Net Core, C#, Cosmos DB, Kafka, Tailwind CSS, CI/CD, DevOps</p>
                 <p className={styles.summary}>Mainly worked on an app for customers to track their orders and packages, after making a purchase in the e-commerce store. The app is available in four countries.</p>
                 <p className={styles.summary}>Included some coaching of junior developers.</p>
               </div>
@@ -51,7 +52,7 @@ export default function Cv() {
                 <h3>Insclear</h3>
                 <p className={styles.title}>Full Stack Developer</p>
                 <p className={styles.period}>2019-2022</p>
-                <p className={styles.skills}>Angular, .Net, Service Fabric, Azure DevOps, SQL</p>
+                <p className={styles.skills}>Angular, .Net, Service Fabric, Azure DevOps, SQL, CI/CD, DevOps</p>
                 <p className={styles.summary}>Various projects to streamline administration processes and interfaces, to minimize errors and make administration more efficient. I worked on requirements engineering, architecture, design of interfaces and web development.</p>
                 <p className={styles.summary}>Migration of a monolithic frontend application to a micro frontend based architecture using module federation. I helped with initial research and requirements analysis, architecture, web development and documentation.</p>
               </div>
@@ -68,7 +69,7 @@ export default function Cv() {
                 <h3>Tattoomigo</h3>
                 <p className={styles.title}>Co-Founder &amp; Developer</p>
                 <p className={styles.period}>2017-2018</p>
-                <p className={styles.skills}>Angular, Node, .Net, SQL, Azure</p>
+                <p className={styles.skills}>React, Node, TypeScript, .Net Core, SQL, Azure</p>
                 <p className={styles.summary}>Web development including architecture, programming, UX and design.</p>
                 <p className={styles.summary}>Supervision of two engineering students doing their examination work at Tattoomigo.</p>
                 <p className={styles.summary}>I also helped with development of the initial idea into a sustainable business model. I also helped with branding. I worked closely with a very entrepreneurial colleague and my role was often to take ideas and bring them down to earth.</p>
@@ -96,7 +97,7 @@ export default function Cv() {
                 <p className={styles.title}>Web Developer</p>
                 <p className={styles.period}>2013-2014</p>
                 <p className={styles.skills}>JavaScript, TypeScript, Node, SQL, PHP, AWS</p>
-                <p className={styles.summary}>Continuation of development of my <Link href="/portfolio/klang" target="_blank">school examination project Klang</Link>, which was used in collaboration with clients such as Google, H&amp;M, Mercedes, HBO and many more.</p>
+                <p className={styles.summary}>Continuation of development of my <Link href="/portfolio/klang" target="_blank">school examination project Klang</Link>, which was used in collaboration with clients such as Google, H&amp;M, Mercedes, HBO and many more. I wrote it in TypeScript when it had just been released still had no major version, needless to say I was amazed at being able to write typed JavaScript :&#41;</p>
                 <p className={styles.summary}>Full stack development of a cloud based system for handling audio files and adding music and sound to interactive websites.</p>
                 <p className={styles.summary}>Various interactive web apps.</p>
               </div>

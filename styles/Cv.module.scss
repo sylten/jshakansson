@@ -62,9 +62,9 @@
             }
     
             .section {
-                margin-bottom: 4rem;
+                margin-bottom: 2rem;
                 @media print {
-                    margin-bottom: 2.5rem;
+                    margin-bottom: 1.5rem;
                 }
         
                 h2 {
@@ -85,10 +85,13 @@
                 }
                 .period {
                     margin-top: 0.5rem;
+                    color: #666;
                 }
                 .summary {
+                    margin-top: .5rem;
+                    margin-bottom: .5rem;    
                     &:last-child {
-                        margin-bottom: 2rem;
+                        margin-bottom: 1rem;
                     }
                     &:before {
                         content: '- ';
@@ -97,9 +100,8 @@
                 .skills {
                     font-size: 0.675rem;
                     font-weight: bold;
-                    letter-spacing: 1px;
                     text-transform: uppercase;
-                    color: #666;
+                    
                 }
             }
         }
