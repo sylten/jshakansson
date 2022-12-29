@@ -4,6 +4,7 @@ import BackButton from "../common/components/BackButton";
 import Logo from "../common/components/Logo";
 import styles from "../styles/Cv.module.scss";
 import Link from "next/link";
+import CvSkills from "../common/components/CvSkills";
 
 export default function Cv() {
   return (
@@ -196,6 +197,7 @@ export default function Cv() {
           </div>
           <div className={styles.contactSide}>
             <CvContact></CvContact>
+            <CvSkills></CvSkills>
           </div>
         </div>
 

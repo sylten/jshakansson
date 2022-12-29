@@ -42,7 +42,7 @@ export default function CvContact() {
               </a>
           </p>
 
-          <a className={styles.pdf + ' no-print'} href="/jonas-siltamaki-hakansson-cv.pdf" target="blank">
+          <a className={styles.pdf} href="/jonas-siltamaki-hakansson-cv.pdf" target="blank">
               <IconAligner><BsFileEarmarkPdf size={"1rem"} /> Pdf</IconAligner>
           </a>
 
