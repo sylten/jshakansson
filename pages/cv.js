@@ -44,8 +44,10 @@ export default function Cv() {
                 <p className={styles.title}>Full Stack Developer</p>
                 <p className={styles.period}>2022-</p>
                 <p className={styles.skills}>React, Next.js, Node, TypeScript, .Net Core, C#, Cosmos DB, Kafka, Tailwind CSS, CI/CD, DevOps</p>
-                <p className={styles.summary}>Mainly worked on an app for customers to track their orders and packages, after making a purchase in the e-commerce store. The app is available in four countries.</p>
-                <p className={styles.summary}>Included some coaching of junior developers.</p>
+                <ul>
+                  <li>Mainly worked on an app for customers to track their orders and packages, after making a purchase in the e-commerce store. The app is available in four countries.</li>
+                  <li>Included some coaching of junior developers.</li>
+                </ul>
               </div>
 
               <div className={styles.item}>
@@ -53,8 +55,10 @@ export default function Cv() {
                 <p className={styles.title}>Full Stack Developer</p>
                 <p className={styles.period}>2019-2022</p>
                 <p className={styles.skills}>Angular, .Net, Service Fabric, Azure DevOps, SQL, CI/CD, DevOps</p>
-                <p className={styles.summary}>Various projects to streamline administration processes and interfaces, to minimize errors and make administration more efficient. I worked on requirements engineering, architecture, design of interfaces and web development.</p>
-                <p className={styles.summary}>Migration of a monolithic frontend application to a micro frontend based architecture using module federation. I helped with initial research and requirements analysis, architecture, web development and documentation.</p>
+                <ul>
+                  <li>Various projects to streamline administration processes and interfaces, to minimize errors and make administration more efficient. I worked on requirements engineering, architecture, design of interfaces and web development.</li>
+                  <li>Migration of a monolithic frontend application to a micro frontend based architecture using module federation. I helped with initial research and requirements analysis, architecture, web development and documentation.</li>
+                </ul>
               </div>
 
               <div className={styles.item}>
@@ -62,7 +66,9 @@ export default function Cv() {
                 <p className={styles.title}>Solutions Developer / Designer</p>
                 <p className={styles.period}>2018-2019</p>
                 <p className={styles.skills}>Angular, .Net, SQL, Azure DevOps, Software architecture, IBM Api Connect</p>
-                <p className={styles.summary}>Solution design and engineering. I worked on a project to modernise the architecture of the systems handling settlement of securities, while also making SEB compliant in CSDR. The main deliveries of the project was an API for securities settlement and a web based GUI for administration of securities settlement.</p>
+                <ul>
+                  <li>Solution design and engineering. I worked on a project to modernise the architecture of the systems handling settlement of securities, while also making SEB compliant in CSDR. The main deliveries of the project was an API for securities settlement and a web based GUI for administration of securities settlement.</li>
+                </ul>
               </div>
 
               <div className={styles.item}>
@@ -70,9 +76,11 @@ export default function Cv() {
                 <p className={styles.title}>Co-Founder &amp; Developer</p>
                 <p className={styles.period}>2017-2018</p>
                 <p className={styles.skills}>React, Node, TypeScript, .Net Core, SQL, Azure</p>
-                <p className={styles.summary}>Web development including architecture, programming, UX and design.</p>
-                <p className={styles.summary}>Supervision of two engineering students doing their examination work at Tattoomigo.</p>
-                <p className={styles.summary}>I also helped with development of the initial idea into a sustainable business model. I also helped with branding. I worked closely with a very entrepreneurial colleague and my role was often to take ideas and bring them down to earth.</p>
+                <ul>
+                  <li>Web development including architecture, programming, UX and design.</li>
+                  <li>Supervision of two engineering students doing their examination work at Tattoomigo.</li>
+                  <li>I also helped with development of the initial idea into a sustainable business model. I also helped with branding. I worked closely with a very entrepreneurial colleague and my role was often to take ideas and bring them down to earth.</li>
+                </ul>
               </div>
 
               <div className={styles.item}>
@@ -80,8 +88,10 @@ export default function Cv() {
                 <p className={styles.title}>Co-Founder &amp; Developer</p>
                 <p className={styles.period}>2016-2017</p>
                 <p className={styles.skills}>React, Node, JavaScript, SQL, Stripe</p>
-                <p className={styles.summary}>Development of a prototype version of the platform using Node, MySQL, React and Stripe as a payment service provider.</p>
-                <p className={styles.summary}>Development of the business model, logistics and branding.</p>
+                <ul>
+                  <li>Development of a prototype version of the platform using Node, MySQL, React and Stripe as a payment service provider.</li>
+                  <li>Development of the business model, logistics and branding.</li>
+                </ul>
               </div>
 
               <div className={styles.item}>
@@ -89,7 +99,9 @@ export default function Cv() {
                 <p className={styles.title}>Full Stack Developer</p>
                 <p className={styles.period}>2014-2015</p>
                 <p className={styles.skills}>.Net, C#, SQL, JavaScript</p>
-                <p className={styles.summary}>Systems development, full stack development of a system for handling pensions.</p>
+                <ul>
+                  <li>Systems development, full stack development of a system for handling pensions.</li>
+                </ul>
               </div>
 
               <div className={styles.item}>
@@ -97,9 +109,11 @@ export default function Cv() {
                 <p className={styles.title}>Web Developer</p>
                 <p className={styles.period}>2013-2014</p>
                 <p className={styles.skills}>JavaScript, TypeScript, Node, SQL, PHP, AWS</p>
-                <p className={styles.summary}>Continuation of development of my <Link href="/portfolio/klang" target="_blank">school examination project Klang</Link>, which was used in collaboration with clients such as Google, H&amp;M, Mercedes, HBO and many more. I wrote it in TypeScript when it had just been released still had no major version, needless to say I was amazed at being able to write typed JavaScript :&#41;</p>
-                <p className={styles.summary}>Full stack development of a cloud based system for handling audio files and adding music and sound to interactive websites.</p>
-                <p className={styles.summary}>Various interactive web apps.</p>
+                <ul>
+                  <li>Continuation of development of my <Link href="/portfolio/klang" target="_blank">school examination project Klang</Link>, which was used in collaboration with clients such as Google, H&amp;M, Mercedes, HBO and many more. I wrote it in TypeScript when it had just been released still had no major version, needless to say I was amazed at being able to write typed JavaScript :&#41;</li>
+                  <li>Full stack development of a cloud based system for handling audio files and adding music and sound to interactive websites.</li>
+                  <li>Various interactive web apps.</li>
+                </ul>
               </div>
             </div>
 
@@ -127,20 +141,22 @@ export default function Cv() {
             <div className={`${styles.section} ${styles.experience}`}>
               <h2>Other projects</h2>
               <div className={styles.item}>
-                <h3>MiBreaker</h3>
-                <p className={styles.title}><Link href="https://mibreaker.com/sv">mibreaker.com</Link></p>
+                <h3>MiBreaker <Link href="https://mibreaker.com/sv">(mibreaker.com)</Link></h3>
                 <p className={styles.period}>2020</p>
                 <p className={styles.skills}>React, Node, Next.js, Vercel, Electron, Stripe, Mailjet, Bunny CDN</p>
-                <p className={styles.summary}>I developed a basic e-commerce website to market and sell the MiBreaker application. Developed in Next.js with React and deployed on Vercel with bunny CDN for serving static files. I also implemented card payments with Stripe and email sending using Mailjet.</p>
-                <p className={styles.summary}>I created a desktop app using Electron with React, packaged and code signed for Windows and Mac.</p>
+                <ul>
+                  <li>A basic e-commerce website to market and sell the app. Developed in Next.js with React and deployed on Vercel with bunny CDN for serving static files, Stripe for card payments and Mailjet for sending emails.</li>
+                  <li>The desktop app is built on Electron with React, packaged and code signed for Windows and Mac.</li>
+                </ul>
               </div>
               <div className={styles.item}>
-                <h3>Personal website</h3>
-                <p className={styles.title}><Link href="https://jshakansson.se">jshakansson.se</Link></p>
+                <h3>Personal website <Link href="https://jshakansson.se">(jshakansson.se)</Link></h3>
                 <p className={styles.period}>2019</p>
                 <p className={styles.skills}>React, Next.js, Vercel</p>
-                <p className={styles.summary}>When I started my one man consulting firm, I created a pretty basic website to showcase what I&lsquo;ve done.</p>
-                <p className={styles.summary}>It&lsquo;s built on Next.js and is hosted on Vercel.</p>
+                <ul>
+                  <li>When I started my one man consulting firm, I created a pretty basic website to showcase what I&lsquo;ve done.</li>
+                  <li>It&lsquo;s built on Next.js and is hosted on Vercel.</li>
+                </ul>
               </div>
             </div>
 

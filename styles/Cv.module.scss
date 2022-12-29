@@ -77,6 +77,9 @@
                     font-weight: bold;
                     margin-bottom: 0.5rem;
                     font-size: 1rem;
+                    a {
+                        font-weight: normal;
+                    }
                 }
                 .title, .degree, .issuer, .level {
                     margin-top: 0.5rem;
@@ -94,7 +97,17 @@
                         margin-bottom: 1rem;
                     }
                     &:before {
-                        content: '- ';
+                        content: '\25FE';
+                        font-size: .25rem;
+                        margin-top: -.25rem;
+                    }
+                }
+                ul {
+                    list-style-type: square;
+                    padding-left: 1rem;
+                    font-size: 0.875rem;
+                    li {
+                        margin-bottom: .5rem;
                     }
                 }
                 .skills {
