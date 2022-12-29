@@ -1,14 +1,14 @@
-import Head from 'next/head'
-import { ReactNode } from 'react';
-import Footer from './Footer';
-import styles from './Layout.module.scss';
+import Head from "next/head";
+import { ReactNode } from "react";
+import Footer from "./Footer";
+import styles from "./Layout.module.scss";
 
 interface LayoutProps {
   children: ReactNode;
   isLanding?: boolean;
 }
 
-const Layout: React.FC<LayoutProps> = ({children, isLanding}) => {
+const Layout: React.FC<LayoutProps> = ({ children, isLanding }) => {
   return (
     <div className={styles.Layout}>
       <Head>
@@ -33,6 +33,6 @@ const Layout: React.FC<LayoutProps> = ({children, isLanding}) => {
       <Footer isLanding={isLanding} />
     </div>
   );
-}
+};
 
 export default Layout;
