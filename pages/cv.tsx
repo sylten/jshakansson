@@ -13,7 +13,7 @@ export default function Cv() {
           <BackButton></BackButton>
         </div>
 
-        <div id="cv-content" className={styles.content}>
+        <div className={styles.content}>
           <div className={styles.main}>
             <div className={styles.header}>
               <h1>Jonas Siltamäki Håkansson</h1>

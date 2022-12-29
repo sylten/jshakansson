@@ -14,13 +14,23 @@ export default function CvContact() {
       <div className={styles.contact}>
           <h4>Contact</h4>
 
+          <p>
+              <a href="mailto:jonas@jshakansson.se" target="blank">
+                  <IconAligner><BsEnvelope size={"1rem"} /> jonas@jshakansson.se</IconAligner>
+              </a>
+          </p>
+
+          <p className={styles.phone}>
+              <IconAligner><BsTelephone size={"1rem"} /> +46703078303</IconAligner>
+          </p>
+
           <p className={styles.website}>
               <a href="https://jshakansson.se/" target="blank">
                   <IconAligner><BsGlobe size={"1rem"} /> jshakansson.se</IconAligner>
               </a>
           </p>
 
-          <p className="no-print">
+          <p>
               <a href="https://www.linkedin.com/in/jonas-siltamaki-hakansson" target="blank">
                   <IconAligner><IoLogoLinkedin size={"1rem"} /> LinkedIn</IconAligner>
               </a>
@@ -30,16 +40,6 @@ export default function CvContact() {
               <a href="https://github.com/sylten" target="blank">
                   <IconAligner><IoLogoGithub size={"1rem"} /> GitHub - sylten</IconAligner>
               </a>
-          </p>
-
-          <p>
-              <a href="mailto:jonas@jshakansson.se" target="blank">
-                  <IconAligner><BsEnvelope size={"1rem"} /> jonas@jshakansson.se</IconAligner>
-              </a>
-          </p>
-
-          <p className={styles.phone}>
-              <IconAligner><BsTelephone size={"1rem"} /> +46703078303</IconAligner>
           </p>
 
           <a className={styles.pdf + ' no-print'} href="/jonas-siltamaki-hakansson-cv.pdf" target="blank">
