@@ -14,10 +14,10 @@ export default function Landing() {
             <div>
               <h1>Jonas Siltamäki Håkansson</h1>
               <p>
-                        Software engineering consultant proficient in frontend and backend
-                        technologies such as React, Angular, .Net and Node.
-                        Experienced working in small and large teams at both startups and larger
-                        companies.
+                Software engineering consultant proficient in frontend and backend
+                technologies such as React, Angular, .Net and Node.
+                Experienced working in small and large teams at both startups and larger
+                companies.
               </p>
             </div>
 
