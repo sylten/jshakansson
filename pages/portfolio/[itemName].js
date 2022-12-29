@@ -6,6 +6,8 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { FiChevronLeft } from 'react-icons/fi';
+import IconAligner from "../../common/components/IconAligner";
 
 export default function Item() {
   const router = useRouter();
@@ -114,7 +116,7 @@ export default function Item() {
 
           <div className={styles.back}>
             <Link href="/portfolio">
-              <i className="fal fa-chevron-left"></i> Back to portfolio
+              <IconAligner><FiChevronLeft size={"1.25rem"} /> Back to portfolio</IconAligner>
             </Link>
           </div>
         </div>
