@@ -1,6 +1,9 @@
 import styles from './CvContact.module.scss';
 import jonasMin from "../../public/jonas-min.jpg";
 import Image from 'next/image';
+import IconAligner from './IconAligner';
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io';
+import { BsFileEarmarkPdf, BsTelephone, BsEnvelope, BsGlobe } from 'react-icons/bs';
 
 export default function CvContact() {
   return (
@@ -13,34 +16,34 @@ export default function CvContact() {
 
           <p className={styles.website}>
               <a href="https://jshakansson.se/" target="blank">
-                  <i className="fal fa-globe"></i> jshakansson.se
+                  <IconAligner><BsGlobe size={"1rem"} /> jshakansson.se</IconAligner>
               </a>
           </p>
 
           <p className="no-print">
               <a href="https://www.linkedin.com/in/jonas-siltamaki-hakansson" target="blank">
-                  <i className="fab fa-linkedin"></i> LinkedIn
+                  <IconAligner><IoLogoLinkedin size={"1rem"} /> LinkedIn</IconAligner>
               </a>
           </p>
 
           <p>
               <a href="https://github.com/sylten" target="blank">
-                  <i className="fab fa-github"></i> GitHub - sylten
+                  <IconAligner><IoLogoGithub size={"1rem"} /> GitHub - sylten</IconAligner>
               </a>
           </p>
 
           <p>
               <a href="mailto:jonas@jshakansson.se" target="blank">
-                  <i className="fal fa-envelope"></i> jonas@jshakansson.se
+                  <IconAligner><BsEnvelope size={"1rem"} /> jonas@jshakansson.se</IconAligner>
               </a>
           </p>
 
           <p className={styles.phone}>
-              <i className="fal fa-phone"></i> +46703078303
+              <IconAligner><BsTelephone size={"1rem"} /> +46703078303</IconAligner>
           </p>
 
           <a className={styles.pdf + ' no-print'} href="/jonas-siltamaki-hakansson-cv.pdf" target="blank">
-              <i className="fal fa-file-pdf"></i> Pdf
+              <IconAligner><BsFileEarmarkPdf size={"1rem"} /> Pdf</IconAligner>
           </a>
 
           <p className={styles.address}>

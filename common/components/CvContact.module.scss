@@ -71,8 +71,11 @@
             }
             white-space: nowrap;
         }
-        i {
-            margin-right: 0.25rem;
+        a {
+            display: inline-block;
+        }
+        svg {
+            margin-right: .25rem;
         }
         .website {
             @media screen and (max-width: $max-md) {
@@ -80,9 +83,10 @@
             }
         }
         .phone {
+            margin-top: 0;
             display: none;
             @media print {
-                display: inline;
+                display: inline-block;
             }
         }
         .address {

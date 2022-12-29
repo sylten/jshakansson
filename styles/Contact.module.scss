@@ -14,11 +14,15 @@
       li {
           padding: 0.5rem 0rem;
           border-bottom: 1px solid #ccc;
-          i {
-              width: 1.25rem;
-          }
           &:last-child {
               border: none;
+          }
+          a {
+            display: inline-block;
+            svg {
+                margin-top: .125rem;
+                width: 2rem;
+            }
           }
 
           @media screen and (min-width: $min-lg) {
