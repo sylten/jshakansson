@@ -1,12 +1,11 @@
 import Layout from "../../common/layout/Layout";
 import styles from "../../styles/Item.module.scss";
-import { portfolioItems } from "../../common/portfolio-items";
-import { MediaType } from "../../common/media-type";
+import { PortfolioItem, portfolioItems, MediaType } from "../../common/portfolioItems";
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FiChevronLeft } from 'react-icons/fi';
+import { FiChevronLeft } from "react-icons/fi";
 import IconAligner from "../../common/components/IconAligner";
 
 export default function Item() {
@@ -14,8 +13,8 @@ export default function Item() {
   const { itemName } = router.query;
 
   const [isHoveringVisitButton, setIsHoveringVisitButton] = useState(false);
-  const [item, setItem] = useState(null);
-  const [descriptionParagraphs, setDescriptionParagraphs] = useState([]);
+  const [item, setItem] = useState<PortfolioItem|null>(null);
+  const [descriptionParagraphs, setDescriptionParagraphs] = useState<string[]>([]);
 
   useEffect(() => {
     if (!itemName) {
@@ -23,17 +22,18 @@ export default function Item() {
     }
 
     const item = portfolioItems.find(item => item.uniqueName === itemName);
+    if (!item) return;
     const descriptionParagraphs = item.description.split("<br>");
 
     setItem(item);
     setDescriptionParagraphs(descriptionParagraphs);
   }, [router, itemName]);
 
-  const mouseEnterVisitButton = event => {
+  const mouseEnterVisitButton = () => {
     setIsHoveringVisitButton(true);
   };
 
-  const mouseLeaveVisitButton = event => {
+  const mouseLeaveVisitButton = () => {
     setIsHoveringVisitButton(false);
   };
 
@@ -96,21 +96,21 @@ export default function Item() {
           {
             item.largeMedia.type === MediaType.YouTube &&
               <div className={styles.embeddedVideoWrapper}>
-                <iframe src={"https://www.youtube.com/embed/" + item.largeMedia.url} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe src={"https://www.youtube.com/embed/" + item.largeMedia.url} allow="autoplay; encrypted-media" allowFullScreen></iframe>
               </div>
           }
 
           {
             item.largeMedia.type === MediaType.Vimeo &&
               <div className={styles.embeddedVideoWrapper}>
-                <iframe src={"https://player.vimeo.com/video/" + item.largeMedia.url} frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe src={"https://player.vimeo.com/video/" + item.largeMedia.url} allowFullScreen></iframe>
               </div>
           }
 
           {
             item.largeMedia.type === MediaType.GoogleDrive &&
               <div className={styles.embeddedVideoWrapper}>
-                <iframe src={"https://drive.google.com/file/d/" + item.largeMedia.url + "/preview"} frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe src={"https://drive.google.com/file/d/" + item.largeMedia.url + "/preview"} allowFullScreen></iframe>
               </div>
           }
 

@@ -3,11 +3,9 @@ import BackButton from "../../common/components/BackButton";
 import Logo from "../../common/components/Logo";
 import PortfolioItem from "../../common/components/PortfolioItem";
 import styles from "../../styles/Portfolio.module.scss";
-import { portfolioItems } from "../../common/portfolio-items";
+import { portfolioItems } from "../../common/portfolioItems";
 
 export default function Portfolio() {
-  const items = portfolioItems.filter(item => !item.hidden);
-
   return (
     <Layout>
       <div className={styles.portfolioIndex}>
@@ -24,7 +22,7 @@ export default function Portfolio() {
 
         <div className={styles.portfolioItems}>
           {
-            items.map(item => (
+            portfolioItems.map(item => (
               <div key={item.uniqueName} className={styles.portfolioIndexItem}>
                 <PortfolioItem item={item}></PortfolioItem>
               </div>

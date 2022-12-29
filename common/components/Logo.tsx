@@ -3,7 +3,11 @@ import styles from './Logo.module.scss';
 import Image from 'next/image';
 import jshakanssonMin from "../../public/jshakansson-650-min.png";
 
-export default function Logo({priority}) {
+interface LayoutProps {
+  priority?: boolean;
+}
+
+const Logo: React.FC<LayoutProps> = ({priority}) => {
   return (
     <div className={styles.logo}>
       <Link href="/">
@@ -12,3 +16,5 @@ export default function Logo({priority}) {
     </div>
   );
 }
+
+export default Logo;

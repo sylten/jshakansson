@@ -2,11 +2,15 @@ import styles from './Footer.module.scss';
 import { IoLogoLinkedin } from 'react-icons/io';
 import IconAligner from '../components/IconAligner';
 
-export default function Footer(props) {
+interface FooterProps {
+  isLanding?: boolean;
+}
+
+const Footer: React.FC<FooterProps> = ({isLanding}) => {
   const year = new Date().getFullYear();
 
   return (
-    <div className={`${styles.footer} ${props.isLanding ? styles.isLanding : ''}`}>
+    <div className={`${styles.footer} ${isLanding ? styles.isLanding : ''}`}>
       <footer className="no-print">
         <span className={styles.copyright}>&copy; {year} J.S. Håkansson AB</span>
         <span className="social">
@@ -18,3 +22,5 @@ export default function Footer(props) {
     </div>
   );
 }
+
+export default Footer;
