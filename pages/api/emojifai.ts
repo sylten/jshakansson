@@ -3,7 +3,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { WebClient, LogLevel } from "@slack/web-api";
 import OpenAI from "openai";
-import { error } from "console";
 
 const findEmojiNames = (text: string) => {
   const numEmojis = Math.floor(text.split("").filter(c => c === ":").length / 2);
@@ -34,7 +33,7 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
     }
 
     const event = req.body.event;
-    console.info(event);
+    console.info("received event", event);
     if ((global as any).processed[event.client_msg_id] || event.type !== "message" || event.subtype === "message_changed" || !event.text) {
       res.statusCode = 204;
       res.end();
@@ -59,17 +58,21 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
         project: process.env.OPENAI_PROJECT_ID
       });
 
-      openai.images.generate({
-        model: "dall-e-2",
-        size: "256x256",
-        prompt: `
+      const prompt = `
         You create emojis based on user input.
         If the user input includes something unsafe, replace it with something safe.
         Do not include text in the image.
+        Use a transparent background.
         Create a single emoji based on this phrase: ${firstEmoji}
-        `
+        `;
+      console.info("Generating image from prompt: " + prompt);
+
+      openai.images.generate({
+        model: "dall-e-3",
+        size: "256x256",
+        prompt
       }).then(openAiResponse => {
-        console.info(openAiResponse);
+        console.info("open ai response", openAiResponse);
 
         if (openAiResponse.data?.length) {
           const imgUrl = openAiResponse.data[0].url;
@@ -79,7 +82,7 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
             channel: event.channel,
             text: imgUrl
           }).then(chatResponse => {
-            console.info(chatResponse);
+            console.info("slack chat response", chatResponse);
           }).catch(chatError => {
             console.error(chatError);
             res.statusCode = 500;
