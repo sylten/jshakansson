@@ -59,6 +59,7 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
         prompt: `
         You create emojis based on user input.
         If the user input includes something unsafe, replace it with something safe.
+        Do not include text in the image.
         Create a single emoji based on this phrase: ${firstEmoji}
         `
       }).then(openAiResponse => {
