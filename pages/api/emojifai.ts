@@ -3,6 +3,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { WebClient, LogLevel } from "@slack/web-api";
 import OpenAI from "openai";
+import { error } from "console";
 
 const findEmojiNames = (text: string) => {
   const numEmojis = Math.floor(text.split("").filter(c => c === ":").length / 2);
@@ -29,7 +30,7 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
   }
   else if (req.body.type === "event_callback") {
     const event = req.body.event;
-    console.log(event);
+    console.info(event);
     if (event.type !== "message" || !event.text) {
       res.statusCode = 204;
       res.json({});
@@ -61,7 +62,7 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
         Create a single emoji based on this phrase: ${firstEmoji}
         `
       }).then(openAiResponse => {
-        console.log(openAiResponse);
+        console.info(openAiResponse);
 
         if (openAiResponse.data?.length) {
           const imgUrl = openAiResponse.data[0].url;
@@ -71,13 +72,20 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
             channel: event.channel,
             text: imgUrl
           }).then(chatResponse => {
-            console.log(chatResponse);
+            console.info(chatResponse);
           }).catch(chatError => {
             console.error(chatError);
+            res.statusCode = 500;
+            res.json({ error: chatError });
           });
         }
+
+        res.statusCode = 204;
+        res.json({});
       }).catch(openAiError => {
         console.error(openAiError);
+        res.statusCode = 500;
+        res.json({ error: openAiError });
       });
     }
   }
