@@ -76,8 +76,8 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
     console.info("Generating image from prompt: " + prompt);
 
     openai.images.generate({
-      model: "dall-e-3",
-      size: "1024x1024",
+      model: "dall-e-2",
+      size: "256x256",
       prompt
     }).then(openAiResponse => {
       console.info("open ai response", openAiResponse);
