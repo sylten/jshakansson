@@ -17,7 +17,7 @@ const findEmojiNames = (text: string) => {
 };
 
 const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method !== "post") {
+  if (req.method !== "POST") {
     res.statusCode = 200;
     return res.json({ message: "helo" });
   }
