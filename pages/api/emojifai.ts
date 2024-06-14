@@ -34,80 +34,81 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
       (global as any).processed = {};
     }
 
-    const client = new WebClient(process.env.EMOJIFAI_SLACK_OAUTH_TOKEN, {
-      logLevel: LogLevel.DEBUG
-    });
-    client.auth.test().then(response => {
-      console.info("auth test", response);
-      res.status(200);
-      res.json(response);
-    });
-
-    // const event = req.body.event;
-    // if ((global as any).processed[event.client_msg_id] || event.type !== "message" || event.subtype === "message_changed" || !event.text || event.bot_profile) {
-    //   res.statusCode = 204;
-    //   res.end();
-    //   return;
-    // }
-
-    // (global as any).processed[event.client_msg_id] = true;
-
-    // const emojiNames = findEmojiNames(event.text);
-    // if (!emojiNames.length) {
-    //   res.statusCode = 204;
-    //   res.end();
-    //   return;
-    // }
-
-    // const firstEmoji = emojiNames[0]
-    //   .replaceAll("-", " ")
-    //   .replaceAll("_", " ");
-
-    // const openai = new OpenAI({
-    //   organization: process.env.OPENAI_ORG_ID,
-    //   project: process.env.OPENAI_PROJECT_ID
+    // const client = new WebClient(process.env.EMOJIFAI_SLACK_OAUTH_TOKEN, {
+    //   logLevel: LogLevel.DEBUG
+    // });
+    // client.auth.test().then(response => {
+    //   console.info("auth test", response);
+    //   res.status(200);
+    //   res.json(response);
     // });
 
-    // const prompt = `
-    //     You create emojis based on user input.
-    //     If the user input includes something unsafe, replace it with something safe.
-    //     Create a single emoji based on this phrase: ${firstEmoji}
-    //     `;
-    // console.info("Generating image from prompt: " + prompt);
+    const event = req.body.event;
+    if ((global as any).processed[event.client_msg_id] || event.type !== "message" || event.subtype === "message_changed" || !event.text || event.bot_profile) {
+      res.statusCode = 204;
+      res.end();
+      return;
+    }
 
-    // openai.images.generate({
-    //   model: "dall-e-3",
-    //   size: "1024x1024",
-    //   prompt
-    // }).then(openAiResponse => {
-    //   console.info("open ai response", openAiResponse);
+    (global as any).processed[event.client_msg_id] = true;
 
-    //   if (openAiResponse.data?.length) {
-    //     const imgUrl = openAiResponse.data[0].url;
+    const emojiNames = findEmojiNames(event.text);
+    if (!emojiNames.length) {
+      res.statusCode = 204;
+      res.end();
+      return;
+    }
 
-    //     // const client = new WebClient(process.env.EMOJIFAI_SLACK_OAUTH_TOKEN, {
-    //     //   logLevel: LogLevel.DEBUG
-    //     // });
+    const firstEmoji = emojiNames[0]
+      .replaceAll("-", " ")
+      .replaceAll("_", " ");
 
-    //     client.chat.postMessage({
-    //       channel: event.channel,
-    //       text: imgUrl
-    //     }).then(chatResponse => {
-    //       console.info("slack chat response", chatResponse);
-    //     }).catch(chatError => {
-    //       console.error(chatError);
-    //       res.statusCode = 500;
-    //       res.json({ error: chatError });
-    //     });
-    //   }
+    const openai = new OpenAI({
+      organization: process.env.OPENAI_ORG_ID,
+      project: process.env.OPENAI_PROJECT_ID
+    });
 
-    //   res.statusCode = 200;
-    //   res.end();
-    // }).catch(openAiError => {
-    //   console.error(openAiError);
-    //   res.statusCode = 500;
-    //   res.json({ error: openAiError });
-    // });
+    const prompt = `
+        You create emojis based on user input.
+        If the user input includes something unsafe, replace it with something safe.
+        Create a single emoji based on this phrase: ${firstEmoji}
+        `;
+    console.info("Generating image from prompt: " + prompt);
+
+    openai.images.generate({
+      model: "dall-e-3",
+      size: "1024x1024",
+      prompt
+    }).then(openAiResponse => {
+      console.info("open ai response", openAiResponse);
+
+      if (openAiResponse.data?.length) {
+        const imgUrl = openAiResponse.data[0].url;
+
+        const client = new WebClient(process.env.EMOJIFAI_SLACK_OAUTH_TOKEN, {
+          logLevel: LogLevel.DEBUG
+        });
+
+        client.chat.postMessage({
+          as_user: false,
+          channel: event.channel,
+          text: imgUrl
+        }).then(chatResponse => {
+          console.info("slack chat response", chatResponse);
+        }).catch(chatError => {
+          console.error(chatError);
+          res.statusCode = 500;
+          res.json({ error: chatError });
+        });
+      }
+
+      res.statusCode = 200;
+      res.end();
+    }).catch(openAiError => {
+      console.error(openAiError);
+      res.statusCode = 500;
+      res.json({ error: openAiError });
+    });
   }
 };
 
