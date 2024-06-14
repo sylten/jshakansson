@@ -34,7 +34,7 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
 
     const event = req.body.event;
     console.info("received event", event);
-    if ((global as any).processed[event.client_msg_id] || event.type !== "message" || event.subtype === "message_changed" || !event.text || event.bot_profile) {
+    if ((global as any).processed[event.client_msg_id] || event.type !== "message" || event.subtype === "message_changed" || !event.text) {
       res.statusCode = 204;
       res.end();
       return;
