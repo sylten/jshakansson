@@ -34,7 +34,7 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
 
     const event = req.body.event;
     console.info("received event", event);
-    if ((global as any).processed[event.client_msg_id] || event.type !== "message" || event.subtype === "message_changed" || !event.text) {
+    if ((global as any).processed[event.client_msg_id] || event.type !== "message" || event.subtype === "message_changed" || !event.text || event.bot_profile) {
       res.statusCode = 204;
       res.end();
       return;
@@ -102,3 +102,4 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
 };
 
 export default emojifai;
+export const maxDuration = 60;
