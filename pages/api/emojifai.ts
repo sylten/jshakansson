@@ -17,6 +17,8 @@ const findEmojiNames = (text: string) => {
 };
 
 const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
+  console.info("request", req.body);
+
   if (req.method !== "POST") {
     res.statusCode = 200;
     return res.json({ message: "helo" });
@@ -33,7 +35,6 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
     }
 
     const event = req.body.event;
-    console.info("received event", event);
     if ((global as any).processed[event.client_msg_id] || event.type !== "message" || event.subtype === "message_changed" || !event.text || event.bot_profile) {
       res.statusCode = 204;
       res.end();
@@ -83,7 +84,6 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
         client.chat.postMessage({
           token: process.env.EMOJIFAI_SLACK_OAUTH_TOKEN,
           channel: event.channel,
-          ts: event.ts,
           text: imgUrl
         }).then(chatResponse => {
           console.info("slack chat response", chatResponse);
