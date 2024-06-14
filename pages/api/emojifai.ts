@@ -34,7 +34,7 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
 
     const event = req.body.event;
     console.info("received event", event);
-    if ((global as any).processed[event.client_msg_id] || event.type !== "message" || event.subtype === "message_changed" || !event.text) {
+    if ((global as any).processed[event.client_msg_id] || event.type !== "message" || event.subtype === "message_changed" || !event.text || event.bot_profile) {
       res.statusCode = 204;
       res.end();
       return;
@@ -69,7 +69,7 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
 
       openai.images.generate({
         model: "dall-e-3",
-        size: "256x256",
+        size: "1024x1024",
         prompt
       }).then(openAiResponse => {
         console.info("open ai response", openAiResponse);
