@@ -94,15 +94,14 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
           text: imgUrl
         }).then(chatResponse => {
           console.info("slack chat response", chatResponse);
+          res.statusCode = 200;
+          res.end();
         }).catch(chatError => {
           console.error(chatError);
           res.statusCode = 500;
           res.json({ error: chatError });
         });
       }
-
-      res.statusCode = 200;
-      res.end();
     }).catch(openAiError => {
       console.error(openAiError);
       res.statusCode = 500;
