@@ -39,73 +39,75 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
     });
     client.auth.test().then(response => {
       console.info("auth test", response);
+      res.status(200);
+      res.json(response);
     });
 
-    const event = req.body.event;
-    if ((global as any).processed[event.client_msg_id] || event.type !== "message" || event.subtype === "message_changed" || !event.text || event.bot_profile) {
-      res.statusCode = 204;
-      res.end();
-      return;
-    }
+    // const event = req.body.event;
+    // if ((global as any).processed[event.client_msg_id] || event.type !== "message" || event.subtype === "message_changed" || !event.text || event.bot_profile) {
+    //   res.statusCode = 204;
+    //   res.end();
+    //   return;
+    // }
 
-    (global as any).processed[event.client_msg_id] = true;
+    // (global as any).processed[event.client_msg_id] = true;
 
-    const emojiNames = findEmojiNames(event.text);
-    if (!emojiNames.length) {
-      res.statusCode = 204;
-      res.end();
-      return;
-    }
+    // const emojiNames = findEmojiNames(event.text);
+    // if (!emojiNames.length) {
+    //   res.statusCode = 204;
+    //   res.end();
+    //   return;
+    // }
 
-    const firstEmoji = emojiNames[0]
-      .replaceAll("-", " ")
-      .replaceAll("_", " ");
+    // const firstEmoji = emojiNames[0]
+    //   .replaceAll("-", " ")
+    //   .replaceAll("_", " ");
 
-    const openai = new OpenAI({
-      organization: process.env.OPENAI_ORG_ID,
-      project: process.env.OPENAI_PROJECT_ID
-    });
+    // const openai = new OpenAI({
+    //   organization: process.env.OPENAI_ORG_ID,
+    //   project: process.env.OPENAI_PROJECT_ID
+    // });
 
-    const prompt = `
-        You create emojis based on user input.
-        If the user input includes something unsafe, replace it with something safe.
-        Create a single emoji based on this phrase: ${firstEmoji}
-        `;
-    console.info("Generating image from prompt: " + prompt);
+    // const prompt = `
+    //     You create emojis based on user input.
+    //     If the user input includes something unsafe, replace it with something safe.
+    //     Create a single emoji based on this phrase: ${firstEmoji}
+    //     `;
+    // console.info("Generating image from prompt: " + prompt);
 
-    openai.images.generate({
-      model: "dall-e-3",
-      size: "1024x1024",
-      prompt
-    }).then(openAiResponse => {
-      console.info("open ai response", openAiResponse);
+    // openai.images.generate({
+    //   model: "dall-e-3",
+    //   size: "1024x1024",
+    //   prompt
+    // }).then(openAiResponse => {
+    //   console.info("open ai response", openAiResponse);
 
-      if (openAiResponse.data?.length) {
-        const imgUrl = openAiResponse.data[0].url;
+    //   if (openAiResponse.data?.length) {
+    //     const imgUrl = openAiResponse.data[0].url;
 
-        // const client = new WebClient(process.env.EMOJIFAI_SLACK_OAUTH_TOKEN, {
-        //   logLevel: LogLevel.DEBUG
-        // });
+    //     // const client = new WebClient(process.env.EMOJIFAI_SLACK_OAUTH_TOKEN, {
+    //     //   logLevel: LogLevel.DEBUG
+    //     // });
 
-        client.chat.postMessage({
-          channel: event.channel,
-          text: imgUrl
-        }).then(chatResponse => {
-          console.info("slack chat response", chatResponse);
-        }).catch(chatError => {
-          console.error(chatError);
-          res.statusCode = 500;
-          res.json({ error: chatError });
-        });
-      }
+    //     client.chat.postMessage({
+    //       channel: event.channel,
+    //       text: imgUrl
+    //     }).then(chatResponse => {
+    //       console.info("slack chat response", chatResponse);
+    //     }).catch(chatError => {
+    //       console.error(chatError);
+    //       res.statusCode = 500;
+    //       res.json({ error: chatError });
+    //     });
+    //   }
 
-      res.statusCode = 200;
-      res.end();
-    }).catch(openAiError => {
-      console.error(openAiError);
-      res.statusCode = 500;
-      res.json({ error: openAiError });
-    });
+    //   res.statusCode = 200;
+    //   res.end();
+    // }).catch(openAiError => {
+    //   console.error(openAiError);
+    //   res.statusCode = 500;
+    //   res.json({ error: openAiError });
+    // });
   }
 };
 
