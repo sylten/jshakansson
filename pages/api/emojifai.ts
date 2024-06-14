@@ -90,7 +90,6 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
         });
 
         client.chat.postMessage({
-          as_user: false,
           channel: event.channel,
           text: imgUrl
         }).then(chatResponse => {
