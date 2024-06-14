@@ -29,13 +29,19 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
     return;
   }
   else if (req.body.type === "event_callback") {
+    if (!(global as any).processed) {
+      (global as any).processed = {};
+    }
+
     const event = req.body.event;
     console.info(event);
-    if (event.type !== "message" || !event.text) {
+    if ((global as any).processed[event.client_msg_id] || event.type !== "message" || event.subtype === "message_changed" || !event.text) {
       res.statusCode = 204;
-      res.json({});
+      res.end();
       return;
     }
+
+    (global as any).processed[event.client_msg_id] = true;
 
     const emojiNames = findEmojiNames(event.text);
     if (emojiNames.length > 0) {
@@ -81,8 +87,8 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
           });
         }
 
-        res.statusCode = 204;
-        res.json({});
+        res.statusCode = 200;
+        res.end();
       }).catch(openAiError => {
         console.error(openAiError);
         res.statusCode = 500;
