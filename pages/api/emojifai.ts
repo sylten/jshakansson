@@ -29,6 +29,7 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
   }
   else if (req.body.type === "event_callback") {
     const event = req.body.event;
+    console.log(event);
     if (event.type !== "message") {
       res.statusCode = 204;
       res.json({});
