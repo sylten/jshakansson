@@ -34,6 +34,13 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
       (global as any).processed = {};
     }
 
+    const client = new WebClient(process.env.EMOJIFAI_SLACK_OAUTH_TOKEN, {
+      logLevel: LogLevel.DEBUG
+    });
+    client.auth.test().then(response => {
+      console.info("auth test", response);
+    });
+
     const event = req.body.event;
     if ((global as any).processed[event.client_msg_id] || event.type !== "message" || event.subtype === "message_changed" || !event.text || event.bot_profile) {
       res.statusCode = 204;
@@ -49,11 +56,6 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
       res.end();
       return;
     }
-
-    const client = new WebClient("xoxb-your-token", {
-      // LogLevel can be imported and used to make debugging simpler
-      logLevel: LogLevel.DEBUG
-    });
 
     const firstEmoji = emojiNames[0]
       .replaceAll("-", " ")
@@ -81,8 +83,11 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
       if (openAiResponse.data?.length) {
         const imgUrl = openAiResponse.data[0].url;
 
+        // const client = new WebClient(process.env.EMOJIFAI_SLACK_OAUTH_TOKEN, {
+        //   logLevel: LogLevel.DEBUG
+        // });
+
         client.chat.postMessage({
-          token: process.env.EMOJIFAI_SLACK_OAUTH_TOKEN,
           channel: event.channel,
           text: imgUrl
         }).then(chatResponse => {
