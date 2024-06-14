@@ -24,7 +24,7 @@ const emojifai = (req: NextApiRequest, res: NextApiResponse) => {
 
   if (req.body.type === "url_verification") {
     res.statusCode = 200;
-    res.json({ challange: req.body.challange });
+    res.json({ challenge: req.body.challenge });
     return;
   }
   else if (req.body.type === "event_callback") {
