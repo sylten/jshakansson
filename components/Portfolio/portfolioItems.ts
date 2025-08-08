@@ -37,10 +37,41 @@ interface PortfolioItemCompany {
 
 export const portfolioItems: PortfolioItem[] = [
   {
+    name: "Digilog",
+    uniqueName: "digilog",
+    url: "https://www.digilog.se/",
+    intro: "An app for managing CE documentation for automated doors.",
+    description:
+        "An app for managing CE documentation for automated doors. Includes web interfaces for installers that do the documentation and property owners that need to access it.",
+    tech: ["React", "NextJS", "AWS", "Dynamo DB", "S3"],
+    year: 2021,
+    largeMedia: {
+      type: MediaType.Image,
+      url: "/digilog/digilog-landing.png",
+      width: 1280,
+      height: 800
+    },
+    smallMedia: {
+      type: MediaType.Image,
+      url: "/digilog/digilog-landing.png",
+      width: 1280,
+      height: 800
+    },
+    itemLogo: {
+      url: "/digilog/digilog.png",
+      width: 500,
+      height: 500
+    },
+    showNameNextToLogo: true,
+    companies: [
+      { name: "Digilog", mediaUrl: "/digilog/digilog.png", mediaWidth: 500, mediaHeight: 500 }
+    ]
+  },
+  {
     name: "Crypto New Tab",
     uniqueName: "crypto-new-tab",
     url: "https://chrome.google.com/webstore/detail/crypto-new-tab/iggdnocohklfkhjngbeodhkngohncogg",
-    intro: "A Chrome extension that adds a crypto market overview to your new tab page.",
+    intro: "A Chrome extension that adds a crypto market overview on the new tab.",
     description:
         "Shows current prices for the top 10 cryptocurrencies on the Chrome new tab page. Also provides some additional stats like market cap, volume and total- and circulating supply for each token.",
     tech: ["React", "NextJS"],

@@ -20,7 +20,7 @@ export default function Cv() {
               <p className={styles.title}>Software engineering consultant</p>
               <p>Self-employed software engineering consultant proficient in system architecture, as well as frontend and backend technologies such as React, Angular, .Net and Node.</p>
               <p>
-                have a business mindset and am used to advising on how to use tech to for example to optimise ways of working. My motivation is delivering value, rather than utilising some specific technology.
+                I have a business mindset and am used to advising on how to use tech to for example to optimise ways of working. My motivation is delivering value, rather than utilising some specific technology.
               </p>
               <p>
                 Experience working with LLMs in various contexts, for example chatbot, including some experience with MCP servers and RAG implementations. Mostly using Open AI in Azure.
