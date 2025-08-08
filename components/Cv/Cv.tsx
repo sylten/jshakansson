@@ -18,20 +18,12 @@ export default function Cv() {
             <div className={styles.header}>
               <h1>Jonas Siltamäki Håkansson</h1>
               <p className={styles.title}>Software engineering consultant</p>
+              <p>Self-employed software engineering consultant proficient in system architecture, as well as frontend and backend technologies such as React, Angular, .Net and Node.</p>
               <p>
-                I am an entrepreneurial self-employed software engineer with
-                experience of multiple industries, from music and marketing to
-                banking and finance. My interest in web development started as
-                an 11-year old, when I created a website for a game I played.
-                Since then I&lsquo;ve obtained degrees in computer science and business
-                administration, and have gained extensive knowledge working with
-                software development and software architecture. I also still like to
-                spend time on hobby programming projects. I&lsquo;ve had a lot of fun with Raspberry Pis.
+                have a business mindset and am used to advising on how to use tech to for example to optimise ways of working. My motivation is delivering value, rather than utilising some specific technology.
               </p>
               <p>
-                In addition to web development, finance and business are deep-rooted interests.
-                I consume a lot of information on economics and financial news, and I&lsquo;ve
-                enjoyed co-founding two startups. I also enjoy reading, running and cooking.
+                Experience working with LLMs in various contexts, for example chatbot, including some experience with MCP servers and RAG implementations. Mostly using Open AI in Azure.
               </p>
               <div className={styles.contactHeader}>
                 <CvContact></CvContact>
@@ -39,14 +31,19 @@ export default function Cv() {
             </div>
             <div className={`${styles.section} ${styles.experience}`}>
               <h2>Experience</h2>
+
               <div className={styles.item}>
                 <h3>Elgiganten</h3>
                 <p className={styles.title}>Full Stack Developer</p>
                 <p className={styles.period}>2022-</p>
-                <p className={styles.skills}>React, Next.js, Node, TypeScript, .Net Core, C#, Cosmos DB, Kafka, Tailwind CSS, CI/CD, DevOps</p>
+                <p className={styles.skills}>React, Next.js, Node, TypeScript, .Net, C#, Kafka, Tailwind CSS, AI, LLM, RAG, MCP</p>
+                <p>System development and architecture related to:</p>
                 <ul>
-                  <li>Mainly worked on an app for customers to track their orders and packages, after making a purchase in the e-commerce store. The app is available in four countries.</li>
-                  <li>Included some coaching of junior developers.</li>
+                  <li>Self service applications for customers</li>
+                  <li>Chatbot integrations</li>
+                  <li>Genesys Cloud plugins including an AI Email Assistant</li>
+                  <li>Various other internal tools and experimentation with a focus on AI</li>
+                  <li>And some coaching of junior developers.</li>
                 </ul>
               </div>
 
@@ -141,21 +138,20 @@ export default function Cv() {
             <div className={`${styles.section} ${styles.experience}`}>
               <h2>Other projects</h2>
               <div className={styles.item}>
+                <h3>Digilog <Link href="https://digilog.se/">(digilog.se)</Link></h3>
+                <p className={styles.period}>2025</p>
+                <p className={styles.skills}>Next.js, React, Node, AWS, Dynamo DB, S3</p>
+                <ul>
+                  <li>An app for managing CE documentation for automated doors. Includes web interfaces for installers that do the documentation and property owners that need to access it.</li>
+                </ul>
+              </div>
+              <div className={styles.item}>
                 <h3>MiBreaker <Link href="https://mibreaker.com/sv">(mibreaker.com)</Link></h3>
                 <p className={styles.period}>2020</p>
                 <p className={styles.skills}>React, Node, Next.js, Vercel, Electron, Stripe, Mailjet, Bunny CDN</p>
                 <ul>
                   <li>A basic e-commerce website to market and sell the app. Developed in Next.js with React and deployed on Vercel with bunny CDN for serving static files, Stripe for card payments and Mailjet for sending emails.</li>
                   <li>The desktop app is built on Electron with React, packaged and code signed for Windows and Mac.</li>
-                </ul>
-              </div>
-              <div className={styles.item}>
-                <h3>Personal website <Link href="https://jshakansson.se">(jshakansson.se)</Link></h3>
-                <p className={styles.period}>2019</p>
-                <p className={styles.skills}>React, Next.js, Vercel</p>
-                <ul>
-                  <li>When I started my one man consulting firm, I created a pretty basic website to showcase what I&lsquo;ve done.</li>
-                  <li>It&lsquo;s built on Next.js and is hosted on Vercel.</li>
                 </ul>
               </div>
             </div>
@@ -192,6 +188,25 @@ export default function Cv() {
                 <h3>English</h3>
                 <p className={styles.level}>Full professional proficiency</p>
               </div>
+            </div>
+
+            <div className={`${styles.section} ${styles.languages}`}>
+              <h2>About me</h2>
+              <p>
+                I am an entrepreneurial self-employed software engineer with
+                experience of multiple industries, from music and marketing to
+                banking and finance. My interest in web development started as
+                an 11-year old, when I created a website for a game I played.
+                Since then I&lsquo;ve obtained degrees in computer science and business
+                administration, and have gained extensive knowledge working with
+                software development and software architecture. I also still like to
+                spend time on hobby programming projects. I&lsquo;ve had a lot of fun with Raspberry Pis.
+              </p>
+              <p>
+                In addition to web development, finance and business are deep-rooted interests.
+                I consume a lot of information on economics and financial news, and I&lsquo;ve
+                enjoyed co-founding multiple startups. I also enjoy reading, running and cooking.
+              </p>
             </div>
           </div>
           <div className={styles.contactSide}>

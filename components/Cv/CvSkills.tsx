@@ -16,7 +16,7 @@ export default function CvSkills() {
               <li>C#</li>
             </ul>
           </li>
-          <li>Software Architecture</li>
+          <li>System Architecture</li>
           <li>Databases
             <ul>
               <li>SQL</li>
@@ -24,6 +24,13 @@ export default function CvSkills() {
             </ul>
           </li>
           <li>DevOps &amp; CI/CD</li>
+          <li>
+            AI/LLM
+            <ul>
+              <li>RAG</li>
+              <li>MCP</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
