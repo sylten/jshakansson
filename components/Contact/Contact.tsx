@@ -1,9 +1,7 @@
 import BackButton from "../common/BackButton";
-import Logo from "../common/Logo";
 import styles from "./Contact.module.scss";
 import { IoLogoLinkedin } from "react-icons/io";
 import { BsEnvelope } from "react-icons/bs";
-import IconAligner from "../common/IconAligner";
 
 export default function Contact() {
   return (
@@ -13,18 +11,18 @@ export default function Contact() {
       <ul className={styles.contactOptions}>
         <li>
           <a href="https://www.linkedin.com/in/jonas-siltamaki-hakansson" target="_blank" rel="noreferrer">
-            <IconAligner><IoLogoLinkedin size={"1em"} /> LinkedIn</IconAligner>
+            <IoLogoLinkedin size={"1.25rem"} /> LinkedIn
           </a>
         </li>
         <li>
           <a href="mailto:jonas@jshakansson.se" target="_blank" rel="noreferrer">
-            <IconAligner><BsEnvelope size={"1em"} /> jonas@jshakansson.se</IconAligner>
+            <BsEnvelope size={"1.25rem"} /> jonas@jshakansson.se
           </a>
         </li>
       </ul>
 
       <p className={styles.address}>
-        <span className="company-name">J.S. Håkansson AB</span>
+        <span>J.S. Håkansson AB</span>
         <span>Ernst Ahlgrens väg 10</span>
         <span>11255 Stockholm, Sweden</span>
       </p>

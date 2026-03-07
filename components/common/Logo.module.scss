@@ -1,22 +1,23 @@
 @import '../../styles/common.scss';
 
 .logo {
-  margin-top: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
   text-align: center;
-  
-  img {
-      width: 100px;
-      height: auto;
-      @media screen and (max-width: $max-sm) {
-          width: 75px;
-      }
-  }
 
-  @media screen and (max-width: $max-sm) {
-      margin-top: 2rem;
-      img {
-          width: 75px;
-      }
+  img {
+    width: 80px;
+    height: auto;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @media screen and (max-width: $max-sm) {
+      width: 60px;
+    }
   }
 }
 

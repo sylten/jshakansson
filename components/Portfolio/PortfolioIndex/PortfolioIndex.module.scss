@@ -3,51 +3,60 @@
 .portfolioIndex {
   max-width: $page-size;
   margin: 0 auto;
-  
-  @media screen and (min-width: $min-sm) {
+  padding: 0 1.5rem;
+
+  @media screen and (max-width: $max-sm) {
     padding: 0 1rem;
   }
 
   .header {
-      @media screen and (max-width: $max-sm) {
-          padding-left: 1rem;
-      }
+    margin-bottom: 2rem;
 
-      h1 {
-          font-size: 4rem;
-          margin-top: 1.5rem;
-          margin-bottom: 0.5rem;
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 0.5rem 0 0.5rem;
+      background: $accent-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+
+      @media screen and (max-width: $max-sm) {
+        font-size: 2rem;
       }
-      p {
-          margin-bottom: 2rem;
-      }
+    }
+
+    p {
+      color: $text-secondary;
+      margin: 0 0 1.5rem;
+      font-size: 0.95rem;
+    }
   }
 
   .portfolioItems {
-      display: flex;
-      flex-flow: row wrap;
-      margin-left: -2rem;
-      margin-right: -2rem;
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+
+    @media screen and (max-width: $max-sm) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .portfolioIndexItem {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 50%;
 
       @media screen and (max-width: $max-sm) {
-        margin-left: 0;
-        margin-right: 0;
+        flex-basis: 100%;
       }
-  
-      .portfolioIndexItem {
-          flex-grow: 0;
-          flex-shrink: 0;
-          flex-basis: 50%;
-          @media screen and (max-width: $max-sm) {
-              flex-basis: 100%;
-          }
-      }
+    }
   }
 
   .utilRow {
-      margin-top: 2rem;
-    @media screen and (max-width: $max-sm) {
-        margin-left: 1rem;
-    }
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 }

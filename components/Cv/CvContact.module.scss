@@ -1,110 +1,155 @@
 @import '../../styles/common.scss';
 
 .cvContact {
-    $border-radius: 0.25rem;
+  $border-radius: 0.65rem;
 
-    background: white;
-    border-radius: $border-radius;
-    font-size: 0.875rem;
+  background: $bg-card;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  font-size: 0.875rem;
+  overflow: hidden;
+
+  @media print {
+    width: 33%;
+    background: #f7f7f7;
+    border-color: #e0e0e0;
+  }
+
+  .contact {
+    position: relative;
+  }
+
+  .pdf {
+    @media screen and (min-width: $min-lg) {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: $text-muted;
+      font-size: 0.8rem;
+      transition: color 0.15s;
+
+      &:hover {
+        color: $accent-blue;
+      }
+    }
 
     @media print {
-        width: 33%;
+      display: none;
     }
+  }
 
-    margin-left: 2rem;
+  @media screen and (max-width: $max-md) {
+    display: flex;
+    border-radius: $border-radius;
 
     .contact {
-        position: relative;
+      flex-grow: 3;
     }
+  }
 
-    .pdf {
-        @media screen and (min-width: $min-lg) {
-            position: absolute;
-            top: 2rem;
-            right: 1rem;
-        }
-        @media print {
-            display: none;
-        }
+  .profilePicture {
+    img {
+      height: auto;
+      width: 100%;
+      max-width: 240px;
+      display: block;
+
+      @media print {
+        max-width: 100%;
+        max-height: 160px;
+        object-fit: cover;
+      }
+
+      @media screen and (max-width: $max-md) {
+        max-width: 90px;
+        margin: 0.75rem;
+        border-radius: $border-radius;
+      }
     }
+  }
+
+  .contact {
+    padding: 1rem;
 
     @media screen and (max-width: $max-md) {
-        display: flex;
-        margin-left: 0;
-
-        .contact {
-            flex-grow: 3;
-        }
+      padding: 0.75rem 0.75rem 0.75rem 0;
     }
 
-    .profilePicture {
-        img {
-            height: auto;
-            max-width: 300px;
-            border-top-left-radius: $border-radius;
-            border-top-right-radius: $border-radius;
-            @media print {
-                width: auto;
-                max-height: 200px;
-                border-radius: $border-radius;
-            }
-            @media screen and (max-width: $max-md) {
-                max-width: 100px;
-                margin-right: 1rem;
-                margin-top: 1rem;
-            }
-        }
-    }
-    .contact {
-        padding: 1rem;
-        @media screen and (max-width: $max-md) {
-            padding: 0.5rem;
-        }
+    h4 {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.7rem;
+      color: $text-muted;
+      margin: 0 0 0.875rem;
 
-        h4 {
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            @media screen and (max-width: $max-md) {
-                display: none;
-            }
-        }
-        p {
-            margin-top: 0.375rem;
-            margin-bottom: 0.375rem;
-            white-space: nowrap;
-        }
-        a {
-            display: inline-block;
-        }
-        svg {
-            margin-right: .25rem;
-        }
-        .website {
-            // @media screen and (max-width: $max-md) {
-            //     display: none;
-            // }
-        }
-        .phone {
-            margin-top: 0;
-            display: none;
-            // @media print {
-            //     display: inline-block;
-            // }
-        }
-        .address {
-            margin-top: 2rem;
-            margin-bottom: 0;
-            span {
-                display: block;
-                margin-bottom: 0.125rem;
-                &:first {
-                    margin-bottom: 0.5rem;
-                }
-            }
+      @media screen and (max-width: $max-md) {
+        display: none;
+      }
 
-            @media screen and (max-width: $max-md) {
-                display: none;
-            }
-        }
+      @media print {
+        color: #888;
+      }
     }
+
+    p {
+      margin: 0.3rem 0;
+      white-space: nowrap;
+      color: $text-secondary;
+
+      @media print {
+        color: #444;
+      }
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: $text-secondary;
+      font-size: 0.8rem;
+      transition: color 0.15s;
+
+      &:hover {
+        color: $accent-blue;
+      }
+
+      @media print {
+        color: #444;
+      }
+    }
+
+    svg {
+      flex-shrink: 0;
+      color: $accent-blue;
+
+      @media print {
+        color: #3b82f6;
+      }
+    }
+
+    .address {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid $border-color;
+
+      @media screen and (max-width: $max-md) {
+        display: none;
+      }
+
+      @media print {
+        border-color: #e0e0e0;
+      }
+
+      span {
+        display: block;
+        font-size: 0.75rem;
+        color: $text-muted;
+        margin-bottom: 0.15rem;
+
+        @media print {
+          color: #666;
+        }
+      }
+    }
+  }
 }

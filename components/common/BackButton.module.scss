@@ -2,9 +2,19 @@
 
 .BackButton {
   white-space: nowrap;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  color: $text-muted;
+  font-size: 0.875rem;
+  transition: color 0.15s;
+
+  &:hover {
+    color: $accent-blue;
+  }
+
   div {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 }

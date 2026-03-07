@@ -1,134 +1,181 @@
 @import "../../styles/common.scss";
 
 .landing {
-    margin: 2rem;
-    min-height: 75vh;
-    
-    .header {
-        max-width: $landing-page-size;
-        margin: 0 auto;
-        margin-bottom: 2rem;
-        @media screen and (min-width: $min-lg) {
-            margin-bottom: 6rem;
-        }
+  min-height: 100vh;
+  background: linear-gradient(160deg, #0a0f1e 0%, #0f1629 55%, #110d24 100%);
+  padding: 0 2rem;
 
-        .title {
-            display: flex;
-            justify-content: space-between;
-            h1 {
-                margin-top: 0rem;
-            }
-            p {
-                max-width: 80%;
-            }
-            .profileAbove {
-                display: none;
-                margin-bottom: 1rem;
-            }
-            
-            @media screen and (max-width: $max-xs) {
-                flex-direction: column;
-                text-align: center;
+  @media screen and (max-width: $max-sm) {
+    padding: 0 1.25rem;
+  }
 
-                h1 {
-                    font-size: 1.5rem;
-                }
-                p {
-                    max-width: 100%;
-                }
-                .profileRight {
-                    display: none;
-                }
-                .profileAbove {
-                    display: block;
-                }
-            }
-        }
+  .hero {
+    max-width: $landing-page-size;
+    margin: 0 auto;
+    padding: 5rem 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
 
-        .image {
-            height: 100px;
-            width: 100px;
-            img {
-                @extend .fit;
-                border-radius: 50%;
-                border: 0.125rem solid $blue-3;
-            }
-            @media screen and (max-width: $max-xs) {
-                height: 75px;
-                width: 75px;
-            }
-        }
+    @media screen and (max-width: $max-sm) {
+      flex-direction: column-reverse;
+      text-align: center;
+      padding: 3rem 0 2rem;
+      gap: 1.5rem;
     }
 
-    .navigation {
-        margin: 3rem 0rem;
-        text-align: center;
+    .heroText {
+      flex: 1;
 
-        @media screen and (max-width: $max-xs) {
-            margin: 2rem 0rem;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0rem;
-            font-size: 1.75rem;
-            text-transform: uppercase; 
-            letter-spacing: 2px;
-
-            li {
-                display: block;
-                width: 100%;
-                margin-bottom: 0.5rem;
-                a {
-                    display: block;
-                    width: 100%;
-                    padding: 4rem 0rem;
-                    color: $blue-3;
-                    background: rgba(250,250,250,0.5);
-                    background: linear-gradient(135deg, rgba(250,250,250,0.5) 0%,#fcfcfc 100%);
-                    border-radius: 0.15rem;
-                    box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
-    
-                    &::first-letter {
-                        font-size: 2.25rem;
-                        letter-spacing: 1px;
-                    }
-
-                    @media screen and (min-width: $min-lg) {
-                        position: relative;
-                        top: 0px;
-                        transition: box-shadow 0.15s, top 0.15s;
-                
-                        &:hover {
-                            box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.2);
-                            transform: scale(1.01);
-                            background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%,#f8fafc 100%);
-                        }
-                    }
-                }
-
-                @media screen and (min-width: $min-lg) {
-                    display: inline-block;
-                    width: auto;
-                    a {
-                        display: inline-block;
-                        width: auto;
-                        min-width: 200px;
-                        padding: 4rem 2rem;
-                    }
-                }
-            }
-        }
-    }
-
-    .line {
-        background: $blue-1;
-        height: 0.35rem;
-        max-width: 800px;
-        margin: 10rem auto;
+      h1 {
+        font-size: 2.75rem;
+        font-weight: 700;
+        margin: 0 0 0.4rem;
+        background: $accent-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1.15;
 
         @media screen and (max-width: $max-sm) {
-            margin: 4rem 0;
+          font-size: 1.9rem;
         }
+      }
+
+      .subtitle {
+        font-size: 1.05rem;
+        color: $text-secondary;
+        font-weight: 400;
+        margin: 0 0 1.25rem;
+        letter-spacing: 0.01em;
+      }
+
+      p {
+        color: $text-secondary;
+        line-height: 1.75;
+        font-size: 0.95rem;
+        margin: 0;
+        max-width: 480px;
+
+        @media screen and (max-width: $max-sm) {
+          max-width: 100%;
+        }
+      }
     }
+
+    .heroImage {
+      flex-shrink: 0;
+
+      .profilePic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid rgba(59, 130, 246, 0.5);
+        box-shadow:
+          0 0 0 6px rgba(59, 130, 246, 0.08),
+          0 0 40px rgba(59, 130, 246, 0.2);
+
+        img {
+          @extend .fit;
+          border-radius: 50%;
+        }
+
+        @media screen and (max-width: $max-sm) {
+          width: 110px;
+          height: 110px;
+        }
+      }
+    }
+  }
+
+  .navigation {
+    max-width: $landing-page-size;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+
+    @media screen and (max-width: $max-sm) {
+      padding-bottom: 3rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1.25rem;
+
+      @media screen and (max-width: $max-sm) {
+        flex-direction: column;
+        gap: 0.875rem;
+      }
+
+      li {
+        flex: 1;
+
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 2rem 1.5rem;
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid $border-color;
+          border-radius: 0.75rem;
+          color: $text-primary;
+          text-align: center;
+          transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+
+          .navLabel {
+            font-size: 1.15rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            background: $accent-gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.4rem;
+          }
+
+          .navDesc {
+            font-size: 0.8rem;
+            color: $text-muted;
+            font-weight: 400;
+          }
+
+          @media screen and (min-width: $min-lg) {
+            &:hover {
+              background: rgba(59, 130, 246, 0.08);
+              border-color: rgba(59, 130, 246, 0.4);
+              transform: translateY(-3px);
+              box-shadow: 0 8px 30px rgba(59, 130, 246, 0.12);
+            }
+          }
+
+          @media screen and (max-width: $max-sm) {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 1.25rem 1.25rem;
+            text-align: left;
+
+            .navLabel {
+              margin-bottom: 0;
+            }
+            .navDesc {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .divider {
+    max-width: $landing-page-size;
+    margin: 0 auto 4rem;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, $border-color 50%, transparent 100%);
+  }
 }

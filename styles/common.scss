@@ -1,11 +1,25 @@
-// $blue-1: #4f6db9;
-$blue-1: rgb(100, 100, 100);
-$blue-2: #324678;
-$blue-3: #232852;
+// Dark theme palette
+$bg-primary:   #0a0f1e;
+$bg-secondary: #0f1629;
+$bg-card:      #1a2236;
+$border-color: rgba(255, 255, 255, 0.08);
 
-$primary-color: $blue-1;
-$accent-color: $blue-1;
-$secondary-color: $blue-1;
+$accent-blue:     #3b82f6;
+$accent-cyan:     #06b6d4;
+$accent-gradient: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+
+$text-primary:   #f9fafb;
+$text-secondary: #9ca3af;
+$text-muted:     #6b7280;
+
+// Legacy aliases kept for compatibility
+$blue-1: $accent-blue;
+$blue-2: #324678;
+$blue-3: $accent-cyan;
+
+$primary-color:   $accent-blue;
+$accent-color:    $accent-cyan;
+$secondary-color: $text-secondary;
 
 $min-xs:  0;
 $min-sm:  576px;

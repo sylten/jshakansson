@@ -1,20 +1,36 @@
-﻿@import '../../../styles/common.scss';
+@import '../../../styles/common.scss';
 
 .footer {
   footer {
     max-width: $page-size;
-    margin: 3rem auto;
+    margin: 2rem auto 1.5rem;
     padding: 1rem 1.5rem;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $border-color;
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
     .copyright {
-        font-size: 0.75rem;
+      font-size: 0.75rem;
+      color: $text-muted;
+    }
+
+    a {
+      color: $text-muted;
+      font-size: 0.875rem;
+      transition: color 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+
+      &:hover {
+        color: $accent-blue;
+      }
     }
 
     @media print {
-        display: none;
+      display: none;
     }
   }
 

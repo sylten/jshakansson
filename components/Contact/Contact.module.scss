@@ -1,48 +1,86 @@
 @import "../../styles/common.scss";
 
 .contact {
-  margin: 0rem auto;
+  margin: 0 auto;
   max-width: $page-size;
   padding: 1rem 1.5rem;
 
-  .contactOptions {
-      list-style: none;
-      margin-top: 3rem;
-      margin-bottom: 3rem;
-      padding: 0;
-      font-size: 1.25rem;
-      li {
-          padding: 0.5rem 0rem;
-          border-bottom: 1px solid #ccc;
-          &:last-child {
-              border: none;
-          }
-          a {
-            display: inline-block;
-            svg {
-                margin-top: .125rem;
-                width: 2rem;
-            }
-          }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: $accent-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0.5rem 0;
 
-          @media screen and (min-width: $min-lg) {
-              width: 25%;
-          }
+    @media screen and (max-width: $max-sm) {
+      font-size: 1.75rem;
+    }
+  }
+
+  > p {
+    color: $text-secondary;
+    margin: 0 0 2.5rem;
+  }
+
+  .contactOptions {
+    list-style: none;
+    margin: 0 0 3rem;
+    padding: 0;
+
+    li {
+      border-bottom: 1px solid $border-color;
+
+      &:last-child {
+        border-bottom: none;
       }
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.875rem;
+        padding: 1.1rem 0.5rem;
+        font-size: 1rem;
+        color: $text-secondary;
+        transition: color 0.15s, background 0.15s;
+        border-radius: 0.5rem;
+
+        svg {
+          flex-shrink: 0;
+          color: $accent-blue;
+        }
+
+        &:hover {
+          color: $text-primary;
+          background: rgba(59, 130, 246, 0.06);
+          padding-left: 1rem;
+        }
+      }
+    }
   }
 
   .address {
-      margin-bottom: 5rem;
+    margin-bottom: 4rem;
+    padding: 1.25rem;
+    background: $bg-card;
+    border: 1px solid $border-color;
+    border-radius: 0.65rem;
+    display: block;
+    width: fit-content;
 
-      span {
-          display: block;
-          margin-bottom: 0.25rem;
-          font-size: 0.875rem;
+    span {
+      display: block;
+      color: $text-secondary;
+      font-size: 0.875rem;
+      margin-bottom: 0.2rem;
 
-          &.companyName {
-              margin-bottom: 1rem;
-              font-size: 1rem;
-          }
+      &:first-child {
+        color: $text-primary;
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
       }
+    }
   }
 }
