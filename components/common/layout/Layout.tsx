@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { ReactNode } from "react";
 import Footer from "./Footer";
+import ThemeChrome from "./ThemeChrome";
 import styles from "./Layout.module.scss";
 
 interface LayoutProps {
@@ -29,7 +30,8 @@ const Layout: React.FC<LayoutProps> = ({ children, isLanding }) => {
         <meta name="google-site-verification" content="RZ_40JsTzlDejUohOlhrK4KzHir-YRa3kAoSdDAyrrI" />
         <link rel="icon" type="image/x-icon" href="favicon.ico?v=7" />
       </Head>
-      <div className={styles.Content}>{children}</div>
+      <ThemeChrome />
+      <div className={styles.Content} data-gui-layout="content">{children}</div>
       <Footer isLanding={isLanding} />
     </div>
   );

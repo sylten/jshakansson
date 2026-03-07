@@ -79,33 +79,77 @@
 
 // ── Winamp theme ─────────────────────────────────────────────────────────────
 html[data-theme="winamp"] {
-  --bg:             #1a1a1a;
+  --bg:             #1b1b1b;
   --bg-subtle:      #1e1e1e;
-  --bg-card:        #232323;
-  --bg-card-hover:  #2a2a2a;
-  --border:         rgba(84, 197, 0, 0.22);
+  --bg-card:        #242424;
+  --bg-card-hover:  #2e2e2e;
+  --border:         rgba(84, 197, 0, 0.20);
   --border-strong:  rgba(84, 197, 0, 0.45);
-  --text:           #e0e0e0;
-  --text-muted:     #a0a0a0;
-  --text-faint:     #606060;
+  --text:           #d0d0d0;
+  --text-muted:     #909090;
+  --text-faint:     #505050;
   --accent:         #54c500;
   --accent-muted:   rgba(84, 197, 0, 0.10);
-  --accent-border:  rgba(84, 197, 0, 0.32);
-  --accent-hover:   rgba(84, 197, 0, 0.16);
+  --accent-border:  rgba(84, 197, 0, 0.30);
+  --accent-hover:   rgba(84, 197, 0, 0.14);
   --shadow-sm:      0 1px 3px rgba(0, 0, 0, 0.6);
   --shadow:         0 2px 6px rgba(0, 0, 0, 0.7);
   --shadow-md:      0 4px 10px rgba(0, 0, 0, 0.75);
   --shadow-lg:      0 10px 20px rgba(0, 0, 0, 0.85);
-  --shadow-hover:   0 0 0 1px rgba(84, 197, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.9);
+  --shadow-hover:   0 0 0 1px rgba(84, 197, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.9);
   --hero-grad-a:    #54c500;
   --hero-grad-b:    #00c8b4;
-  --page-bg:        #1a1a1a;
+  --page-bg:        #1b1b1b;
   --logo-filter:    invert(1) brightness(0.7);
   --logo-opacity:   0.55;
 
   body {
     font-family: "Lucida Console", "Courier New", monospace;
-    letter-spacing: -0.01em;
+  }
+
+  // Cards look like Winamp panel windows with a dark header strip
+  [data-gui-card] {
+    border: 1px solid rgba(84, 197, 0, 0.18) !important;
+    border-top: none !important;
+    background: #242424 !important;
+    position: relative !important;
+
+    &::before {
+      content: "" !important;
+      display: block !important;
+      height: 16px !important;
+      background: linear-gradient(180deg, #3a3a3a 0%, #1e1e1e 100%) !important;
+      border-top: 1px solid rgba(84, 197, 0, 0.25) !important;
+      border-bottom: 1px solid #0a0a0a !important;
+    }
+  }
+
+  // Nav items as playlist rows
+  [data-gui-card="nav"] a {
+    border-radius: 0 !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(84, 197, 0, 0.10) !important;
+    background: #202020 !important;
+    box-shadow: none !important;
+
+    &:hover {
+      background: #000080 !important;
+      border-color: #000080 !important;
+      transform: none !important;
+    }
+  }
+
+  [data-gui-card="nav"] a span {
+    -webkit-text-fill-color: inherit !important;
+    background: none !important;
+    background-clip: unset !important;
+  }
+
+  // Section headings: LED green monospace
+  h1, h2, h3 {
+    font-family: "Lucida Console", "Courier New", monospace !important;
+    letter-spacing: -0.01em !important;
+    text-shadow: 0 0 8px rgba(84, 197, 0, 0.3) !important;
   }
 }
 
@@ -124,12 +168,11 @@ html[data-theme="win95"] {
   --accent-muted:   rgba(0, 0, 128, 0.10);
   --accent-border:  rgba(0, 0, 128, 0.45);
   --accent-hover:   rgba(0, 0, 128, 0.12);
-  // Classic raised-bevel box-shadow
-  --shadow-sm:      inset -1px -1px 0 #808080, inset 1px 1px 0 #ffffff;
-  --shadow:         inset -2px -2px 0 #808080, inset 2px 2px 0 #ffffff, inset -1px -1px 0 #404040, inset 1px 1px 0 #dfdfdf;
-  --shadow-md:      inset -2px -2px 0 #808080, inset 2px 2px 0 #ffffff, inset -1px -1px 0 #404040, inset 1px 1px 0 #dfdfdf;
-  --shadow-lg:      inset -2px -2px 0 #808080, inset 2px 2px 0 #ffffff, inset -1px -1px 0 #404040, inset 1px 1px 0 #dfdfdf;
-  --shadow-hover:   inset -1px -1px 0 #ffffff, inset 1px 1px 0 #808080; // pressed
+  --shadow-sm:      none;
+  --shadow:         none;
+  --shadow-md:      none;
+  --shadow-lg:      none;
+  --shadow-hover:   none;
   --hero-grad-a:    #000080;
   --hero-grad-b:    #0000cc;
   --page-bg:        #008080;
@@ -137,7 +180,8 @@ html[data-theme="win95"] {
   --logo-opacity:   0.75;
 
   body {
-    font-family: "MS Sans Serif", "Tahoma", "Arial", sans-serif;
+    font-family: "Tahoma", "MS Sans Serif", "Arial", sans-serif;
+    font-size: 12px;
     -webkit-font-smoothing: auto;
   }
 
@@ -146,15 +190,161 @@ html[data-theme="win95"] {
     border-radius: 0 !important;
   }
 
-  // Title-bar style for h1 — !important needed to override component-scoped CSS module gradient
-  h1 {
-    background: linear-gradient(90deg, #000080 0%, #1084d0 100%) !important;
-    -webkit-background-clip: unset !important;
-    -webkit-text-fill-color: #ffffff !important;
+  // The content window sits in the teal "desktop"
+  [data-gui-layout="content"] {
+    background: #c0c0c0 !important;
+    border: 2px solid !important;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf !important;
+    outline: 1px solid #000000 !important;
+    margin: 0 auto !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 4rem !important;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3) !important;
+  }
+
+  // Cards: Win95 dialog/panel boxes with raised bevel border and a title bar strip
+  [data-gui-card] {
+    background: #c0c0c0 !important;
+    border: 2px solid !important;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf !important;
+    outline: 1px solid #000 !important;
+    box-shadow: none !important;
+    padding-top: 22px !important;
+    position: relative !important;
+    transform: none !important;
+
+    // Win95 window title bar via ::before
+    &::before {
+      content: "" !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      height: 18px !important;
+      background: linear-gradient(90deg, #000080 0%, #1084d0 100%) !important;
+      border-bottom: 2px solid #404040 !important;
+    }
+
+    &:hover {
+      background: #c0c0c0 !important;
+      border-color: #dfdfdf #808080 #808080 #dfdfdf !important;
+      outline-color: #000 !important;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  // Nav items: Win95 button style
+  [data-gui-card="nav"] {
+    background: #c0c0c0 !important;
+    border: none !important;
+    outline: none !important;
+    padding: 0 !important;
+  }
+
+  [data-gui-card="nav"]::before {
+    display: none !important;
+  }
+
+  [data-gui-card="nav"] a {
+    display: flex !important;
+    align-items: center !important;
+    background: #c0c0c0 !important;
+    border: 2px solid !important;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf !important;
+    outline: 1px solid #000000 !important;
+    padding: 4px 8px !important;
+    box-shadow: none !important;
+    transform: none !important;
+    gap: 6px !important;
+
+    &:hover {
+      background: #000080 !important;
+      border-color: #000080 !important;
+      outline-color: #000080 !important;
+      transform: none !important;
+    }
+
+    &:hover span {
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+    }
+
+    &:active {
+      border-color: #808080 #dfdfdf #dfdfdf #808080 !important;
+    }
+  }
+
+  [data-gui-card="nav"] a span {
+    font-family: "Tahoma", "MS Sans Serif", "Arial", sans-serif !important;
+    -webkit-text-fill-color: #000000 !important;
+    background: none !important;
     background-clip: unset !important;
-    color: #ffffff !important;
-    padding: 0.1em 0.4em !important;
-    display: inline-block !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    font-size: 11px !important;
+    font-weight: normal !important;
+    color: #000000 !important;
+  }
+
+  // Headings: plain black text, h1 restyled as window area label
+  h1 {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #000000 !important;
+    background-clip: unset !important;
+    color: #000000 !important;
+    font-family: "Tahoma", "MS Sans Serif", "Arial", sans-serif !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    letter-spacing: 0 !important;
+  }
+
+  h2 {
+    font-family: "Tahoma", "MS Sans Serif", "Arial", sans-serif !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    color: #000000 !important;
+    border-bottom: 1px solid #808080 !important;
+    box-shadow: 0 1px 0 #ffffff !important;
+    padding-bottom: 2px !important;
+    margin-bottom: 6px !important;
+  }
+
+  h3 {
+    font-family: "Tahoma", "MS Sans Serif", "Arial", sans-serif !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    color: #000000 !important;
+  }
+
+  // All buttons outside of theme-chrome and theme-switcher get Win95 raised bevel.
+  // Uses negative selector to skip chrome/switcher buttons that have their own bevel styling.
+  button:not([class*="win95"]):not([class*="themeBtn"]):not([class*="winBtn"]):not([class*="tBtn"]) {
+    background: #c0c0c0 !important;
+    color: #000000 !important;
+    border: 2px solid !important;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf !important;
+    outline: 1px solid #000000 !important;
+    font-family: "Tahoma", "MS Sans Serif", "Arial", sans-serif !important;
+    font-size: 11px !important;
+    padding: 3px 12px !important;
+    cursor: default !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+
+    // Simulate Win95 button press: content shifts 1px down+right via padding asymmetry
+    &:active {
+      border-color: #808080 #dfdfdf #dfdfdf #808080 !important;
+      padding: 4px 11px 2px 13px !important;
+    }
+  }
+
+  // Page background stays teal
+  body {
+    background: #008080 !important;
   }
 }
 

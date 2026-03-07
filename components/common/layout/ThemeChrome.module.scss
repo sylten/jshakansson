@@ -1,0 +1,333 @@
+@import '../../../styles/common.scss';
+
+// ── Win95 Window Title Bar ────────────────────────────────────────────────────
+.win95Bar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px 2px 6px;
+  background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
+  border-bottom: 2px solid #404040;
+  user-select: none;
+
+  .win95Icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(1px 1px 0 rgba(0,0,0,0.4));
+  }
+
+  .win95Title {
+    flex: 1;
+    color: #ffffff;
+    font-family: "Tahoma", "MS Sans Serif", "Arial", sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+  }
+
+  .win95Btns {
+    display: flex;
+    gap: 2px;
+    flex-shrink: 0;
+  }
+
+  .win95Btn {
+    width: 16px;
+    height: 14px;
+    background: #c0c0c0;
+    color: #000000;
+    border: none;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    box-shadow: inset 1px 1px 0 #dfdfdf;
+    font-size: 9px;
+    font-weight: bold;
+    font-family: "Tahoma", "MS Sans Serif", monospace;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+
+    &:active {
+      border-top: 2px solid #808080;
+      border-left: 2px solid #808080;
+      border-right: 2px solid #dfdfdf;
+      border-bottom: 2px solid #dfdfdf;
+      box-shadow: none;
+    }
+  }
+
+  .win95Close {
+    margin-left: 2px;
+  }
+}
+
+// ── Winamp Player Chrome ──────────────────────────────────────────────────────
+.winampChrome {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #232323;
+  font-family: "Lucida Console", "Courier New", monospace;
+  // Double-bevel window border
+  border-bottom: 1px solid #1a1a1a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+
+  // ── Title bar ──────────────────────────────────────────────────────────────
+  .titlebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #3a3a3a 0%, #1e1e1e 100%);
+    padding: 3px 4px;
+    border-bottom: 1px solid #444;
+    border-top: 1px solid #555;
+
+    .logo {
+      display: flex;
+      align-items: baseline;
+      gap: 0;
+      user-select: none;
+    }
+
+    .logoW {
+      font-size: 13px;
+      font-weight: 900;
+      font-family: "Impact", "Arial Black", sans-serif;
+      color: #e0a020;
+      letter-spacing: -0.03em;
+      text-shadow: 0 0 8px rgba(224, 160, 32, 0.7), 0 1px 0 #000;
+    }
+
+    .logoRest {
+      font-size: 9px;
+      font-weight: 700;
+      font-family: "Impact", "Arial Black", sans-serif;
+      color: #c08010;
+      letter-spacing: 0.08em;
+      text-transform: lowercase;
+    }
+
+    .winBtns {
+      display: flex;
+      gap: 2px;
+    }
+
+    .winBtn {
+      width: 11px;
+      height: 10px;
+      background: linear-gradient(180deg, #4a4a4a 0%, #2a2a2a 100%);
+      color: #909090;
+      border: 1px solid #606060;
+      border-bottom-color: #1a1a1a;
+      font-size: 7px;
+      cursor: default;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      line-height: 1;
+
+      &:hover {
+        background: linear-gradient(180deg, #5a5a5a 0%, #3a3a3a 100%);
+        color: #cccccc;
+      }
+
+      &:active {
+        background: #1a1a1a;
+        border-color: #2a2a2a;
+      }
+    }
+
+    .winBtnClose {
+      &:hover {
+        background: #aa2222;
+        border-color: #cc3333;
+        color: #fff;
+      }
+    }
+  }
+
+  // ── LED display area ───────────────────────────────────────────────────────
+  .display {
+    display: flex;
+    align-items: center;
+    background: #000000;
+    margin: 3px 4px 0;
+    padding: 3px 6px 3px 4px;
+    border: 2px solid;
+    border-color: #1a1a1a #3a3a3a #3a3a3a #1a1a1a;
+    gap: 6px;
+    height: 18px;
+    overflow: hidden;
+
+    .lcd {
+      flex: 1;
+      overflow: hidden;
+
+      .scroll {
+        display: flex;
+        white-space: nowrap;
+        animation: winampScroll 22s linear infinite;
+        color: #00cf00;
+        font-size: 9px;
+        font-family: "Lucida Console", "Courier New", monospace;
+        text-shadow: 0 0 5px #54c500, 0 0 2px #00ff00;
+        line-height: 14px;
+      }
+    }
+
+    .sideMeta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      flex-shrink: 0;
+
+      .kbps {
+        font-size: 11px;
+        font-weight: bold;
+        font-family: "Lucida Console", monospace;
+        color: #00cf00;
+        text-shadow: 0 0 5px #54c500;
+        line-height: 1;
+      }
+
+      .kbpsLabel {
+        font-size: 7px;
+        color: #004400;
+        text-transform: uppercase;
+        font-family: monospace;
+        line-height: 1;
+      }
+    }
+  }
+
+  // ── EQ bars ────────────────────────────────────────────────────────────────
+  .eqRow {
+    display: flex;
+    gap: 1px;
+    height: 24px;
+    margin: 0 4px;
+    padding: 2px 2px 0;
+    background: #000000;
+    border: 2px solid;
+    border-color: #1a1a1a #3a3a3a #3a3a3a #1a1a1a;
+    border-top: none;
+    align-items: flex-end;
+    overflow: hidden;
+
+    .bar {
+      flex: 1;
+      min-width: 2px;
+      background: linear-gradient(to top, #006600 0%, #54c500 40%, #a0e000 70%, #ffdd00 85%, #ff6600 100%);
+      animation: eqBounce 0.6s ease-in-out infinite alternate;
+      transform-origin: bottom;
+    }
+
+    // Stagger each bar with SCSS
+    @for $i from 1 through 28 {
+      .bar:nth-child(#{$i}) {
+        animation-delay: -#{$i * 0.07}s;
+        animation-duration: #{0.35 + (($i * 7) % 7) * 0.11}s;
+      }
+    }
+  }
+
+  // ── Transport controls ─────────────────────────────────────────────────────
+  .transport {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 3px 4px;
+    background: #232323;
+    border-top: 1px solid #1a1a1a;
+
+    .tBtn {
+      height: 20px;
+      min-width: 26px;
+      background: linear-gradient(180deg, #3e3e3e 0%, #2a2a2a 100%);
+      color: #a0a0a0;
+      border: 1px solid #505050;
+      border-bottom-color: #1a1a1a;
+      font-size: 10px;
+      cursor: pointer;
+      padding: 0 5px;
+      font-family: monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background: linear-gradient(180deg, #4a4a4a 0%, #363636 100%);
+        color: #54c500;
+        border-color: #54c500;
+        box-shadow: 0 0 4px rgba(84, 197, 0, 0.3);
+      }
+
+      &:active {
+        background: #1a1a1a;
+        border-color: #3a3a3a;
+        box-shadow: none;
+      }
+    }
+
+    .tPlay {
+      color: #54c500;
+      text-shadow: 0 0 4px #54c500;
+      min-width: 32px;
+    }
+
+    .vol {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      .volLabel {
+        font-size: 8px;
+        color: #555;
+        text-transform: uppercase;
+        font-family: monospace;
+      }
+
+      .volTrack {
+        width: 56px;
+        height: 8px;
+        background: #0a0a0a;
+        border: 1px solid #2a2a2a;
+        position: relative;
+        overflow: hidden;
+
+        .volFill {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 75%;
+          background: linear-gradient(90deg, #003300 0%, #54c500 100%);
+        }
+      }
+    }
+  }
+}
+
+@keyframes winampScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes eqBounce {
+  from { transform: scaleY(0.15); }
+  to { transform: scaleY(1); }
+}

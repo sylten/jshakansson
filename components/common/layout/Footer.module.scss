@@ -1,5 +1,6 @@
 @import '../../../styles/common.scss';
 
+// ── Default / Winamp footer ───────────────────────────────────────────────────
 .footer {
   footer {
     max-width: $page-size;
@@ -41,7 +42,7 @@
     max-width: $landing-page-size;
   }
 
-  // ── Theme switcher ────────────────────────────────────────────────────────
+  // ── Theme switcher (Default/Winamp) ────────────────────────────────────────
   .themeSwitcher {
     display: inline-flex;
     align-items: center;
@@ -89,6 +90,132 @@
       @media (max-width: $max-xs) {
         display: none;
       }
+    }
+  }
+}
+
+// ── Win95 Taskbar ─────────────────────────────────────────────────────────────
+.win95Taskbar {
+  position: sticky;
+  bottom: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 4px;
+  background: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  box-shadow: inset 0 1px 0 #dfdfdf;
+  min-height: 30px;
+  font-family: "Tahoma", "MS Sans Serif", "Arial", sans-serif;
+  font-size: 11px;
+
+  // ── Start button ───────────────────────────────────────────────────────────
+  .win95StartBtn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px 2px 4px;
+    background: #c0c0c0;
+    border: none;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    box-shadow: inset 1px 1px 0 #dfdfdf;
+    font-size: 11px;
+    font-family: "Tahoma", "MS Sans Serif", "Arial", sans-serif;
+    font-weight: bold;
+    cursor: default;
+    min-height: 22px;
+    color: #000000;
+
+    &:active {
+      border-color: #808080 #ffffff #ffffff #808080;
+      box-shadow: none;
+      padding: 3px 7px 1px 5px;
+    }
+
+    .startIcon {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  // ── Divider ────────────────────────────────────────────────────────────────
+  .win95TaskbarDivider {
+    width: 2px;
+    height: 22px;
+    background: #808080;
+    box-shadow: 1px 0 0 #ffffff;
+    margin: 0 2px;
+    flex-shrink: 0;
+  }
+
+  // ── Theme picker (taskbar style) ───────────────────────────────────────────
+  .win95ThemePicker {
+    display: flex;
+    gap: 2px;
+    flex: 1;
+    flex-wrap: wrap;
+  }
+
+  .win95TaskBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 2px 8px;
+    background: #c0c0c0;
+    color: #000000;
+    border: none;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    box-shadow: inset 1px 1px 0 #dfdfdf;
+    font-size: 11px;
+    font-family: "Tahoma", "MS Sans Serif", "Arial", sans-serif;
+    cursor: default;
+    min-height: 22px;
+    white-space: nowrap;
+
+    &:active,
+    &.win95TaskBtnActive {
+      border-color: #808080 #ffffff #ffffff #808080;
+      box-shadow: none;
+      background: #c0c0c0;
+    }
+  }
+
+  // ── System tray ────────────────────────────────────────────────────────────
+  .win95Tray {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+    padding: 1px 6px;
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #808080 #ffffff #ffffff #808080;
+    min-height: 22px;
+
+    .win95TrayBtn {
+      display: flex;
+      align-items: center;
+      color: #000080;
+      font-size: 0.85rem;
+      padding: 0 2px;
+
+      &:hover { color: #0000cc; }
+    }
+
+    .win95Clock {
+      font-size: 11px;
+      font-family: "Tahoma", "MS Sans Serif", "Arial", sans-serif;
+      color: #000000;
+      white-space: nowrap;
+      min-width: 38px;
+      text-align: center;
     }
   }
 }

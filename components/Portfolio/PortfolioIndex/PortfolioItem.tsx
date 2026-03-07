@@ -11,7 +11,7 @@ interface PortfolioItemProps {
 
 const PortfolioItem: React.FC<PortfolioItemProps> = ({ item, smallView }) => {
   return (
-    <div className={`${styles.portfolioItem} ${smallView ? styles.smallView : ""}`}>
+    <div className={`${styles.portfolioItem} ${smallView ? styles.smallView : ""}`} data-gui-card="portfolio">
       <div className={styles.imageWrapper}>
         <Link href={"/portfolio/" + item.uniqueName}>
           <Image src={item.smallMedia?.url} alt={`${item.name} preview image`} width={item.smallMedia.width} height={item.smallMedia.height} />

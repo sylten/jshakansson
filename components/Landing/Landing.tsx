@@ -25,21 +25,21 @@ export default function Landing() {
 
       <div className={styles.navigation}>
         <ul>
-          <li>
+          <li data-gui-card="nav">
             <Link href="/portfolio">
               <span className={styles.navLabel}>Portfolio</span>
               <span className={styles.navDesc}>Personal &amp; professional projects</span>
               <span className={styles.navArrow}>→</span>
             </Link>
           </li>
-          <li>
+          <li data-gui-card="nav">
             <Link href="/cv">
               <span className={styles.navLabel}>CV</span>
               <span className={styles.navDesc}>Experience &amp; education</span>
               <span className={styles.navArrow}>→</span>
             </Link>
           </li>
-          <li>
+          <li data-gui-card="nav">
             <Link href="/contact">
               <span className={styles.navLabel}>Contact</span>
               <span className={styles.navDesc}>Get in touch</span>
