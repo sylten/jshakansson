@@ -77,6 +77,87 @@
   .no-print { display: none; }
 }
 
+// ── Winamp theme ─────────────────────────────────────────────────────────────
+html[data-theme="winamp"] {
+  --bg:             #1a1a1a;
+  --bg-subtle:      #1e1e1e;
+  --bg-card:        #232323;
+  --bg-card-hover:  #2a2a2a;
+  --border:         rgba(84, 197, 0, 0.22);
+  --border-strong:  rgba(84, 197, 0, 0.45);
+  --text:           #e0e0e0;
+  --text-muted:     #a0a0a0;
+  --text-faint:     #606060;
+  --accent:         #54c500;
+  --accent-muted:   rgba(84, 197, 0, 0.10);
+  --accent-border:  rgba(84, 197, 0, 0.32);
+  --accent-hover:   rgba(84, 197, 0, 0.16);
+  --shadow-sm:      0 1px 3px rgba(0, 0, 0, 0.6);
+  --shadow:         0 2px 6px rgba(0, 0, 0, 0.7);
+  --shadow-md:      0 4px 10px rgba(0, 0, 0, 0.75);
+  --shadow-lg:      0 10px 20px rgba(0, 0, 0, 0.85);
+  --shadow-hover:   0 0 0 1px rgba(84, 197, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.9);
+  --hero-grad-a:    #54c500;
+  --hero-grad-b:    #00c8b4;
+  --page-bg:        #1a1a1a;
+  --logo-filter:    invert(1) brightness(0.7);
+  --logo-opacity:   0.55;
+
+  body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    letter-spacing: -0.01em;
+  }
+}
+
+// ── Windows 95 theme ─────────────────────────────────────────────────────────
+html[data-theme="win95"] {
+  --bg:             #008080;
+  --bg-subtle:      #008080;
+  --bg-card:        #c0c0c0;
+  --bg-card-hover:  #d4d0c8;
+  --border:         #808080;
+  --border-strong:  #404040;
+  --text:           #000000;
+  --text-muted:     #333333;
+  --text-faint:     #808080;
+  --accent:         #000080;
+  --accent-muted:   rgba(0, 0, 128, 0.10);
+  --accent-border:  rgba(0, 0, 128, 0.45);
+  --accent-hover:   rgba(0, 0, 128, 0.12);
+  // Classic raised-bevel box-shadow
+  --shadow-sm:      inset -1px -1px 0 #808080, inset 1px 1px 0 #ffffff;
+  --shadow:         inset -2px -2px 0 #808080, inset 2px 2px 0 #ffffff, inset -1px -1px 0 #404040, inset 1px 1px 0 #dfdfdf;
+  --shadow-md:      inset -2px -2px 0 #808080, inset 2px 2px 0 #ffffff, inset -1px -1px 0 #404040, inset 1px 1px 0 #dfdfdf;
+  --shadow-lg:      inset -2px -2px 0 #808080, inset 2px 2px 0 #ffffff, inset -1px -1px 0 #404040, inset 1px 1px 0 #dfdfdf;
+  --shadow-hover:   inset -1px -1px 0 #ffffff, inset 1px 1px 0 #808080; // pressed
+  --hero-grad-a:    #000080;
+  --hero-grad-b:    #0000cc;
+  --page-bg:        #008080;
+  --logo-filter:    none;
+  --logo-opacity:   0.75;
+
+  body {
+    font-family: "MS Sans Serif", "Tahoma", "Arial", sans-serif;
+    -webkit-font-smoothing: auto;
+  }
+
+  // Remove all border-radius — Win95 is boxy (intentional theme reset over component styles)
+  *, *::before, *::after {
+    border-radius: 0 !important;
+  }
+
+  // Title-bar style for h1 — !important needed to override component-scoped CSS module gradient
+  h1 {
+    background: linear-gradient(90deg, #000080 0%, #1084d0 100%) !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background-clip: unset !important;
+    color: #ffffff !important;
+    padding: 0.1em 0.4em !important;
+    display: inline-block !important;
+  }
+}
+
 // ── Base styles ───────────────────────────────────────────────────────────────
 body {
   font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
