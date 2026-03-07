@@ -1,23 +1,16 @@
 @import '../../styles/common.scss';
 
 .logo {
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin: 2.5rem 0 1rem;
   text-align: center;
 
   img {
-    width: 80px;
+    width: 68px;
     height: auto;
-    opacity: 0.6;
+    opacity: var(--logo-opacity);
+    filter: var(--logo-filter);
     transition: opacity 0.2s;
 
-    &:hover {
-      opacity: 1;
-    }
-
-    @media screen and (max-width: $max-sm) {
-      width: 60px;
-    }
+    &:hover { opacity: 0.9; }
   }
 }
-

@@ -1,154 +1,122 @@
 @import '../../styles/common.scss';
 
 .cvContact {
-  $border-radius: 0.65rem;
+  $r: 0.65rem;
 
   background: $bg-card;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
+  border: 1px solid $border;
+  border-radius: $r;
   font-size: 0.875rem;
   overflow: hidden;
+  box-shadow: $shadow-sm;
+
+  @media (max-width: $max-md) {
+    display: flex;
+  }
 
   @media print {
     width: 33%;
-    background: #f7f7f7;
+    background: #f9fafb;
     border-color: #e0e0e0;
-  }
-
-  .contact {
-    position: relative;
-  }
-
-  .pdf {
-    @media screen and (min-width: $min-lg) {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      color: $text-muted;
-      font-size: 0.8rem;
-      transition: color 0.15s;
-
-      &:hover {
-        color: $accent-blue;
-      }
-    }
-
-    @media print {
-      display: none;
-    }
-  }
-
-  @media screen and (max-width: $max-md) {
-    display: flex;
-    border-radius: $border-radius;
-
-    .contact {
-      flex-grow: 3;
-    }
   }
 
   .profilePicture {
     img {
-      height: auto;
       width: 100%;
-      max-width: 240px;
+      height: auto;
       display: block;
+      max-width: 230px;
 
-      @media print {
-        max-width: 100%;
-        max-height: 160px;
-        object-fit: cover;
+      @media (max-width: $max-md) {
+        max-width: 88px;
+        margin: 0.75rem;
+        border-radius: $r;
       }
 
-      @media screen and (max-width: $max-md) {
-        max-width: 90px;
-        margin: 0.75rem;
-        border-radius: $border-radius;
+      @media print {
+        max-height: 160px;
+        object-fit: cover;
       }
     }
   }
 
   .contact {
-    padding: 1rem;
+    flex: 1;
+    padding: 0.9rem;
+    position: relative;
 
-    @media screen and (max-width: $max-md) {
+    @media (max-width: $max-md) {
       padding: 0.75rem 0.75rem 0.75rem 0;
     }
 
     h4 {
+      font-size: 0.65rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.7rem;
-      color: $text-muted;
-      margin: 0 0 0.875rem;
+      letter-spacing: 0.1em;
+      color: $text-faint;
+      margin: 0 0 0.75rem;
 
-      @media screen and (max-width: $max-md) {
-        display: none;
-      }
-
-      @media print {
-        color: #888;
-      }
+      @media (max-width: $max-md) { display: none; }
+      @media print { color: #888; }
     }
 
     p {
       margin: 0.3rem 0;
       white-space: nowrap;
-      color: $text-secondary;
+      color: $text-muted;
 
-      @media print {
-        color: #444;
-      }
+      @media print { color: #444; }
     }
 
     a {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      color: $text-secondary;
-      font-size: 0.8rem;
+      color: $text-muted;
+      font-size: 0.78rem;
       transition: color 0.15s;
 
-      &:hover {
-        color: $accent-blue;
-      }
+      &:hover { color: $accent; }
 
-      @media print {
-        color: #444;
-      }
+      @media print { color: #444; }
     }
 
     svg {
       flex-shrink: 0;
-      color: $accent-blue;
+      color: $accent;
+      opacity: 0.8;
 
-      @media print {
-        color: #3b82f6;
-      }
+      @media print { color: #1d4ed8; }
     }
 
+    .pdf {
+      @media (min-width: $min-lg) {
+        position: absolute;
+        top: 0.9rem;
+        right: 0.9rem;
+        font-size: 0.72rem;
+      }
+      @media print { display: none; }
+    }
+
+    .phone { display: none; } // visible on print only (handled by print overrides)
+
     .address {
-      margin-top: 1.25rem;
-      padding-top: 1rem;
-      border-top: 1px solid $border-color;
+      margin-top: 1rem;
+      padding-top: 0.875rem;
+      border-top: 1px solid $border;
 
-      @media screen and (max-width: $max-md) {
-        display: none;
-      }
-
-      @media print {
-        border-color: #e0e0e0;
-      }
+      @media (max-width: $max-md) { display: none; }
+      @media print { border-color: #ddd; }
 
       span {
         display: block;
-        font-size: 0.75rem;
-        color: $text-muted;
+        font-size: 0.73rem;
+        color: $text-faint;
         margin-bottom: 0.15rem;
 
-        @media print {
-          color: #666;
-        }
+        @media print { color: #666; }
       }
     }
   }

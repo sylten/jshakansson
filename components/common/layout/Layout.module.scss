@@ -5,10 +5,10 @@
     max-width: $page-size;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 2.5rem;
+    padding-top: 1.75rem;
 
-    @media screen and (max-width: $max-sm) {
-      padding-top: 1.5rem;
+    @media (min-width: $min-md) {
+      padding-top: 2.5rem;
     }
 
     @media print {

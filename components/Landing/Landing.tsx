@@ -8,8 +8,8 @@ export default function Landing() {
       <div className={styles.hero}>
         <div className={styles.heroText}>
           <h1>Jonas Siltamäki Håkansson</h1>
-          <p className={styles.subtitle}>Software Engineering Consultant</p>
-          <p>
+          <p className={styles.role}>Software Engineering Consultant</p>
+          <p className={styles.bio}>
             Proficient in system architecture, full-stack development and AI implementations.
             I have worked with small and large teams at both startups and larger companies.
           </p>
@@ -21,30 +21,33 @@ export default function Landing() {
         </div>
       </div>
 
+      <div className={styles.divider}></div>
+
       <div className={styles.navigation}>
         <ul>
           <li>
             <Link href="/portfolio">
               <span className={styles.navLabel}>Portfolio</span>
               <span className={styles.navDesc}>Personal &amp; professional projects</span>
+              <span className={styles.navArrow}>→</span>
             </Link>
           </li>
           <li>
             <Link href="/cv">
               <span className={styles.navLabel}>CV</span>
               <span className={styles.navDesc}>Experience &amp; education</span>
+              <span className={styles.navArrow}>→</span>
             </Link>
           </li>
           <li>
             <Link href="/contact">
               <span className={styles.navLabel}>Contact</span>
               <span className={styles.navDesc}>Get in touch</span>
+              <span className={styles.navArrow}>→</span>
             </Link>
           </li>
         </ul>
       </div>
-
-      <div className={styles.divider}></div>
     </div>
   );
 }

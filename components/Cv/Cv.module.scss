@@ -5,12 +5,12 @@
   max-width: $page-size;
   padding: 0.5rem 1.5rem;
 
-  @media screen and (max-width: $max-sm) {
+  @media (max-width: $max-sm) {
     padding: 0.5rem 1rem;
   }
 
   .utilRow {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .content {
@@ -18,18 +18,18 @@
     display: flex;
     gap: 2rem;
 
-    @media screen and (max-width: $max-md) {
+    @media (max-width: $max-md) {
       display: block;
     }
 
     p {
       font-size: 0.875rem;
-      color: $text-secondary;
+      color: $text-muted;
       line-height: 1.7;
     }
 
     .main {
-      flex-grow: 2;
+      flex-grow: 1;
       min-width: 0;
 
       @media print {
@@ -37,47 +37,33 @@
       }
 
       .header {
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
 
-        @media screen and (max-width: $max-md) {
-          margin-bottom: 2rem;
-        }
-
-        @media print {
+        @media (max-width: $max-md) {
           margin-bottom: 2rem;
         }
 
         h1 {
-          font-size: 2.25rem;
+          font-size: clamp(1.6rem, 4vw, 2.1rem);
           font-weight: 700;
           margin-top: 0;
           margin-bottom: 0.25rem;
-          background: $accent-gradient;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-
-          @media screen and (max-width: $max-md) {
-            font-size: 1.6rem;
-          }
+          color: $text;
 
           @media print {
-            font-size: 1.75rem;
-            color: #222;
-            background: none;
-            -webkit-text-fill-color: unset;
+            color: #111;
           }
         }
 
         .title {
-          font-size: 0.95rem;
+          font-size: 0.875rem;
           font-weight: 600;
-          color: $accent-blue;
+          color: $accent;
           margin-top: 0;
           margin-bottom: 1rem;
 
           @media print {
-            color: #555;
+            color: #1d4ed8;
           }
         }
 
@@ -85,7 +71,7 @@
           display: none;
           margin-top: 2rem;
 
-          @media screen and (max-width: $max-md) {
+          @media (max-width: $max-md) {
             display: block;
           }
         }
@@ -94,115 +80,102 @@
       .section {
         margin-bottom: 2.5rem;
         padding-bottom: 2rem;
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid $border;
 
-        &:last-child {
-          border-bottom: none;
-        }
+        &:last-child { border-bottom: none; }
 
         @media print {
           margin-bottom: 1.5rem;
-          border-color: #e0e0e0;
+          border-color: #ddd;
         }
 
         h2 {
-          font-size: 1.25rem;
-          font-weight: 600;
-          text-transform: uppercase;
-          letter-spacing: 0.08em;
-          color: $text-muted;
-          margin-bottom: 1.5rem;
-
-          @media print {
-            color: #666;
-            font-size: 1rem;
-          }
-        }
-
-        h3 {
+          font-size: 0.7rem;
           font-weight: 700;
-          margin-bottom: 0.25rem;
-          font-size: 1rem;
-          color: $text-primary;
-
-          @media print {
-            color: #222;
-          }
-
-          a {
-            font-weight: 400;
-            color: $accent-blue;
-          }
-        }
-
-        .title,
-        .degree,
-        .level {
-          margin-top: 0.2rem;
-          margin-bottom: 0.2rem;
-          font-size: 0.9rem;
-          color: $text-secondary;
-        }
-
-        .issuer {
-          color: $accent-blue;
-        }
-
-        .period {
-          margin-top: 0.2rem;
-          margin-bottom: 0.5rem;
-          font-size: 0.8rem;
-          color: $text-muted;
+          text-transform: uppercase;
+          letter-spacing: 0.12em;
+          color: $text-faint;
+          margin-bottom: 1.25rem;
 
           @media print {
             color: #888;
           }
         }
 
+        h3 {
+          font-weight: 700;
+          margin-bottom: 0.2rem;
+          font-size: 0.95rem;
+          color: $text;
+
+          @media print { color: #111; }
+
+          a {
+            font-weight: 400;
+            color: $accent;
+          }
+        }
+
+        .title,
+        .degree,
+        .level {
+          margin-top: 0.15rem;
+          margin-bottom: 0.2rem;
+          font-size: 0.875rem;
+          color: $text-muted;
+        }
+
+        .issuer {
+          color: $accent;
+        }
+
+        .period {
+          margin-top: 0.15rem;
+          margin-bottom: 0.4rem;
+          font-size: 0.775rem;
+          color: $text-faint;
+
+          @media print { color: #888; }
+        }
+
         .skills {
-          font-size: 0.65rem;
+          font-size: 0.62rem;
           font-weight: 700;
           text-transform: uppercase;
-          letter-spacing: 0.07em;
-          color: $accent-cyan;
+          letter-spacing: 0.08em;
+          color: $accent;
           margin-bottom: 0.5rem;
+          opacity: 0.8;
 
-          @media print {
-            color: #06b6d4;
-          }
+          @media print { color: #1d4ed8; }
         }
 
         ul {
           list-style-type: disc;
           padding-left: 1.25rem;
-          font-size: 0.875rem;
-          color: $text-secondary;
+          font-size: 0.85rem;
+          color: $text-muted;
 
-          @media print {
-            color: #444;
-          }
+          @media print { color: #444; }
 
           li {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.35rem;
             line-height: 1.6;
           }
         }
 
         .item {
-          margin-bottom: 1.75rem;
-
-          &:last-child {
-            margin-bottom: 0;
-          }
+          margin-bottom: 1.5rem;
+          &:last-child { margin-bottom: 0; }
         }
       }
     }
 
     .contactSide {
       flex-shrink: 0;
-      width: 240px;
+      width: 230px;
 
-      @media screen and (max-width: $max-md) {
+      @media (max-width: $max-md) {
         display: none;
       }
     }
@@ -210,7 +183,5 @@
 }
 
 @media print {
-  .certifications {
-    margin-top: 3rem;
-  }
+  .certifications { margin-top: 3rem; }
 }

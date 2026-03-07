@@ -5,58 +5,38 @@
   margin: 0 auto;
   padding: 0 1.5rem;
 
-  @media screen and (max-width: $max-sm) {
+  @media (max-width: $max-sm) {
     padding: 0 1rem;
   }
 
   .header {
-    margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
 
     h1 {
-      font-size: 3rem;
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
       font-weight: 700;
-      margin: 0.5rem 0 0.5rem;
-      background: $accent-gradient;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-
-      @media screen and (max-width: $max-sm) {
-        font-size: 2rem;
-      }
+      margin: 0.5rem 0 0.4rem;
+      color: $text;
     }
 
     p {
-      color: $text-secondary;
-      margin: 0 0 1.5rem;
-      font-size: 0.95rem;
+      color: $text-muted;
+      margin: 0 0 0.5rem;
+      font-size: 0.925rem;
     }
   }
 
   .portfolioItems {
-    display: flex;
-    flex-flow: row wrap;
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 
-    @media screen and (max-width: $max-sm) {
-      margin-left: 0;
-      margin-right: 0;
-    }
-
-    .portfolioIndexItem {
-      flex-grow: 0;
-      flex-shrink: 0;
-      flex-basis: 50%;
-
-      @media screen and (max-width: $max-sm) {
-        flex-basis: 100%;
-      }
+    @media (min-width: $min-md) {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
   .utilRow {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin: 1.5rem 0 0.5rem;
   }
 }

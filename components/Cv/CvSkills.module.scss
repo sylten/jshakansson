@@ -1,65 +1,56 @@
 @import '../../styles/common.scss';
 
 .cvSkills {
-  $border-radius: 0.65rem;
-  padding: 1rem;
+  $r: 0.65rem;
+  padding: 0.9rem;
   margin-top: 1rem;
   background: $bg-card;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  font-size: 0.875rem;
+  border: 1px solid $border;
+  border-radius: $r;
+  box-shadow: $shadow-sm;
 
   @media print {
-    background: #f7f7f7;
+    background: #f9fafb;
     border-color: #e0e0e0;
     max-width: 200px;
   }
 
   h4 {
+    font-size: 0.65rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 0.7rem;
-    color: $text-muted;
-    margin: 0 0 0.875rem;
+    letter-spacing: 0.1em;
+    color: $text-faint;
+    margin: 0 0 0.75rem;
 
-    @media print {
-      color: #888;
-    }
+    @media print { color: #888; }
   }
 
   ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
     margin: 0;
 
     li {
-      color: $text-secondary;
-      margin-bottom: 0.5rem;
-      font-size: 0.8rem;
+      color: $text-muted;
+      margin-bottom: 0.45rem;
+      font-size: 0.78rem;
       line-height: 1.4;
 
-      @media print {
-        color: #444;
-      }
+      @media print { color: #444; }
     }
 
     ul {
-      padding-left: 0;
       margin-top: 0.2rem;
-      font-size: 0.7rem;
+      font-style: italic;
 
       li {
         display: inline;
-        color: $text-muted;
-        font-style: italic;
+        font-size: 0.7rem;
+        color: $text-faint;
 
-        &::after {
-          content: ", ";
-        }
-
-        &:last-of-type::after {
-          display: none;
-        }
+        &::after { content: ", "; }
+        &:last-of-type::after { display: none; }
       }
     }
   }

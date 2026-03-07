@@ -5,33 +5,28 @@
     max-width: $page-size;
     margin: 2rem auto 1.5rem;
     padding: 1rem 1.5rem;
-    border-top: 1px solid $border-color;
-
+    border-top: 1px solid $border;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .copyright {
       font-size: 0.75rem;
-      color: $text-muted;
+      color: $text-faint;
     }
 
     a {
-      color: $text-muted;
-      font-size: 0.875rem;
-      transition: color 0.15s;
-      display: flex;
+      color: $text-faint;
+      font-size: 0.8rem;
+      display: inline-flex;
       align-items: center;
       gap: 0.35rem;
+      transition: color 0.15s;
 
-      &:hover {
-        color: $accent-blue;
-      }
+      &:hover { color: $accent; }
     }
 
-    @media print {
-      display: none;
-    }
+    @media print { display: none; }
   }
 
   &.isLanding footer {

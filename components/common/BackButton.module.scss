@@ -4,17 +4,16 @@
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
-  color: $text-muted;
-  font-size: 0.875rem;
+  color: $text-faint;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   transition: color 0.15s;
 
-  &:hover {
-    color: $accent-blue;
-  }
+  &:hover { color: $accent; }
 
   div {
     display: flex;
-    justify-content: center;
     align-items: center;
   }
 }
