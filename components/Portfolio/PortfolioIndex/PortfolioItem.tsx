@@ -1,3 +1,4 @@
+"use client";
 import styles from "./PortfolioItem.module.scss";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,31 +12,43 @@ interface PortfolioItemProps {
 
 const PortfolioItem: React.FC<PortfolioItemProps> = ({ item, smallView }) => {
   return (
-    <div className={`${styles.portfolioItem} ${smallView ? styles.smallView : ""}`}>
+    <Link
+      href={"/portfolio/" + item.uniqueName}
+      className={`${styles.card} ${smallView ? styles.smallView : ""}`}
+    >
       <div className={styles.imageWrapper}>
-        <Link href={"/portfolio/" + item.uniqueName}>
-          <Image src={item.smallMedia?.url} alt={`${item.name} preview image`} width={item.smallMedia.width} height={item.smallMedia.height} />
-        </Link>
+        <Image
+          src={item.smallMedia?.url}
+          alt={`${item.name} preview image`}
+          width={item.smallMedia.width}
+          height={item.smallMedia.height}
+          className={styles.image}
+        />
       </div>
       <div className={styles.body}>
-        <h3 className={styles.title}><Link href={"/portfolio/" + item.uniqueName}>{item.name}</Link></h3>
+        <h3 className={styles.title}>{item.name}</h3>
         <div className={styles.companies}>
-          {
-            item.companies.map(company => (
-              <span key={company.name} className={styles.company}>
-                <Image src={company.mediaUrl} alt="" width={company.mediaWidth} height={company.mediaHeight} />
-                <span>{company.name}</span>
-              </span>
-            ))
-          }
+          {item.companies.map(company => (
+            <span key={company.name} className={styles.company}>
+              <Image
+                src={company.mediaUrl}
+                alt=""
+                width={company.mediaWidth}
+                height={company.mediaHeight}
+                className={styles.companyLogo}
+              />
+              <span>{company.name}</span>
+            </span>
+          ))}
         </div>
-        <span className={styles.intro}>{item.intro}</span>
-        <span className={styles.tech}>
-          { item.tech.map(name => <span key={name}>{name}</span>) }
-        </span>
+        <p className={styles.intro}>{item.intro}</p>
+        <div className={styles.tech}>
+          {item.tech.map(name => (
+            <span key={name} className={styles.tag}>{name}</span>
+          ))}
+        </div>
       </div>
-    </div>
-
+    </Link>
   );
 };
 
