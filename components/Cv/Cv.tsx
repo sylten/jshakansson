@@ -33,6 +33,17 @@ export default function Cv() {
               <h2>Experience</h2>
 
               <div className={styles.item}>
+                <h3>Digilog <Link href="https://digilog.se/">(digilog.se)</Link></h3>
+                <p className={styles.title}>Co-Founder</p>
+                <p className={styles.period}>2025–</p>
+                <p className={styles.skills}>Next.js, React, Node, AWS, Dynamo DB, S3</p>
+                <ul>
+                  <li>AI-first business development and technical co-founder of Digilog, an app for managing CE documentation for automated doors.</li>
+                  <li>Includes web interfaces for installers that do the documentation and property owners that need to access it.</li>
+                </ul>
+              </div>
+
+              <div className={styles.item}>
                 <h3>Elgiganten</h3>
                 <p className={styles.title}>Full Stack Developer</p>
                 <p className={styles.period}>2022–2025</p>
@@ -44,17 +55,6 @@ export default function Cv() {
                   <li>Genesys Cloud plugins including an AI Email Assistant</li>
                   <li>Various other internal tools and experimentation with a focus on AI</li>
                   <li>And some coaching of junior developers.</li>
-                </ul>
-              </div>
-
-              <div className={styles.item}>
-                <h3>Digilog <Link href="https://digilog.se/">(digilog.se)</Link></h3>
-                <p className={styles.title}>Co-Founder</p>
-                <p className={styles.period}>2025–</p>
-                <p className={styles.skills}>Next.js, React, Node, AWS, Dynamo DB, S3</p>
-                <ul>
-                  <li>AI-first business development and technical co-founder of Digilog, an app for managing CE documentation for automated doors.</li>
-                  <li>Includes web interfaces for installers that do the documentation and property owners that need to access it.</li>
                 </ul>
               </div>
 
