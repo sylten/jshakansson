@@ -2,9 +2,27 @@
 
 .BackButton {
   white-space: nowrap;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  transition: color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--grad-start);
+    border-color: rgba(99,102,241,0.3);
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.08);
+  }
+
   div {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 }

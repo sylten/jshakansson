@@ -3,46 +3,82 @@
 .contact {
   margin: 0rem auto;
   max-width: $page-size;
-  padding: 1rem 1.5rem;
+  padding: 2rem 1.5rem;
+
+  h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text-heading);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  > p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
 
   .contactOptions {
-      list-style: none;
-      margin-top: 3rem;
-      margin-bottom: 3rem;
-      padding: 0;
-      font-size: 1.25rem;
-      li {
-          padding: 0.5rem 0rem;
-          border-bottom: 1px solid #ccc;
-          &:last-child {
-              border: none;
-          }
-          a {
-            display: inline-block;
-            svg {
-                margin-top: .125rem;
-                width: 2rem;
-            }
-          }
+    list-style: none;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 
-          @media screen and (min-width: $min-lg) {
-              width: 25%;
-          }
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 1.25rem;
+        border-radius: var(--radius-md);
+        background: var(--bg-card);
+        border: 1.5px solid var(--border);
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-heading);
+        text-decoration: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: var(--shadow-sm);
+
+        &:hover {
+          border-color: var(--grad-start);
+          box-shadow: var(--shadow-glow);
+        }
+
+        svg {
+          color: var(--grad-start);
+          flex-shrink: 0;
+        }
       }
+
+      @media screen and (min-width: $min-lg) {
+        max-width: 400px;
+      }
+    }
   }
 
   .address {
-      margin-bottom: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
 
-      span {
-          display: block;
-          margin-bottom: 0.25rem;
-          font-size: 0.875rem;
+    span {
+      display: block;
+      font-size: 0.875rem;
+      color: var(--text-muted);
 
-          &.companyName {
-              margin-bottom: 1rem;
-              font-size: 1rem;
-          }
+      &.companyName {
+        font-weight: 600;
+        color: var(--text-body);
+        margin-bottom: 0.25rem;
+        font-size: 0.9375rem;
       }
+    }
   }
 }

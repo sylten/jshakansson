@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Layout from "../components/common/layout/Layout";
 import CursorGlow from "../components/SitePage/CursorGlow";
 import Navbar from "../components/SitePage/Navbar";
