@@ -1,110 +1,112 @@
 @import '../../styles/common.scss';
 
 .cvContact {
-    $border-radius: 0.25rem;
+  font-size: 0.8125rem;
 
-    background: white;
-    border-radius: $border-radius;
-    font-size: 0.875rem;
+  @media print {
+    width: 33%;
+  }
 
+  margin-left: 2rem;
+
+  .contact {
+    position: relative;
+  }
+
+  .pdf {
+    @media screen and (min-width: $min-lg) {
+      position: absolute;
+      top: 2rem;
+      right: 1rem;
+    }
     @media print {
-        width: 33%;
+      display: none;
     }
+  }
 
-    margin-left: 2rem;
+  @media screen and (max-width: $max-md) {
+    display: flex;
+    margin-left: 0;
 
     .contact {
-        position: relative;
+      flex-grow: 3;
     }
+  }
 
-    .pdf {
-        @media screen and (min-width: $min-lg) {
-            position: absolute;
-            top: 2rem;
-            right: 1rem;
-        }
-        @media print {
-            display: none;
-        }
+  .profilePicture {
+    img {
+      height: auto;
+      max-width: 160px;
+      @media print {
+        width: auto;
+        max-height: 200px;
+      }
+      @media screen and (max-width: $max-md) {
+        max-width: 80px;
+        margin-right: 1rem;
+        margin-top: 1rem;
+      }
     }
+  }
 
+  .contact {
+    padding: 1rem 0;
     @media screen and (max-width: $max-md) {
-        display: flex;
-        margin-left: 0;
-
-        .contact {
-            flex-grow: 3;
-        }
+      padding: 0.5rem;
     }
 
-    .profilePicture {
-        img {
-            height: auto;
-            max-width: 300px;
-            border-top-left-radius: $border-radius;
-            border-top-right-radius: $border-radius;
-            @media print {
-                width: auto;
-                max-height: 200px;
-                border-radius: $border-radius;
-            }
-            @media screen and (max-width: $max-md) {
-                max-width: 100px;
-                margin-right: 1rem;
-                margin-top: 1rem;
-            }
-        }
+    h4 {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 400;
+      color: $blue-2;
+      margin-bottom: 1rem;
+      @media screen and (max-width: $max-md) {
+        display: none;
+      }
     }
-    .contact {
-        padding: 1rem;
-        @media screen and (max-width: $max-md) {
-            padding: 0.5rem;
-        }
 
-        h4 {
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            @media screen and (max-width: $max-md) {
-                display: none;
-            }
-        }
-        p {
-            margin-top: 0.375rem;
-            margin-bottom: 0.375rem;
-            white-space: nowrap;
-        }
-        a {
-            display: inline-block;
-        }
-        svg {
-            margin-right: .25rem;
-        }
-        .website {
-            // @media screen and (max-width: $max-md) {
-            //     display: none;
-            // }
-        }
-        .phone {
-            margin-top: 0;
-            display: none;
-            // @media print {
-            //     display: inline-block;
-            // }
-        }
-        .address {
-            margin-top: 2rem;
-            margin-bottom: 0;
-            span {
-                display: block;
-                margin-bottom: 0.125rem;
-                &:first {
-                    margin-bottom: 0.5rem;
-                }
-            }
-
-            @media screen and (max-width: $max-md) {
-                display: none;
-            }
-        }
+    p {
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+      white-space: nowrap;
     }
+
+    a {
+      display: inline-block;
+      color: $blue-3;
+      transition: color 0.2s ease;
+      &:hover {
+        color: $blue-2;
+      }
+    }
+
+    svg {
+      margin-right: 0.25rem;
+    }
+
+    .phone {
+      margin-top: 0;
+      display: none;
+    }
+
+    .address {
+      margin-top: 1.5rem;
+      margin-bottom: 0;
+      color: #999;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+
+      span {
+        display: block;
+        margin-bottom: 0.125rem;
+      }
+
+      @media screen and (max-width: $max-md) {
+        display: none;
+      }
+    }
+  }
 }

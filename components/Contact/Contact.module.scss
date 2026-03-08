@@ -64,7 +64,8 @@
       }
 
       a {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
         color: $blue-3;
         transition: color 0.2s ease;
         font-family: "Josefin Sans", sans-serif;
@@ -74,11 +75,6 @@
 
         &:hover {
           color: $blue-2;
-        }
-
-        svg {
-          margin-top: 0.125rem;
-          width: 1.25rem;
         }
       }
 

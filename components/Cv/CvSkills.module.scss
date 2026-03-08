@@ -1,43 +1,67 @@
 @import '../../styles/common.scss';
 
 .cvSkills {
-    $border-radius: 0.25rem;
-    padding: 1rem;
-    margin-left: 2rem;
-    background: white;
-    font-size: 0.875rem;
+  padding: 1rem 0;
+  margin-left: 2rem;
+  font-size: 0.8125rem;
 
-    @media print {
-        max-width: 200px;
+  @media print {
+    max-width: 200px;
+  }
+
+  h4 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    color: $blue-2;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0.35rem;
+      padding-left: 0.75rem;
+      position: relative;
+
+      &::before {
+        content: "·";
+        position: absolute;
+        left: 0;
+        color: rgba($blue-2, 0.5);
+      }
     }
 
-    h4 {
-        text-transform: uppercase;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
     ul {
-        list-style-type: square;
-        padding-left: 1rem;
-        li {
-            margin-bottom: .25rem;
+      padding-left: 0.75rem;
+      margin-top: 0.25rem;
+      font-size: 0.75rem;
+      color: #888;
+      list-style: none;
+
+      li {
+        display: inline;
+        padding: 0;
+        margin: 0;
+
+        &::before {
+          display: none;
         }
-        ul {
-            padding-left: 0;
-            font-size: 0.75rem;
-            font-style: italic;
-            list-style: none;
-            li {
-                display: inline-block;
-                margin-right: .25rem;
-                margin-bottom: 0;
-                &::after {
-                    content: ",";
-                }
-                &:last-of-type::after {
-                    display: none;
-                }
-            }
+
+        &::after {
+          content: ",\00a0";
         }
+
+        &:last-of-type::after {
+          display: none;
+        }
+      }
     }
+  }
 }
