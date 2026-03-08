@@ -1,127 +1,144 @@
 @import '../../../styles/common.scss';
 
 .portfolioItem {
-  $border-radius: 0.1rem;
+  $border-radius: 0;
 
   margin: 2rem;
-  border-radius: $border-radius;
-  box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
-  
-  @media screen and (min-width: $min-lg) {
-      position: relative;
-      transition: box-shadow 0.15s, transform 0.15s;
+  border: 1px solid rgba($blue-2, 0.15);
+  position: relative;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 
-      &:hover {
-          box-shadow: 1px 1px 8px 1px rgba(0,0,0,0.2);
-          transform: scale(1.01);
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba($blue-2, 0.07);
+    pointer-events: none;
+    z-index: 1;
+    transition: border-color 0.25s ease;
+  }
+
+  @media screen and (min-width: $min-lg) {
+    &:hover {
+      border-color: rgba($blue-2, 0.45);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba($blue-2, 0.08);
+
+      &::before {
+        border-color: rgba($blue-2, 0.2);
       }
+    }
   }
 
   @media screen and (max-width: $max-sm) {
-      margin: 1rem;
+    margin: 1rem;
   }
 
   .imageWrapper {
-      width: auto;
-      height: 200px;
-      img {
-          @extend .fit;
-          border-top-left-radius: $border-radius;
-          border-top-right-radius: $border-radius;
-      }
+    width: auto;
+    height: 200px;
+    overflow: hidden;
+    img {
+      @extend .fit;
+    }
   }
+
   .body {
-      padding: 0.5rem 0.75rem;
-      background: rgba(255,255,255,0.75);
-      border-bottom-left-radius: $border-radius;
-      border-bottom-right-radius: $border-radius;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.85);
 
-      .title {
-          margin-top: 0rem;
-          margin-bottom: 0.5rem;
-          font-size: 1.5rem;
-      }
-      .companies {
-          margin-bottom: 0.5rem;
+    .title {
+      margin-top: 0.25rem;
+      margin-bottom: 0.4rem;
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
 
-          .company {
-              font-size: 0.75rem;
-              text-transform: uppercase;
-              img {
-                  height: 0.875rem;
-                  width: auto;
-                  position: relative;
-                  top: 0.1rem;
-                  margin-right: .25rem;
-              }
+    .companies {
+      margin-bottom: 0.5rem;
 
-              :after {
-                  content: "/";
-                  margin-left: 0.25rem;
-                  color: #ccc;
-              }
-              &:last-child {
-                  :after {
-                      display: none;
-                  }
-              }
+      .company {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #888;
+        img {
+          height: 0.875rem;
+          width: auto;
+          position: relative;
+          top: 0.1rem;
+          margin-right: 0.25rem;
+        }
+
+        :after {
+          content: "/";
+          margin-left: 0.25rem;
+          color: #ccc;
+        }
+        &:last-child {
+          :after {
+            display: none;
           }
+        }
       }
-      .intro {
-          display: block;
-          font-size: 0.75rem;
-          margin-top: 1rem;
-      }
-      .tech {
-          display: block;
-          
-          span {
-              display: inline-block;
+    }
 
-              color: #999;
-              font-size: 0.65rem;
-              font-weight: 500;
+    .intro {
+      display: block;
+      font-size: 0.75rem;
+      margin-top: 0.75rem;
+      color: #888;
+      line-height: 1.6;
+    }
 
-              &:after {
-                  content: "/";
-                  margin-left: 0.25rem;
-                  margin-right: 0.25rem;
-                  color: #ccc;
-              }
-              &:last-child {
-                  &:after {
-                      display: none;
-                  }
-              }
+    .tech {
+      display: block;
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
+
+      span {
+        display: inline-block;
+        color: $blue-2;
+        font-size: 0.75rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        opacity: 0.7;
+
+        &:after {
+          content: "·";
+          margin-left: 0.3rem;
+          margin-right: 0.3rem;
+          color: #ccc;
+        }
+        &:last-child {
+          &:after {
+            display: none;
           }
+        }
       }
+    }
   }
 
   &.smallView {
-      margin: 0.5rem;
+    margin: 0.5rem;
 
-      @media screen and (min-width: $min-lg) {
-          &:hover {
-              box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.2);
-              top: -1px;
-          }
-      }
+    @media screen and (max-width: $max-sm) {
+      margin: 0.25rem;
+    }
 
-      @media screen and (max-width: $max-sm) {
-          margin: 0.25rem;
-      }
+    .imageWrapper {
+      height: 100px;
+    }
 
-      .imageWrapper {
-          height: 100px;
+    .body {
+      .title {
+        font-size: 1rem;
+        @media screen and (max-width: $max-sm) {
+          font-size: 0.875rem;
+        }
       }
-
-      .body {
-          .title {
-              font-size: 1.25rem;
-              @media screen and (max-width: $max-sm) {
-                  font-size: 1rem;
-              }
-          }
-      }
+    }
   }
 }

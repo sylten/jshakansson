@@ -1,9 +1,7 @@
 import CvContact from "./CvContact";
 import BackButton from "../common/BackButton";
-import Logo from "../common/Logo";
 import styles from "./Cv.module.scss";
 import Link from "next/link";
-import CvSkills from "./CvSkills";
 
 export default function Cv() {
   return (
@@ -33,9 +31,11 @@ export default function Cv() {
               <h2>Experience</h2>
 
               <div className={styles.item}>
-                <h3>Digilog <Link href="https://digilog.se/">(digilog.se)</Link></h3>
-                <p className={styles.title}>Co-Founder</p>
-                <p className={styles.period}>2025–</p>
+                <h3>Digilog</h3>
+                <div className={styles.itemMeta}>
+                  <p className={styles.title}>Co-Founder</p>
+                  <p className={styles.period}>2025–</p>
+                </div>
                 <p className={styles.skills}>Next.js, React, Node, AWS, Dynamo DB, S3</p>
                 <ul>
                   <li>Co-founder, AI-first software development and business development of Digilog, a two-way asset management platform for doors.</li>
@@ -44,8 +44,10 @@ export default function Cv() {
 
               <div className={styles.item}>
                 <h3>Elgiganten</h3>
-                <p className={styles.title}>Full Stack Developer</p>
-                <p className={styles.period}>2022–2025</p>
+                <div className={styles.itemMeta}>
+                  <p className={styles.title}>Full Stack Developer</p>
+                  <p className={styles.period}>2022–2025</p>
+                </div>
                 <p className={styles.skills}>React, Next.js, Node, TypeScript, .Net, C#, Kafka, Tailwind CSS, AI, LLM, RAG, MCP</p>
                 <p>System development and architecture related to:</p>
                 <ul>
@@ -59,8 +61,10 @@ export default function Cv() {
 
               <div className={styles.item}>
                 <h3>Insclear</h3>
-                <p className={styles.title}>Full Stack Developer</p>
-                <p className={styles.period}>2019-2022</p>
+                <div className={styles.itemMeta}>
+                  <p className={styles.title}>Full Stack Developer</p>
+                  <p className={styles.period}>2019–2022</p>
+                </div>
                 <p className={styles.skills}>Angular, .Net, Service Fabric, Azure DevOps, SQL, CI/CD, DevOps</p>
                 <ul>
                   <li>Various projects to streamline administration processes and interfaces, to minimize errors and make administration more efficient. I worked on requirements engineering, architecture, design of interfaces and web development.</li>
@@ -70,8 +74,10 @@ export default function Cv() {
 
               <div className={styles.item}>
                 <h3>SEB</h3>
-                <p className={styles.title}>Solutions Developer / Designer</p>
-                <p className={styles.period}>2018-2019</p>
+                <div className={styles.itemMeta}>
+                  <p className={styles.title}>Solutions Developer / Designer</p>
+                  <p className={styles.period}>2018–2019</p>
+                </div>
                 <p className={styles.skills}>Angular, .Net, SQL, Azure DevOps, Software architecture, IBM Api Connect</p>
                 <ul>
                   <li>Solution design and engineering. I worked on a project to modernise the architecture of the systems handling settlement of securities, while also making SEB compliant in CSDR. The main deliveries of the project was an API for securities settlement and a web based GUI for administration of securities settlement.</li>
@@ -80,8 +86,10 @@ export default function Cv() {
 
               <div className={styles.item}>
                 <h3>Tattoomigo</h3>
-                <p className={styles.title}>Co-Founder &amp; Developer</p>
-                <p className={styles.period}>2017-2018</p>
+                <div className={styles.itemMeta}>
+                  <p className={styles.title}>Co-Founder &amp; Developer</p>
+                  <p className={styles.period}>2017–2018</p>
+                </div>
                 <p className={styles.skills}>React, Node, TypeScript, .Net Core, SQL, Azure</p>
                 <ul>
                   <li>Web development including architecture, programming, UX and design.</li>
@@ -92,8 +100,10 @@ export default function Cv() {
 
               <div className={styles.item}>
                 <h3>Signe.io</h3>
-                <p className={styles.title}>Co-Founder &amp; Developer</p>
-                <p className={styles.period}>2016-2017</p>
+                <div className={styles.itemMeta}>
+                  <p className={styles.title}>Co-Founder &amp; Developer</p>
+                  <p className={styles.period}>2016–2017</p>
+                </div>
                 <p className={styles.skills}>React, Node, JavaScript, SQL, Stripe</p>
                 <ul>
                   <li>Development of a prototype version of the platform using Node, MySQL, React and Stripe as a payment service provider.</li>
@@ -103,8 +113,10 @@ export default function Cv() {
 
               <div className={styles.item}>
                 <h3>Skandikon</h3>
-                <p className={styles.title}>Full Stack Developer</p>
-                <p className={styles.period}>2014-2015</p>
+                <div className={styles.itemMeta}>
+                  <p className={styles.title}>Full Stack Developer</p>
+                  <p className={styles.period}>2014–2015</p>
+                </div>
                 <p className={styles.skills}>.Net, C#, SQL, JavaScript</p>
                 <ul>
                   <li>Systems development, full stack development of a system for handling pensions.</li>
@@ -113,8 +125,10 @@ export default function Cv() {
 
               <div className={styles.item}>
                 <h3>Plan 8 Production</h3>
-                <p className={styles.title}>Web Developer</p>
-                <p className={styles.period}>2013-2014</p>
+                <div className={styles.itemMeta}>
+                  <p className={styles.title}>Web Developer</p>
+                  <p className={styles.period}>2013–2014</p>
+                </div>
                 <p className={styles.skills}>JavaScript, TypeScript, Node, SQL, PHP, AWS</p>
                 <ul>
                   <li>Continuation of development of my <Link href="/portfolio/klang" target="_blank">school examination project Klang</Link>, which was used in collaboration with clients such as Google, H&amp;M, Mercedes, HBO and many more. I wrote it in TypeScript when it had just been released still had no major version, needless to say I was amazed at being able to write typed JavaScript :&#41;</li>
@@ -128,20 +142,26 @@ export default function Cv() {
               <h2>Education</h2>
               <div className={styles.item}>
                 <h3>KTH Royal Institute of skillsnology</h3>
-                <p className={styles.degree}>Bachelor&lsquo;s Degree, Computer Science</p>
-                <p className={styles.period}>2010-2013</p>
+                <div className={styles.itemMeta}>
+                  <p className={styles.degree}>Bachelor&lsquo;s Degree, Computer Science</p>
+                  <p className={styles.period}>2010–2013</p>
+                </div>
               </div>
 
               <div className={styles.item}>
                 <h3>The Chinese University of Hong Kong Business School</h3>
-                <p className={styles.degree}>Exchange term, Managerial Economics</p>
-                <p className={styles.period}>2017</p>
+                <div className={styles.itemMeta}>
+                  <p className={styles.degree}>Exchange term, Managerial Economics</p>
+                  <p className={styles.period}>2017</p>
+                </div>
               </div>
 
               <div className={styles.item}>
                 <h3>Stockholm University</h3>
-                <p className={styles.degree}>Bachelor&lsquo;s Degree, Business Administration and Management</p>
-                <p className={styles.period}>2015-2018</p>
+                <div className={styles.itemMeta}>
+                  <p className={styles.degree}>Bachelor&lsquo;s Degree, Business Administration and Management</p>
+                  <p className={styles.period}>2015–2018</p>
+                </div>
               </div>
             </div>
 
@@ -149,7 +169,9 @@ export default function Cv() {
               <h2>Other projects</h2>
               <div className={styles.item}>
                 <h3>MiBreaker <Link href="https://mibreaker.com/sv">(mibreaker.com)</Link></h3>
-                <p className={styles.period}>2020</p>
+                <div className={styles.itemMeta}>
+                  <p className={styles.period}>2020</p>
+                </div>
                 <p className={styles.skills}>React, Node, Next.js, Vercel, Electron, Stripe, Mailjet, Bunny CDN</p>
                 <ul>
                   <li>A basic e-commerce website to market and sell the app. Developed in Next.js with React and deployed on Vercel with bunny CDN for serving static files, Stripe for card payments and Mailjet for sending emails.</li>
@@ -162,20 +184,26 @@ export default function Cv() {
               <h2>Certifications</h2>
               <div className={styles.item}>
                 <h3>Agile Fundamentals: Including Scrum and Kanban</h3>
-                <p><a className={styles.issuer} href="https://www.ude.my/UC-397a8aa7-b7ce-4851-8bde-0716f342ce49/" target="blank">Udemy</a></p>
-                <p className={styles.period}>2021</p>
+                <div className={styles.itemMeta}>
+                  <p><a className={styles.issuer} href="https://www.ude.my/UC-397a8aa7-b7ce-4851-8bde-0716f342ce49/" target="blank">Udemy</a></p>
+                  <p className={styles.period}>2021</p>
+                </div>
               </div>
 
               <div className={styles.item}>
                 <h3>Data Scientist Nanodegree</h3>
-                <p><a className={styles.issuer} href="https://www.udacity.com/" target="blank">Udacity</a></p>
-                <p className={styles.period}>2021</p>
+                <div className={styles.itemMeta}>
+                  <p><a className={styles.issuer} href="https://www.udacity.com/" target="blank">Udacity</a></p>
+                  <p className={styles.period}>2021</p>
+                </div>
               </div>
 
               <div className={styles.item}>
                 <h3>Leading Yourself and Others</h3>
-                <p><a className={styles.issuer} href="https://enneagramcenter.se/" target="blank">EnneagramCenter</a></p>
-                <p className={styles.period}>2016</p>
+                <div className={styles.itemMeta}>
+                  <p><a className={styles.issuer} href="https://enneagramcenter.se/" target="blank">EnneagramCenter</a></p>
+                  <p className={styles.period}>2016</p>
+                </div>
               </div>
             </div>
 
@@ -213,7 +241,6 @@ export default function Cv() {
           </div>
           <div className={styles.contactSide}>
             <CvContact></CvContact>
-            <CvSkills></CvSkills>
           </div>
         </div>
 

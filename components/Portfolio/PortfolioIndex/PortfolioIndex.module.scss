@@ -1,53 +1,95 @@
 @import "../../../styles/common.scss";
+@import "../../../styles/animations.scss";
 
 .portfolioIndex {
   max-width: $page-size;
   margin: 0 auto;
-  
+
   @media screen and (min-width: $min-sm) {
     padding: 0 1rem;
   }
 
   .header {
+    animation: fadeInUp 0.6s ease 0.1s both;
+    text-align: center;
+    padding: 3rem 0 2rem;
+
+    @media screen and (max-width: $max-sm) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+
       @media screen and (max-width: $max-sm) {
-          padding-left: 1rem;
+        font-size: 1.75rem;
+      }
+    }
+
+    .rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      margin: 1.25rem auto 2rem;
+      max-width: 160px;
+
+      .ruleLine {
+        display: block;
+        height: 1px;
+        flex: 1;
+        background: rgba($blue-2, 0.4);
       }
 
-      h1 {
-          font-size: 4rem;
-          margin-top: 1.5rem;
-          margin-bottom: 0.5rem;
+      .ruleDiamond {
+        display: block;
+        width: 5px;
+        height: 5px;
+        background: $blue-2;
+        transform: rotate(45deg);
+        flex-shrink: 0;
       }
-      p {
-          margin-bottom: 2rem;
-      }
+    }
+
+    p {
+      margin-bottom: 2rem;
+      color: #888;
+      font-size: 0.875rem;
+      letter-spacing: 0.03em;
+    }
   }
 
   .portfolioItems {
-      display: flex;
-      flex-flow: row wrap;
-      margin-left: -2rem;
-      margin-right: -2rem;
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    animation: fadeInUp 0.6s ease 0.25s both;
 
+    @media screen and (max-width: $max-sm) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .portfolioIndexItem {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 50%;
       @media screen and (max-width: $max-sm) {
-        margin-left: 0;
-        margin-right: 0;
+        flex-basis: 100%;
       }
-  
-      .portfolioIndexItem {
-          flex-grow: 0;
-          flex-shrink: 0;
-          flex-basis: 50%;
-          @media screen and (max-width: $max-sm) {
-              flex-basis: 100%;
-          }
-      }
+    }
   }
 
   .utilRow {
-      margin-top: 2rem;
+    margin-top: 2rem;
     @media screen and (max-width: $max-sm) {
-        margin-left: 1rem;
+      margin-left: 1rem;
     }
   }
 }

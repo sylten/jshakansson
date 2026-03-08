@@ -12,8 +12,13 @@ export default function PortfolioIndex() {
 
       <div className={styles.header}>
         <h1>Portfolio</h1>
+        <div className={styles.rule}>
+          <span className={styles.ruleLine}></span>
+          <span className={styles.ruleDiamond}></span>
+          <span className={styles.ruleLine}></span>
+        </div>
         <p>
-        This is a collection of personal and professional projects that I&lsquo;ve worked on.
+          This is a collection of personal and professional projects that I&lsquo;ve worked on.
         </p>
       </div>
 

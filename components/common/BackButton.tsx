@@ -1,14 +1,14 @@
 import styles from "./BackButton.module.scss";
 import Link from "next/link";
-import { FiChevronLeft } from "react-icons/fi";
-import IconAligner from "./IconAligner";
 
-export default function BackButton() {
+interface BackButtonProps {
+  href?: string;
+}
+
+export default function BackButton({ href = "/" }: BackButtonProps) {
   return (
-    <Link href="/" className={styles.BackButton + " no-print"}>
-      <IconAligner>
-        <FiChevronLeft size={"1.25rem"} /> Back
-      </IconAligner>
+    <Link href={href} className={styles.BackButton + " no-print"}>
+      Back
     </Link>
   );
 }

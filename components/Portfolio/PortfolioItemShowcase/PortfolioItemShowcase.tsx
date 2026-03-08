@@ -3,8 +3,7 @@ import { PortfolioItem, MediaType } from "../portfolioItems";
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FiChevronLeft } from "react-icons/fi";
-import IconAligner from "../../common/IconAligner";
+import BackButton from "../../common/BackButton";
 
 interface PortfolioItemShowcaseProps {
   item: PortfolioItem;
@@ -95,9 +94,7 @@ const PortfolioItemShowcase: React.FC<PortfolioItemShowcaseProps> = ({ item }) =
         }
 
         <div className={styles.back}>
-          <Link href="/portfolio">
-            <IconAligner><FiChevronLeft size={"1.25rem"} /> Back to portfolio</IconAligner>
-          </Link>
+          <BackButton href="/portfolio" />
         </div>
       </div>
     </div>
