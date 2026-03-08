@@ -35,7 +35,7 @@ export default function Cv() {
               <div className={styles.item}>
                 <h3>Elgiganten</h3>
                 <p className={styles.title}>Full Stack Developer</p>
-                <p className={styles.period}>2022-</p>
+                <p className={styles.period}>2022–2025</p>
                 <p className={styles.skills}>React, Next.js, Node, TypeScript, .Net, C#, Kafka, Tailwind CSS, AI, LLM, RAG, MCP</p>
                 <p>System development and architecture related to:</p>
                 <ul>
@@ -44,6 +44,17 @@ export default function Cv() {
                   <li>Genesys Cloud plugins including an AI Email Assistant</li>
                   <li>Various other internal tools and experimentation with a focus on AI</li>
                   <li>And some coaching of junior developers.</li>
+                </ul>
+              </div>
+
+              <div className={styles.item}>
+                <h3>Digilog <Link href="https://digilog.se/">(digilog.se)</Link></h3>
+                <p className={styles.title}>Co-Founder</p>
+                <p className={styles.period}>2025–</p>
+                <p className={styles.skills}>Next.js, React, Node, AWS, Dynamo DB, S3</p>
+                <ul>
+                  <li>AI-first business development and technical co-founder of Digilog, an app for managing CE documentation for automated doors.</li>
+                  <li>Includes web interfaces for installers that do the documentation and property owners that need to access it.</li>
                 </ul>
               </div>
 
@@ -137,14 +148,6 @@ export default function Cv() {
 
             <div className={`${styles.section} ${styles.experience}`}>
               <h2>Other projects</h2>
-              <div className={styles.item}>
-                <h3>Digilog <Link href="https://digilog.se/">(digilog.se)</Link></h3>
-                <p className={styles.period}>2025</p>
-                <p className={styles.skills}>Next.js, React, Node, AWS, Dynamo DB, S3</p>
-                <ul>
-                  <li>An app for managing CE documentation for automated doors. Includes web interfaces for installers that do the documentation and property owners that need to access it.</li>
-                </ul>
-              </div>
               <div className={styles.item}>
                 <h3>MiBreaker <Link href="https://mibreaker.com/sv">(mibreaker.com)</Link></h3>
                 <p className={styles.period}>2020</p>
