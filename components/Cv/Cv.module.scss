@@ -58,7 +58,7 @@
           font-weight: 400;
           text-transform: uppercase;
           letter-spacing: 0.2em;
-          color: $blue-2;
+          color: #888;
         }
 
         .contactHeader {
@@ -96,7 +96,7 @@
           font-size: 0.875rem;
           letter-spacing: 0.05em;
           a {
-            color: $blue-2;
+            color: #888;
             font-size: 0.75rem;
           }
         }
@@ -111,7 +111,7 @@
 
         .issuer {
           font-size: 0.875rem;
-          color: $blue-2;
+          color: #888;
           font-style: italic;
         }
 
@@ -133,8 +133,7 @@
           font-weight: 400;
           text-transform: uppercase;
           letter-spacing: 0.1em;
-          color: $blue-2;
-          opacity: 0.7;
+          color: #888;
           font-family: "Josefin Sans", sans-serif;
           font-style: normal;
         }
@@ -148,7 +147,7 @@
 
         ul {
           list-style: none;
-          padding-left: 1rem;
+          padding-left: 0;
           font-size: 0.875rem;
           margin-top: 0.5rem;
           li {
@@ -159,7 +158,7 @@
               content: "·";
               position: absolute;
               left: 0;
-              color: rgba($blue-2, 0.5);
+              color: #888;
             }
           }
         }

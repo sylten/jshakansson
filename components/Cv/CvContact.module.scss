@@ -61,7 +61,7 @@
       text-transform: uppercase;
       letter-spacing: 0.2em;
       font-weight: 400;
-      color: $blue-2;
+      color: #1a1a18;
       margin-bottom: 1rem;
       @media screen and (max-width: $max-md) {
         display: none;
@@ -76,10 +76,10 @@
 
     a {
       display: inline-block;
-      color: $blue-3;
+      color: #1a1a18;
       transition: color 0.2s ease;
       &:hover {
-        color: $blue-2;
+        color: #888;
       }
     }
 
