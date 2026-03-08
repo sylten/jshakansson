@@ -1,5 +1,5 @@
-@import "../../../styles/common.scss";
-@import "../../../styles/animations.scss";
+@use "../../../styles/common.scss" as *;
+@use "../../../styles/animations.scss";
 
 .portfolioItem {
   margin: 0.5rem;
@@ -201,7 +201,7 @@
       }
 
       img {
-        @extend .fit;
+        @include fit();
         border-radius: $border-radius;
       }
     }

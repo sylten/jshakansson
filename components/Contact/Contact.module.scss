@@ -1,5 +1,5 @@
-@import "../../styles/common.scss";
-@import "../../styles/animations.scss";
+@use "../../styles/common.scss" as *;
+@use "../../styles/animations.scss";
 
 .contact {
   margin: 0 auto;

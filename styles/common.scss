@@ -49,9 +49,13 @@ $page-size: 1000px;
   }
 }
 
-.fit {
-  @include object-fit (cover);
+@mixin fit() {
+  @include object-fit(cover);
   width: 100%;
   height: 100%;
+}
+
+.fit {
+  @include fit();
 }
 
