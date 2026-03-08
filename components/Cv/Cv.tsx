@@ -38,8 +38,7 @@ export default function Cv() {
                 <p className={styles.period}>2025–</p>
                 <p className={styles.skills}>Next.js, React, Node, AWS, Dynamo DB, S3</p>
                 <ul>
-                  <li>AI-first business development and technical co-founder of Digilog, an app for managing CE documentation for automated doors.</li>
-                  <li>Includes web interfaces for installers that do the documentation and property owners that need to access it.</li>
+                  <li>Co-founder, AI-first software development and business development of Digilog, a two-way asset management platform for doors.</li>
                 </ul>
               </div>
 
