@@ -90,56 +90,71 @@
         }
 
         h3 {
-          font-weight: 400;
+          font-weight: 600;
           margin-top: 0;
-          margin-bottom: 0.25rem;
-          font-size: 1rem;
-          letter-spacing: 0.05em;
+          margin-bottom: 0.2rem;
+          font-size: 1.05rem;
+          letter-spacing: 0.02em;
           a {
             color: #888;
             font-size: 0.875rem;
+            font-weight: 400;
           }
         }
 
         .title, .degree, .level {
-          margin-top: 0.2rem;
-          margin-bottom: 0.2rem;
-          font-size: 1rem;
+          margin-top: 0.1rem;
+          margin-bottom: 0.1rem;
+          font-size: 0.875rem;
           color: #888;
           font-style: italic;
         }
 
         .issuer {
-          font-size: 1rem;
+          font-size: 0.875rem;
           color: #888;
           font-style: italic;
         }
 
         .period {
-          margin-top: 0.3rem;
-          margin-bottom: 0.1rem;
-          color: #888;
-          font-size: 0.875rem;
-          letter-spacing: 0.1em;
+          margin-top: 0;
+          margin-bottom: 0;
+          color: #aaa;
+          font-size: 0.8rem;
+          letter-spacing: 0.08em;
           text-transform: uppercase;
           font-family: "Josefin Sans", sans-serif;
           font-style: normal;
+          white-space: nowrap;
+        }
+
+        .itemMeta {
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
+          gap: 1rem;
+          margin-top: 0.15rem;
+          margin-bottom: 0.35rem;
+
+          h3, p {
+            margin: 0;
+          }
         }
 
         .skills {
           display: block;
           margin-bottom: 0.5rem;
-          font-size: 0.875rem;
+          font-size: 0.8rem;
           font-weight: 400;
           text-transform: uppercase;
-          letter-spacing: 0.1em;
-          color: #888;
+          letter-spacing: 0.08em;
+          color: #aaa;
           font-family: "Josefin Sans", sans-serif;
           font-style: normal;
         }
 
         .item {
-          margin-bottom: 1.5rem;
+          margin-bottom: 1.75rem;
           @media print {
             margin-bottom: 1rem;
           }

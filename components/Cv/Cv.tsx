@@ -1,6 +1,5 @@
 import CvContact from "./CvContact";
 import BackButton from "../common/BackButton";
-import Logo from "../common/Logo";
 import styles from "./Cv.module.scss";
 import Link from "next/link";
 
@@ -32,8 +31,8 @@ export default function Cv() {
               <h2>Experience</h2>
 
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>Digilog</h3>
+                <h3>Digilog</h3>
+                <div className={styles.itemMeta}>
                   <p className={styles.title}>Co-Founder</p>
                   <p className={styles.period}>2025–</p>
                 </div>
@@ -44,8 +43,8 @@ export default function Cv() {
               </div>
 
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>Elgiganten</h3>
+                <h3>Elgiganten</h3>
+                <div className={styles.itemMeta}>
                   <p className={styles.title}>Full Stack Developer</p>
                   <p className={styles.period}>2022–2025</p>
                 </div>
@@ -61,10 +60,10 @@ export default function Cv() {
               </div>
 
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>Insclear</h3>
+                <h3>Insclear</h3>
+                <div className={styles.itemMeta}>
                   <p className={styles.title}>Full Stack Developer</p>
-                  <p className={styles.period}>2019-2022</p>
+                  <p className={styles.period}>2019–2022</p>
                 </div>
                 <p className={styles.skills}>Angular, .Net, Service Fabric, Azure DevOps, SQL, CI/CD, DevOps</p>
                 <ul>
@@ -74,10 +73,10 @@ export default function Cv() {
               </div>
 
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>SEB</h3>
+                <h3>SEB</h3>
+                <div className={styles.itemMeta}>
                   <p className={styles.title}>Solutions Developer / Designer</p>
-                  <p className={styles.period}>2018-2019</p>
+                  <p className={styles.period}>2018–2019</p>
                 </div>
                 <p className={styles.skills}>Angular, .Net, SQL, Azure DevOps, Software architecture, IBM Api Connect</p>
                 <ul>
@@ -86,10 +85,10 @@ export default function Cv() {
               </div>
 
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>Tattoomigo</h3>
+                <h3>Tattoomigo</h3>
+                <div className={styles.itemMeta}>
                   <p className={styles.title}>Co-Founder &amp; Developer</p>
-                  <p className={styles.period}>2017-2018</p>
+                  <p className={styles.period}>2017–2018</p>
                 </div>
                 <p className={styles.skills}>React, Node, TypeScript, .Net Core, SQL, Azure</p>
                 <ul>
@@ -100,10 +99,10 @@ export default function Cv() {
               </div>
 
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>Signe.io</h3>
+                <h3>Signe.io</h3>
+                <div className={styles.itemMeta}>
                   <p className={styles.title}>Co-Founder &amp; Developer</p>
-                  <p className={styles.period}>2016-2017</p>
+                  <p className={styles.period}>2016–2017</p>
                 </div>
                 <p className={styles.skills}>React, Node, JavaScript, SQL, Stripe</p>
                 <ul>
@@ -113,10 +112,10 @@ export default function Cv() {
               </div>
 
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>Skandikon</h3>
+                <h3>Skandikon</h3>
+                <div className={styles.itemMeta}>
                   <p className={styles.title}>Full Stack Developer</p>
-                  <p className={styles.period}>2014-2015</p>
+                  <p className={styles.period}>2014–2015</p>
                 </div>
                 <p className={styles.skills}>.Net, C#, SQL, JavaScript</p>
                 <ul>
@@ -125,10 +124,10 @@ export default function Cv() {
               </div>
 
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>Plan 8 Production</h3>
+                <h3>Plan 8 Production</h3>
+                <div className={styles.itemMeta}>
                   <p className={styles.title}>Web Developer</p>
-                  <p className={styles.period}>2013-2014</p>
+                  <p className={styles.period}>2013–2014</p>
                 </div>
                 <p className={styles.skills}>JavaScript, TypeScript, Node, SQL, PHP, AWS</p>
                 <ul>
@@ -142,26 +141,26 @@ export default function Cv() {
             <div className={`${styles.section} ${styles.education}`}>
               <h2>Education</h2>
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>KTH Royal Institute of skillsnology</h3>
+                <h3>KTH Royal Institute of skillsnology</h3>
+                <div className={styles.itemMeta}>
                   <p className={styles.degree}>Bachelor&lsquo;s Degree, Computer Science</p>
-                  <p className={styles.period}>2010-2013</p>
+                  <p className={styles.period}>2010–2013</p>
                 </div>
               </div>
 
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>The Chinese University of Hong Kong Business School</h3>
+                <h3>The Chinese University of Hong Kong Business School</h3>
+                <div className={styles.itemMeta}>
                   <p className={styles.degree}>Exchange term, Managerial Economics</p>
                   <p className={styles.period}>2017</p>
                 </div>
               </div>
 
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>Stockholm University</h3>
+                <h3>Stockholm University</h3>
+                <div className={styles.itemMeta}>
                   <p className={styles.degree}>Bachelor&lsquo;s Degree, Business Administration and Management</p>
-                  <p className={styles.period}>2015-2018</p>
+                  <p className={styles.period}>2015–2018</p>
                 </div>
               </div>
             </div>
@@ -169,8 +168,8 @@ export default function Cv() {
             <div className={`${styles.section} ${styles.experience}`}>
               <h2>Other projects</h2>
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>MiBreaker <Link href="https://mibreaker.com/sv">(mibreaker.com)</Link></h3>
+                <h3>MiBreaker <Link href="https://mibreaker.com/sv">(mibreaker.com)</Link></h3>
+                <div className={styles.itemMeta}>
                   <p className={styles.period}>2020</p>
                 </div>
                 <p className={styles.skills}>React, Node, Next.js, Vercel, Electron, Stripe, Mailjet, Bunny CDN</p>
@@ -184,24 +183,24 @@ export default function Cv() {
             <div className={`${styles.section} ${styles.certifications}`}>
               <h2>Certifications</h2>
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>Agile Fundamentals: Including Scrum and Kanban</h3>
+                <h3>Agile Fundamentals: Including Scrum and Kanban</h3>
+                <div className={styles.itemMeta}>
                   <p><a className={styles.issuer} href="https://www.ude.my/UC-397a8aa7-b7ce-4851-8bde-0716f342ce49/" target="blank">Udemy</a></p>
                   <p className={styles.period}>2021</p>
                 </div>
               </div>
 
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>Data Scientist Nanodegree</h3>
+                <h3>Data Scientist Nanodegree</h3>
+                <div className={styles.itemMeta}>
                   <p><a className={styles.issuer} href="https://www.udacity.com/" target="blank">Udacity</a></p>
                   <p className={styles.period}>2021</p>
                 </div>
               </div>
 
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>Leading Yourself and Others</h3>
+                <h3>Leading Yourself and Others</h3>
+                <div className={styles.itemMeta}>
                   <p><a className={styles.issuer} href="https://enneagramcenter.se/" target="blank">EnneagramCenter</a></p>
                   <p className={styles.period}>2016</p>
                 </div>
@@ -211,17 +210,13 @@ export default function Cv() {
             <div className={`${styles.section} ${styles.languages}`}>
               <h2>Languages</h2>
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>Swedish</h3>
-                  <p className={styles.level}>Native</p>
-                </div>
+                <h3>Swedish</h3>
+                <p className={styles.level}>Native</p>
               </div>
 
               <div className={styles.item}>
-                <div className={styles.itemHeader}>
-                  <h3>English</h3>
-                  <p className={styles.level}>Full professional proficiency</p>
-                </div>
+                <h3>English</h3>
+                <p className={styles.level}>Full professional proficiency</p>
               </div>
             </div>
 
