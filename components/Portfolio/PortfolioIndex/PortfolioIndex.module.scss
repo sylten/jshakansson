@@ -20,14 +20,14 @@
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.25rem;
       margin-top: 0;
       margin-bottom: 0.5rem;
       text-transform: uppercase;
       letter-spacing: 0.2em;
 
       @media screen and (max-width: $max-sm) {
-        font-size: 2rem;
+        font-size: 1.75rem;
       }
     }
 
@@ -58,8 +58,8 @@
 
     p {
       margin-bottom: 2rem;
-      color: #666;
-      font-size: 0.9rem;
+      color: #888;
+      font-size: 0.875rem;
       letter-spacing: 0.03em;
     }
   }
