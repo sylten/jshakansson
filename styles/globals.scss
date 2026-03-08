@@ -1,56 +1,91 @@
 @import "./common.scss";
 
-body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #333;
-  font-weight: 300;
-  background: #fdfdfd;
-  // background: linear-gradient(135deg, #f9fdff 0%,#f2fbff 100%);
-  transition: background-color 2s;
+:root {
+  --font-sans: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  &.inkamisu {
-      background: #fcf9ff;
-      // background: linear-gradient(135deg, #fcf9ff 0%,#f5f2ff 100%);
-  }
-  &.tattoomigo {
-      background: #f9fffd;
-      // background: linear-gradient(135deg, #f9fffd 0%,#f2fff8 100%);
-  }
-  &.signe {
-      background: #fffcf9;
-      // background: linear-gradient(135deg, #fffcf9 0%,#fff9f2 100%);
-  }
-  &.santatracker {
-      background: #f9fdff;
-      // background: linear-gradient(135deg, #f9fdff 0%,#f2fdff 100%);
-  }
-  &.smartwater-explore-the-sky {
-      background: #f9fbff;
-      // background: linear-gradient(135deg, #f9fbff 0%,#f2f6ff 100%);
-  }
-  &.clouds-piano {
-      background: #f9f9f9;
-      // background: linear-gradient(135deg, #f9f9f9 0%,#f4f4f4 100%);
-  }
+  --bg: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-muted: #f1f5f9;
+
+  --text-heading: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-subtle: #94a3b8;
+
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+
+  --grad-start: #6366f1;
+  --grad-end: #a855f7;
+  --grad-alt-start: #0ea5e9;
+  --grad-alt-end: #6366f1;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 2rem;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.05);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-glow: 0 0 0 1px rgba(99,102,241,0.15), 0 8px 32px rgba(99,102,241,0.12);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-body);
+  font-weight: 400;
+  background: var(--bg);
+  transition: background-color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.inkamisu { background: #fcf9ff; }
+  &.tattoomigo { background: #f9fffd; }
+  &.signe { background: #fffcf9; }
+  &.santatracker { background: #f9fdff; }
+  &.smartwater-explore-the-sky { background: #f9fbff; }
+  &.clouds-piano { background: #f9f9f9; }
 }
 
 a {
   text-decoration: none;
   &:visited, &:link {
-      color: initial;
+    color: inherit;
   }
 }
 
 button {
-  font-weight: 300;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  cursor: pointer;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
+  font-weight: 700;
+  color: var(--text-heading);
+  line-height: 1.2;
 }
 
 @media print {
   .no-print {
-      display: none;
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

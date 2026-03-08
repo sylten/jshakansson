@@ -1,0 +1,248 @@
+.section {
+  padding: 7rem 1.5rem;
+  background: var(--bg);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grad-start);
+  margin: 0 0 0.75rem;
+}
+
+.heading {
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.75rem;
+  color: var(--text-heading);
+}
+
+.gradientText {
+  background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subheading {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 4rem;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.colTitle {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin: 0 0 2rem;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 1.75rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--grad-start), var(--grad-end), transparent);
+    opacity: 0.3;
+  }
+}
+
+.timelineItem {
+  position: relative;
+  padding-bottom: 2.5rem;
+  will-change: opacity, transform;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.dot {
+  position: absolute;
+  left: -1.75rem;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+}
+
+.itemContent {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+    border-color: rgba(99,102,241,0.2);
+  }
+}
+
+.itemHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+
+  @media (max-width: 575px) {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+.company {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin: 0;
+}
+
+.period {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-subtle);
+  background: var(--bg-muted);
+  padding: 0.2rem 0.5rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.role {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--grad-start);
+  margin: 0 0 0.4rem;
+}
+
+.skills {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-subtle);
+  margin: 0 0 0.75rem;
+}
+
+.points {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--text-body);
+  line-height: 1.65;
+
+  li {
+    margin-bottom: 0.4rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Education */
+.sideCol {
+  position: relative;
+}
+
+.eduList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.eduItem {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease;
+  will-change: opacity, transform;
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+    border-color: rgba(99,102,241,0.2);
+  }
+}
+
+.eduPeriod {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--grad-start);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.eduInstitution {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  margin: 0.3rem 0 0.2rem;
+  color: var(--text-heading);
+}
+
+.eduDegree {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.cvActions {
+  margin-top: 2rem;
+}
+
+.cvLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--grad-start);
+  padding: 0.6rem 1.5rem;
+  border-radius: 100px;
+  border: 1.5px solid rgba(99,102,241,0.3);
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: rgba(99,102,241,0.06);
+    border-color: var(--grad-start);
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+  }
+}

@@ -29,7 +29,7 @@ const Layout: React.FC<LayoutProps> = ({ children, isLanding }) => {
         <meta name="google-site-verification" content="RZ_40JsTzlDejUohOlhrK4KzHir-YRa3kAoSdDAyrrI" />
         <link rel="icon" type="image/x-icon" href="favicon.ico?v=7" />
       </Head>
-      <div className={styles.Content}>{children}</div>
+      <div className={isLanding ? styles.ContentFull : styles.Content}>{children}</div>
       <Footer isLanding={isLanding} />
     </div>
   );
