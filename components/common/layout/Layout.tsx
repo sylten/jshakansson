@@ -28,6 +28,8 @@ const Layout: React.FC<LayoutProps> = ({ children, isLanding }) => {
         <meta property="og:url" content="https://jshakansson.se" />
         <meta name="google-site-verification" content="RZ_40JsTzlDejUohOlhrK4KzHir-YRa3kAoSdDAyrrI" />
         <link rel="icon" type="image/x-icon" href="favicon.ico?v=7" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </Head>
       <div className={styles.Content}>{children}</div>
       <Footer isLanding={isLanding} />

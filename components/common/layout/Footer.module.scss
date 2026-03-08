@@ -4,17 +4,59 @@
   footer {
     max-width: $page-size;
     margin: 3rem auto;
-    padding: 1rem 1.5rem;
-    border-top: 1px solid #ccc;
+    padding: 1.5rem 1.5rem 1rem;
+    position: relative;
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 1.5rem;
+      right: 1.5rem;
+      height: 1px;
+      background: rgba($blue-2, 0.18);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 3px;
+      left: 1.5rem;
+      right: 1.5rem;
+      height: 1px;
+      background: rgba($blue-2, 0.07);
+    }
+
     .copyright {
-        font-size: 0.75rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888;
+      font-family: "Josefin Sans", sans-serif;
+    }
+
+    a {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $blue-2;
+      opacity: 0.7;
+      transition: opacity 0.2s ease;
+      font-family: "Josefin Sans", sans-serif;
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
     @media print {
-        display: none;
+      display: none;
     }
   }
 

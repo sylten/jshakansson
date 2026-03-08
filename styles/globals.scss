@@ -1,11 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,600;1,300&display=swap');
 @import "./common.scss";
 
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #333;
+  color: #1a1a18;
   font-weight: 300;
   background: #fdfdfd;
-  // background: linear-gradient(135deg, #f9fdff 0%,#f2fbff 100%);
   transition: background-color 2s;
 
   &.inkamisu {
@@ -46,7 +46,9 @@ button {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Josefin Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
+  letter-spacing: 0.05em;
 }
 
 @media print {
