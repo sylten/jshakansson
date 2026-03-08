@@ -5,9 +5,20 @@ import styles from "./CvTimeline.module.scss";
 
 const experience = [
   {
+    company: "Digilog",
+    role: "Co-Founder",
+    period: "2025–",
+    skills: "Next.js, React, Node, AWS, DynamoDB, S3, AI",
+    points: [
+      "Co-founded Digilog, an AI-first platform for managing CE documentation for automated doors.",
+      "Led product development and business strategy with a focus on AI-driven automation to minimise manual documentation work.",
+      "Built web interfaces for installers and property owners, with AI-assisted documentation generation."
+    ]
+  },
+  {
     company: "Elgiganten",
     role: "Full Stack Developer",
-    period: "2022–",
+    period: "2022–2025",
     skills: "React, Next.js, Node, TypeScript, .Net, C#, Kafka, Tailwind CSS, AI, LLM, RAG, MCP",
     points: [
       "Self service applications for customers",

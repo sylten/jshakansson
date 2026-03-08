@@ -55,19 +55,6 @@ export default function About() {
                 enjoyed co-founding multiple startups. I also enjoy reading, running and cooking.
               </p>
             </div>
-
-            <div className={styles.highlights}>
-              {[
-                { label: "10+", desc: "Years of experience" },
-                { label: "2", desc: "Startups co-founded" },
-                { label: "2", desc: "University degrees" }
-              ].map(h => (
-                <div key={h.label} className={styles.highlight}>
-                  <span className={styles.highlightNumber}>{h.label}</span>
-                  <span className={styles.highlightDesc}>{h.desc}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </motion.div>
       </div>

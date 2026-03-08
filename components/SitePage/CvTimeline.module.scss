@@ -97,7 +97,7 @@
   height: 12px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
-  box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+  box-shadow: 0 0 0 3px rgba(13,148,136,0.15);
 }
 
 .itemContent {
@@ -110,7 +110,7 @@
 
   &:hover {
     box-shadow: var(--shadow-md);
-    border-color: rgba(99,102,241,0.2);
+    border-color: rgba(13,148,136,0.2);
   }
 }
 
@@ -197,7 +197,7 @@
 
   &:hover {
     box-shadow: var(--shadow-md);
-    border-color: rgba(99,102,241,0.2);
+    border-color: rgba(13,148,136,0.2);
   }
 }
 
@@ -236,13 +236,13 @@
   color: var(--grad-start);
   padding: 0.6rem 1.5rem;
   border-radius: 100px;
-  border: 1.5px solid rgba(99,102,241,0.3);
+  border: 1.5px solid rgba(13,148,136,0.3);
   text-decoration: none;
   transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
-    background: rgba(99,102,241,0.06);
+    background: rgba(13,148,136,0.06);
     border-color: var(--grad-start);
-    box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+    box-shadow: 0 0 0 3px rgba(13,148,136,0.1);
   }
 }

@@ -97,8 +97,8 @@ export default function ContactSection() {
           transition={{ delay: 0.35 }}
         >
           <span className={styles.companyName}>J.S. Håkansson AB</span>
-          <span>Ernst Ahlgrens väg 10</span>
-          <span>11255 Stockholm, Sweden</span>
+          <span>Lundagatan 40A</span>
+          <span>11727 Stockholm, Sweden</span>
         </motion.address>
       </div>
     </section>

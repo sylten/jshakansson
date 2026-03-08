@@ -44,7 +44,7 @@ export const portfolioItems: PortfolioItem[] = [
     description:
         "An app for managing CE documentation for automated doors. Includes web interfaces for installers that do the documentation and property owners that need to access it.",
     tech: ["React", "NextJS", "AWS", "Dynamo DB", "S3"],
-    year: 2021,
+    year: 2025,
     largeMedia: {
       type: MediaType.Image,
       url: "/digilog/digilog-landing.png",
