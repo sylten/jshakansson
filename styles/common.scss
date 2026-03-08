@@ -3,9 +3,17 @@ $blue-1: rgb(100, 100, 100);
 $blue-2: #324678;
 $blue-3: #232852;
 
-$primary-color: $blue-1;
-$accent-color: $blue-1;
-$secondary-color: $blue-1;
+// Design system palette
+$color-base: #F8F5F0;
+$color-foreground: #1A1A18;
+$color-accent: #324678;
+$color-secondary: #8A8A82;
+$color-accent-light: rgba(50, 70, 120, 0.08);
+$color-accent-border: rgba(50, 70, 120, 0.35);
+
+$primary-color: $color-accent;
+$accent-color: $color-accent;
+$secondary-color: $color-secondary;
 
 $min-xs:  0;
 $min-sm:  576px;

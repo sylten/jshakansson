@@ -1,0 +1,53 @@
+@import "../../styles/common.scss";
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.rule {
+  flex: 1;
+  height: 1px;
+  background: $color-accent;
+  max-width: 120px;
+  display: block;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.diamond {
+  color: $color-accent;
+  font-size: 0.5rem;
+  line-height: 1;
+}
+
+.heading {
+  font-family: var(--font-display), "Josefin Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $color-foreground;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: var(--font-body), "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  color: $color-secondary;
+  margin: 0.5rem auto 0;
+  max-width: 520px;
+  letter-spacing: 0.02em;
+}

@@ -1,0 +1,100 @@
+@import "../../styles/common.scss";
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-base;
+  background-image: radial-gradient(circle, rgba(50, 70, 120, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  padding: 6rem 1.5rem 4rem;
+}
+
+.inner {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.name {
+  font-family: var(--font-display), "Josefin Sans", sans-serif;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $color-foreground;
+  margin: 0 0 1.5rem;
+  line-height: 1.1;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.dividerLine {
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: $color-accent;
+}
+
+.dividerDiamond {
+  color: $color-accent;
+  font-size: 0.6rem;
+  line-height: 1;
+}
+
+.role {
+  font-family: var(--font-display), "Josefin Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $color-accent;
+  margin: 0 0 1.5rem;
+}
+
+.tagline {
+  font-family: var(--font-body), "DM Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: $color-secondary;
+  line-height: 1.75;
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+}
+
+.cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaBtn {
+  font-family: var(--font-display), "Josefin Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-accent;
+  border: 1px solid $color-accent;
+  padding: 0.6rem 1.6rem;
+  text-decoration: none;
+  transition: background 300ms ease-out, color 300ms ease-out;
+
+  &:hover {
+    background: $color-accent;
+    color: $color-base;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 3px;
+  }
+}

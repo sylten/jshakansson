@@ -1,0 +1,54 @@
+@import "../../styles/common.scss";
+
+.page {
+  min-height: 100vh;
+  background: $color-base;
+  color: $color-foreground;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background: $color-base;
+  border-top: 1px solid $color-accent;
+  padding: 1.5rem;
+}
+
+.footerInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footerCopy {
+  font-family: var(--font-mono), "DM Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: $color-secondary;
+}
+
+.footerLink {
+  font-family: var(--font-display), "Josefin Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $color-accent;
+  text-decoration: none;
+  transition: opacity 200ms ease-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 3px;
+  }
+}

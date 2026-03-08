@@ -1,0 +1,158 @@
+@import "../../styles/common.scss";
+
+.cv {
+  padding: 6rem 1.5rem;
+  background: $color-base;
+  border-top: 1px solid $color-accent-border;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 3rem;
+  align-items: start;
+
+  @media (max-width: $max-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.timelineBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.blockTitle {
+  font-family: var(--font-display), "Josefin Sans", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $color-secondary;
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $color-accent-border;
+}
+
+.entry {
+  border-left: 3px solid $color-accent;
+  padding: 0.75rem 0 0.75rem 1.25rem;
+  margin-bottom: 0.25rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.entryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  font-family: var(--font-display), "Josefin Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: $color-foreground;
+}
+
+.period {
+  font-family: var(--font-mono), "DM Mono", monospace;
+  font-size: 0.7rem;
+  color: $color-secondary;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.role {
+  font-family: var(--font-body), "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: $color-accent;
+  margin: 0 0 0.25rem;
+  letter-spacing: 0.02em;
+}
+
+.tech {
+  font-family: var(--font-mono), "DM Mono", monospace;
+  font-size: 0.68rem;
+  color: $color-secondary;
+  margin: 0 0 0.4rem;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+}
+
+.description {
+  font-family: var(--font-body), "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: $color-foreground;
+  font-weight: 300;
+  margin: 0;
+}
+
+.sidebar {
+  @media (max-width: $max-md) {
+    order: -1;
+  }
+}
+
+.sidebarBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid $color-accent-border;
+}
+
+.sidebarTitle {
+  font-family: var(--font-display), "Josefin Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-secondary;
+  margin: 0;
+}
+
+.downloadBtn {
+  font-family: var(--font-display), "Josefin Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $color-accent;
+  border: 1px solid $color-accent;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background 300ms ease-out, color 300ms ease-out;
+  display: block;
+
+  &:hover {
+    background: $color-accent;
+    color: $color-base;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 3px;
+  }
+}

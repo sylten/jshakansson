@@ -1,0 +1,93 @@
+@import "../../styles/common.scss";
+
+.about {
+  padding: 6rem 1.5rem;
+  background: $color-base;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 4rem;
+  align-items: start;
+
+  @media (max-width: $max-md) {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.imageCol {
+  @media (max-width: $max-md) {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+.imageFrame {
+  position: relative;
+  border: 1px solid $color-accent-border;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-color: $color-accent;
+    border-style: solid;
+    z-index: 1;
+  }
+
+  &::before {
+    top: 6px;
+    left: 6px;
+    border-width: 1px 0 0 1px;
+  }
+
+  &::after {
+    bottom: 6px;
+    right: 6px;
+    border-width: 0 1px 1px 0;
+  }
+}
+
+.profileImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.textCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bio {
+  font-family: var(--font-body), "DM Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: $color-foreground;
+  font-weight: 300;
+  margin: 0;
+}
+
+.pullQuote {
+  font-family: var(--font-display), "Josefin Sans", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: $color-accent;
+  border-left: 3px solid $color-accent;
+  padding: 0.75rem 1.25rem;
+  margin: 0.5rem 0;
+  background: $color-accent-light;
+}

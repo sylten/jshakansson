@@ -1,0 +1,18 @@
+@import "../../styles/common.scss";
+
+.glow {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(50, 70, 120, 0.06);
+  transform: translate(-50%, -50%);
+  filter: blur(28px);
+  will-change: left, top;
+
+  @media (pointer: coarse) {
+    display: none;
+  }
+}

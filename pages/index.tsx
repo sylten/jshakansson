@@ -1,10 +1,5 @@
-import Layout from "../components/common/layout/Layout";
-import Landing from "../components/Landing/Landing";
+import SitePage from "../components/SitePage/SitePage";
 
-export default function LandingPage() {
-  return (
-    <Layout isLanding={true}>
-      <Landing />
-    </Layout>
-  );
+export default function Home() {
+  return <SitePage />;
 }

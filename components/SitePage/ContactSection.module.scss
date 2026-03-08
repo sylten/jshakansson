@@ -1,0 +1,101 @@
+@import "../../styles/common.scss";
+
+.contact {
+  padding: 6rem 1.5rem;
+  background: $color-base;
+  border-top: 1px solid $color-accent-border;
+}
+
+.inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.frame {
+  position: relative;
+  border: 1px solid $color-accent-border;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-color: $color-accent;
+    border-style: solid;
+  }
+
+  &::before {
+    top: 6px;
+    left: 6px;
+    border-width: 1px 0 0 1px;
+  }
+
+  &::after {
+    bottom: 6px;
+    right: 6px;
+    border-width: 0 1px 1px 0;
+  }
+}
+
+.intro {
+  font-family: var(--font-body), "DM Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: $color-secondary;
+  font-weight: 300;
+  margin: 0;
+  max-width: 380px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-body), "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  color: $color-foreground;
+  text-decoration: none;
+  border: 1px solid $color-accent-border;
+  padding: 0.75rem 1.25rem;
+  transition: border-color 300ms ease-out, background 300ms ease-out, color 300ms ease-out;
+
+  &:hover {
+    border-color: $color-accent;
+    background: $color-accent-light;
+    color: $color-accent;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 3px;
+  }
+}
+
+.icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.company {
+  font-family: var(--font-mono), "DM Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: $color-secondary;
+  margin: 0;
+}
