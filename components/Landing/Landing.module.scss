@@ -1,5 +1,5 @@
-@import "../../styles/common.scss";
-@import "../../styles/animations.scss";
+@use "../../styles/common.scss" as *;
+@use "../../styles/animations.scss";
 
 .landing {
   padding: 3rem 2rem 2rem;

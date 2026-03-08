@@ -1,4 +1,4 @@
-@import '../../../styles/common.scss';
+@use '../../../styles/common.scss' as *;
 
 .portfolioItem {
   $border-radius: 0;
@@ -39,7 +39,7 @@
     height: 200px;
     overflow: hidden;
     img {
-      @extend .fit;
+      @include fit();
     }
   }
 
