@@ -20,7 +20,7 @@
 .name {
   font-family: var(--font-display), "Josefin Sans", sans-serif;
   font-size: clamp(2.2rem, 6vw, 4.5rem);
-  font-weight: 300;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: $color-foreground;
@@ -62,7 +62,7 @@
 .tagline {
   font-family: var(--font-body), "DM Sans", sans-serif;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   color: $color-secondary;
   line-height: 1.75;
   max-width: 620px;
@@ -86,11 +86,12 @@
   border: 1px solid $color-accent;
   padding: 0.6rem 1.6rem;
   text-decoration: none;
+  border-radius: 8px;
   transition: background 300ms ease-out, color 300ms ease-out;
 
   &:hover {
     background: $color-accent;
-    color: $color-base;
+    color: #fff;
   }
 
   &:focus-visible {

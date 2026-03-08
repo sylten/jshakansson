@@ -28,8 +28,10 @@
 .card {
   position: relative;
   border: 1px solid $color-accent-border;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   transition: border-color 300ms ease-out, background 300ms ease-out;
 
   &::before,
@@ -143,7 +145,8 @@
   letter-spacing: 0.04em;
   color: $color-accent;
   border: 1px solid $color-accent-border;
-  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+  padding: 0.15rem 0.55rem;
   background: $color-accent-light;
 }
 

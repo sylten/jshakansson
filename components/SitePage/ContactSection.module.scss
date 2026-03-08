@@ -15,6 +15,7 @@
 .frame {
   position: relative;
   border: 1px solid $color-accent-border;
+  border-radius: 14px;
   padding: 3rem 2.5rem;
   display: flex;
   flex-direction: column;
@@ -49,7 +50,7 @@
   font-size: 1rem;
   line-height: 1.7;
   color: $color-secondary;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
   max-width: 380px;
 }
@@ -72,6 +73,7 @@
   color: $color-foreground;
   text-decoration: none;
   border: 1px solid $color-accent-border;
+  border-radius: 8px;
   padding: 0.75rem 1.25rem;
   transition: border-color 300ms ease-out, background 300ms ease-out, color 300ms ease-out;
 

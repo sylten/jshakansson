@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Navbar.module.scss";
 
 const NAV_LINKS = [
@@ -17,7 +18,15 @@ export default function Navbar() {
     <nav className={styles.navbar} role="navigation" aria-label="Main navigation">
       <div className={styles.inner}>
         <Link href="/" className={styles.logo}>
-          J.S. Håkansson
+          <Image
+            src="/jshakansson-650-min.png"
+            alt="J.S. Håkansson"
+            width={38}
+            height={38}
+            className={styles.logoImage}
+            priority
+          />
+          <span className={styles.logoText}>J.S. Håkansson</span>
         </Link>
 
         <button

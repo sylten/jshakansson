@@ -21,16 +21,34 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: $color-foreground;
+  transition: opacity 200ms ease-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.logoImage {
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.logoText {
   font-family: var(--font-display), "Josefin Sans", sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: $color-foreground;
-  text-decoration: none;
 
-  &:hover {
-    color: $color-accent;
+  @media (max-width: $max-xs) {
+    display: none;
   }
 }
 
