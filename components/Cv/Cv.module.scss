@@ -145,6 +145,34 @@
           }
         }
 
+        .itemHeader {
+          display: flex;
+          align-items: baseline;
+          flex-wrap: wrap;
+          gap: 0 0.75rem;
+          margin-bottom: 0.4rem;
+
+          h3 {
+            margin-bottom: 0;
+          }
+
+          .title, .degree, .level {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          .period {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: auto;
+          }
+
+          .issuer {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+
         ul {
           list-style: none;
           padding-left: 0;
