@@ -1,7 +1,7 @@
 @import '../../styles/common.scss';
 
 .cvContact {
-  font-size: 0.875rem;
+  font-size: 1rem;
 
   @media print {
     width: 33%;
@@ -57,7 +57,7 @@
 
     h4 {
       font-family: "Josefin Sans", sans-serif;
-      font-size: 0.75rem;
+      font-size: 0.875rem;
       text-transform: uppercase;
       letter-spacing: 0.2em;
       font-weight: 400;
@@ -96,7 +96,7 @@
       margin-top: 1.5rem;
       margin-bottom: 0;
       color: #888;
-      font-size: 0.75rem;
+      font-size: 0.875rem;
       letter-spacing: 0.04em;
 
       span {

@@ -33,7 +33,7 @@ export default function Cv() {
               <h2>Experience</h2>
 
               <div className={styles.item}>
-                <h3>Digilog <Link href="https://digilog.se/">(digilog.se)</Link></h3>
+                <h3>Digilog</h3>
                 <p className={styles.title}>Co-Founder</p>
                 <p className={styles.period}>2025–</p>
                 <p className={styles.skills}>Next.js, React, Node, AWS, Dynamo DB, S3</p>
